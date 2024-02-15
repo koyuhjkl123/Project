@@ -49,7 +49,6 @@ function dragStart(e) {
   $(window).on('mousemove touchmove', drag); // 마우스 이동 또는 터치 이동 이벤트에 대한 핸들러 등록
 }
 
-
 function drag(e) {
   if (e.touches) e.clientX = e.touches[0].clientX; // 터치 이벤트가 있을 경우 터치의 첫 번째 위치를 사용
 
@@ -66,7 +65,6 @@ function dragEnd(e) {
   $(window).off('mousemove touchmove', drag); // 마우스 이동 또는 터치 이동 이벤트에 대한 핸들러 제거
   gsap.set('.ring', { cursor: 'grab' }); // .ring 클래스의 커서 속성 원래대로 변경
 }
-
 
 function getBgPos(i) { // 각 이미지들의 위치를 설정하는 함수
   return (100 - gsap.utils.wrap(0, 360, gsap.getProperty('.ring', 'rotationY') - 180 - i * 36) / 360 * 500) + 'px 0px';
