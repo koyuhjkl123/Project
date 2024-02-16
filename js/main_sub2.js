@@ -27,6 +27,8 @@ gsap.timeline()
     ease: 'expo'
   })
 
+  
+
   // 마우스가 해당 이미지에 들어갈 때 이벤트 발생 설정?
   .add(() => {
     $('.img').on('mouseenter', (e) => {
@@ -37,7 +39,10 @@ gsap.timeline()
       gsap.to('.img', { opacity: 1, ease: 'power2.inOut' })
     })
   }, '-=0.5')
-
+// 아무 이미지 클릭 시 해당 본문 페이지로 넘어감
+  $('.img').on('click', function() {
+    window.location.href = "../HTML/main.html";
+});
 $(window).on('mousedown touchstart', dragStart); // 마우스 다운 또는 터치 시작 이벤트에 대한 핸들러 등록
 $(window).on('mouseup touchend', dragEnd); // 마우스 업 또는 터치 종료 이벤트에 대한 핸들러 등록
 
@@ -69,6 +74,8 @@ function dragEnd(e) {
 function getBgPos(i) { // 각 이미지들의 위치를 설정하는 함수
   return (100 - gsap.utils.wrap(0, 360, gsap.getProperty('.ring', 'rotationY') - 180 - i * 36) / 360 * 500) + 'px 0px';
 }
+
+
 
 
 // * 순서대로 나타나는 기능

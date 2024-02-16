@@ -70,9 +70,14 @@ div, svg {
 /* a태그 폰트 설정 */
 .stage > .birds1 a, .stage > .birds2 a,
 .stage > .birds3 a, .stage > .birds4 a{
-  font-family: 'Merienda', cursive;
+  font-family: 'SDSamliphopangche_Outline';
   position: absolute;
   z-index: 5;
-  color: #333;
+  /* color: #83de00; */
+  color: #83de00;
+  opacity: .3;
+  text-shadow: 4px 4px 8px #d4ffce;
+  /* color: #d4ffce; */
   font-size: 35px;
 }
+
