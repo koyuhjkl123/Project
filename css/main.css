@@ -95,50 +95,6 @@ header .top-menu .menu-list ul {
   display: none;
 }
 
-/* 마이페이지 메뉴에 대한 설정 */
-header .top-menu .menu-list li:nth-child(3) {
-  position: relative;
-}
-
-header .top-menu .menu-list li:nth-child(3) > ul {
-  position: absolute;
-  margin-top: 20px;
-  padding: 0;
-  display: block;
-  width: 95px;
-  line-height: 25px;
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 1.2s ease, transform 1.2s ease;
-}
-
-header .top-menu .menu-list li:nth-child(3) > ul > li {
-  margin: 0;
-}
-
-header .top-menu .menu-list li:nth-child(3):hover > ul {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-header .top-menu .menu-list li:nth-child(3):hover > ul > li:nth-child(1) {
-  transition-delay: 1.8s;
-}
-
-header .top-menu .menu-list li:nth-child(3):hover > ul > li:nth-child(2) {
-  transition-delay: 1.2s;
-}
-
-header .top-menu .menu-list li:nth-child(3):hover > ul > li a {
-  color: black;
-  margin: 0;
-  font-size: 0.7rem;
-}
-
-header .top-menu .menu-list li:nth-child(3):hover > ul > li a:hover {
-  color: #7cfc00;
-  opacity: .6;
-}
 
 header .top-menu .menu-list li:hover a {
   color: #68de7c;

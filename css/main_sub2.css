@@ -75,9 +75,9 @@ div, svg {
   z-index: 5;
   /* color: #83de00; */
   color: #83de00;
-  opacity: .3;
-  text-shadow: 4px 4px 8px #d4ffce;
+  text-shadow: 6px 6px 8px #d4ffce;
   /* color: #d4ffce; */
-  font-size: 35px;
+  font-size: 42px;
+  font-weight: 800;
 }
 
