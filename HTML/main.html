@@ -6,9 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="../css/main.css">
-  <script src="../js/main.js"></script>
+  <script defer src="../js/main.js"></script>
   <link rel="icon" href="../images/icon.png" style="border-radius: 50%;">
   <link rel="stylesheet" href="../css/share.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -31,11 +34,12 @@
       </div>
 
       <!-- 본문 메뉴바 -->
-      <div class="icon">
+      <div class="icon-container">
+        <div class="icon"></div>
         <nav class="menubar">
           <div id="menu-container">
             <ul class="menu_section">
-              <img src="../images/bird_icon_x.png" alt="x" />
+              <img src="../images/bird_icon_x.png" alt="" class="close">
               <li><a href="#a">새의 종류</a>
                 <ul>
                   <li><a href="#a">텃새</a></li>
@@ -50,12 +54,123 @@
               <li><a href="#a">후원하기</a></li>
               <li><a href="#a">About Us</a></li>
             </ul>
-          </div>
         </nav>
       </div>
 
-    </header>
-  </div>
+  </header>
+
+  <!-- 본문 영역 -->
+  <nav id="parallax__dot">
+    <ul>
+        <li class="active"><a href="#section1"><span>메뉴1</span></a></li>
+        <li><a href="#section2"><span>메뉴2</span></a></li>
+        <li><a href="#section3"><span>메뉴3</span></a></li>
+        <li><a href="#section4"><span>메뉴4</span></a></li>
+        <li><a href="#section5"><span>메뉴5</span></a></li>
+        <li><a href="#section6"><span>메뉴6</span></a></li>
+        <li><a href="#section7"><span>메뉴7</span></a></li>
+        <li><a href="#section8"><span>메뉴8</span></a></li>
+        <li><a href="#section9"><span>메뉴9</span></a></li>
+    </ul>
+</nav>
+  <!-- //header -->
+
+  <main id="parallax__cont">
+    <div id="contents">
+      <section id="section1" class="content__item">
+        <span class="content__item__num">01</span>
+        <h2 class="content__item__title">section1</h2>
+        <figure class="content__item__imgWrap">
+          <div class="content__item__img"></div>
+        </figure>
+        <p class="content__item__desc">우선 무엇이 되고자 하는가를 자신에게 말하라 그리고 해야 할일을 하라.</p>
+      </section>
+      <!-- //section1 -->
+
+      <section id="section2" class="content__item">
+        <span class="content__item__num">02</span>
+        <h2 class="content__item__title">section2</h2>
+        <figure class="content__item__imgWrap">
+          <div class="content__item__img"></div>
+        </figure>
+        <p class="content__item__desc">이미 끝나버린 일을 후회하기 보다는 하고 싶었던 일들을 하지 못한 것을 후회하라.</p>
+      </section>
+      <!-- //section2 -->
+
+      <section id="section3" class="content__item">
+        <span class="content__item__num">03</span>
+        <h2 class="content__item__title">section3</h2>
+        <figure class="content__item__imgWrap">
+          <div class="content__item__img"></div>
+        </figure>
+        <p class="content__item__desc">문제는 목적지에 얼마나 빨리 가느내가 아니라 그 목적지가 어디냐는 것이다.</p>
+      </section>
+      <!-- //section3 -->
+
+      <section id="section4" class="content__item">
+        <span class="content__item__num">04</span>
+        <h2 class="content__item__title">section4</h2>
+        <figure class="content__item__imgWrap">
+          <div class="content__item__img"></div>
+        </figure>
+        <p class="content__item__desc">도저히 손댈 수가 없는 곤란에 부딪혔다면 과감하게 그 속으로 뛰어들라.</p>
+      </section>
+      <!-- //section4 -->
+
+      <section id="section5" class="content__item">
+        <span class="content__item__num">05</span>
+        <h2 class="content__item__title">section5</h2>
+        <figure class="content__item__imgWrap">
+          <div class="content__item__img"></div>
+        </figure>
+        <p class="content__item__desc">당신이 할수 있다고 믿든 할수 없다고 믿든 믿는 대로 될것이다.</p>
+      </section>
+      <!-- //section5 -->
+
+      <section id="section6" class="content__item">
+        <span class="content__item__num">06</span>
+        <h2 class="content__item__title">section6</h2>
+        <figure class="content__item__imgWrap">
+          <div class="content__item__img"></div>
+        </figure>
+        <p class="content__item__desc">마음만을 가지고 있어서는 안된다. 반드시 실천하여야 한다.</p>
+      </section>
+      <!-- //section6 -->
+
+      <section id="section7" class="content__item">
+        <span class="content__item__num">07</span>
+        <h2 class="content__item__title">section7</h2>
+        <figure class="content__item__imgWrap">
+          <div class="content__item__img"></div>
+        </figure>
+        <p class="content__item__desc">꿈을 계속 간직하고 있으면 반드시 실현할 때가 온다.</p>
+      </section>
+      <!-- //section7 -->
+
+      <section id="section8" class="content__item">
+        <span class="content__item__num">08</span>
+        <h2 class="content__item__title">section8</h2>
+        <figure class="content__item__imgWrap">
+          <div class="content__item__img"></div>
+        </figure>
+        <p class="content__item__desc">오랫동안 꿈을 그리는 사람은 마침내 그 꿈을 닮아 간다.</p>
+      </section>
+      <!-- //section8 -->
+
+      <section id="section9" class="content__item">
+        <span class="content__item__num">09</span>
+        <h2 class="content__item__title">section9</h2>
+        <figure class="content__item__imgWrap">
+          <div class="content__item__img"></div>
+        </figure>
+        <p class="content__item__desc">먼저 핀 꽃은 먼저진다. 남보다 먼저 공을 세우려고 조급히 서둘것이 아니다.</p>
+      </section>
+      <!-- //section9 -->
+    </div>
+  </main>
+  <!-- //main -->
+
+
 
 </body>
 
