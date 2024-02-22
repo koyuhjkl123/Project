@@ -1,66 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@500&family=Nanum+Pen+Script&display=swap');
-html, body, .stage, .ring, .img {
-  width:100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  user-select:none;
-}
+/* 
+<div id="container">
+<header>
+  <!-- 로고 -->
+  <div class="logo">
+    <img src="../images/icon.png" alt="">
+  </div>
 
-a{
-  text-decoration: none;
-}
-html, body, .stage {
-  overflow:hidden;
-  background:#f6f5ef;
-  
-}
+  <!-- 우측 상단 메뉴-->
+  <div class="top-menu">
+    <ul class="menu-list">
+      <li><a href="#a">회원가입</a></li>
+      <li><a href="#a">로그인</a></li>
+      <li><a href="#a">마이페이지</a></li>
+      <li><a href="./free.html">게시판</a></li>
+    </ul>
+  </div>
 
-div, svg {
-  position: absolute;
-}
+  <!-- 좌측 본문 메뉴바 -->
+  <div class="icon-container">
+    <div class="icon"></div>
+    <nav class="menubar">
+      <div id="menu-container">
+        <ul class="menu_section">
+          <img src="../images/bird_icon_x.png" alt="" class="close">
+          <li><a href="#a">새의 종류</a>
+            <ul>
+              <li><a href="./residunt_bird.html">텃새</a></li>
+              <li><a href="./protected_bird.html">철새</a></li>
+              <li><a href="./migratory_bird.html">천연기념물</a></li>
+            </ul>
+          </li>
+          <li><a href="#a">새용품</a></li>
+          <li><a href="./FAQ.html">문의사항</a></li>
+          <li><a href="#a">애완조 안내서</a></li>
+          <li><a href="./news.html">과학 <img src="../images/bird_icon.png" alt="+">새</a></li>
+          <li><a href="#a">후원하기</a></li>
+          <li><a href="#a">About Us</a></li>
+        </ul>
+    </nav>
+    <!-- nav 좌측 메뉴바 종료 -->
+  </div>
+</header> 
+</div>
+*/
 
-.container {
-  perspective: 1000px;
-  width: 500px;
-  height: 300px;  
-  left:50%;
-  top:50%;
-  transform:translate(-50%,-50%);
-}
-.stage > .birds1, .stage > .birds2{
-  opacity: 0;
-  position: absolute;
-  z-index: 5;
-  font-size: 45px;
-  top: 18%;
-}
+/* 
+<!-- footer 시작 -->
+        <footer>
+            <div id="footer-container">
+                <!-- 왼쪽 영역: 프로젝트 팀명 -->
+                <div class="footer-left">
+                    <img src="../images/icon.png" alt="Company Logo">
+                    <p>T e m O N E</p>
+                </div>
 
-.stage > .birds1 {
-  left: 39%;
-}
+                <!-- 중앙 영역: 링크 목록 -->
+                <div class="footer-center">
+                    <ul>
+                        <li><a href="#">홈</a></li>
+                        <li><a href="#">서비스</a></li>
+                        <li><a href="#">새 용품</a></li>
+                        <li><a href="#">고객 지원</a></li>
+                        <li><a href="#">문의하기</a></li>
+                    </ul>
+                </div>
 
-.stage > .birds2 {
-  left: 49%;
-}
-.stage > .birds3, .stage > .birds4{
-  opacity: 0;
-  position: absolute;
-  z-index: 5;
-  font-size: 45px;
-  bottom: 23%;
-}
+                <!-- 오른쪽 영역: 연락처 및 소셜 미디어 링크 -->
+                <div class="footer-right">
+                    <p>연락처 : 02-1234-5678</p>
+                    <p>이메일 : keduit@temone.com</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
 
-.stage > .birds3 {
-  left: 39%;
-}
-.stage > .birds4 {
-  left: 49%;
-}
-.stage > .birds1 a, .stage > .birds2 a,
-.stage > .birds3 a, .stage > .birds4 a{
-  font-family: 'Merienda', cursive;
-  position: absolute;
-  z-index: 5;
-  color: #333;
-  font-size: 35px;
-}
+            <!-- 저작권 정보 및 추가 내용 -->
+            <div class="copyright">
+                <p>&copy; <span class="more"></span> Birding</p>
+            </div>
+        </footer>
+        <!-- footer 종료 --> 
+        */

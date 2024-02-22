@@ -31,7 +31,9 @@ li{
 }
 
 
-/* 메뉴바 영역 */
+
+
+/* 상단 메뉴바 영역 */
 .top-menu {
   display: flex;
   justify-content: flex-end; /* 오른쪽 정렬*/
@@ -73,12 +75,123 @@ li{
   font-weight: 600; /* 글자 굵게*/
 }
 
+/* 아이콘 터치 영역 */
+.icon-container {
+  width: 30px;
+  height: 17px;
+  cursor: pointer;
+  position: relative;
+  /* 문서에 흐름에 기준으로 위치*/
+  display: flex;
+  flex-direction: column;
+  /*자식 요소를 세로로 지정*/
+  justify-content: space-between;
+  /*균등하게 배치*/
+}
+
+
+/* 햄버거 아이콘 만들기 */
+.icon-container .icon {
+  /* 가운데 막대 생성 */
+  margin-top: 7px;
+  width: 24px;
+  height: 3px;
+  background-color: #333;
+  position: relative;
+  /* icon-container 클래스 기준 위치*/
+  transition-delay: 2s;
+  /*2초 지연*/
+}
+
+.icon-container .icon::before,
+.icon-container .icon::after {
+  /* 앞쪽, 끝쪽 막대 생성 */
+  content: ' ';
+  width: 24px;
+  height: 3px;
+  background-color: #333;
+  position: absolute;
+  /*icon클래스 기준으로 절대적 배치*/
+  justify-content: space-around;
+  /*간격 정렬*/
+}
+
+.icon-container .icon::before {
+  /* 가운데 막대 기준으로 위로 8px만큼*/
+  top: -6px;
+}
+
+.icon-container .icon::after {
+  /* 가운데 막대 기준으로 아래로 8px만큼 */
+  top: 6px;
+}
+
+/* 햄버거에 마우스 될 때 서브 메뉴 표시 */
+.icon-container .icon:hover {
+  cursor: pointer;
+}
+
+
+/* 헤더 본문 메뉴바 영역 */
+
+.icon-container .menubar {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 40px;
+  left: -1220px;
+  transition: left 2.4s ease;
+  /* 이동 애니메이션 지정  ease는 처음과 끝 부드러움을 준다.*/
+}
+
+.icon-container .menubar #menu-container {
+  margin-top: 20px;
+  width: 500px;
+}
+
+.icon-container .menubar #menu-container ul {
+  padding: 0;
+  /* padding-left 40px되어 있어서 제거 하기 위해*/
+}
+
+.icon-container .menubar #menu-container ul img {
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+}
+
+.icon-container .menubar #menu-container ul img.close {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+}
+
+.icon-container .menubar #menu-container ul li {
+  margin-top: 20px;
+}
+
+.icon-container .menubar #menu-container ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 24px;
+}
+
+.icon-container .menubar #menu-container ul li>ul {
+  font-size: 0.5rem;
+  /* 서브 메뉴은 부모 li의 기준으로 상대값 부여*/
+}
+
+.icon-container .menubar #menu-container ul li>ul li>a {
+  font-size: 18px;
+  font-weight: none;
+}
+
 
 /* footer 영역  */
 footer {
   padding: 20px 0;
   font-size: 18px;
-  bottom: 0;
   width: 100%;
   height: 200px;
   text-align: center;
