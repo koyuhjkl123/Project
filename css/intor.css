@@ -1,0 +1,260 @@
+/* Color scheme inspired by the national flag of The Republic of the Congo. */
+
+@import url('./css/share.css');
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body,
+html {
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	font-size: 12pt;
+	line-height: 18pt;
+	font-weight: 400;
+	color: white;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background: black;
+	margin: 0;
+}
+
+#nav-toggle,
+#nav-close {
+	display: none;
+}
+
+.nav-toggle,
+.nav-close {
+	position: absolute;
+	display: flex;
+	width: 100px;
+	height: 90px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 1;
+	transition: all 0.2s ease-in-out;
+}
+
+.nav-toggle::after {
+	position: absolute;
+	top: -40px;
+	content: "";
+	color: white;
+	line-height: 0;
+	margin: 0;
+	font-size: 12pt;
+	pointer-events: none !important;
+}
+
+.nav-toggle:active {
+	width: 85px;
+	height: 77px;
+	transition: all 0.2s ease-in-out;
+}
+
+.nav-close {
+	z-index: 6;
+	width: 50px;
+	height: 40px;
+	top: 20px;
+	left: 20px;
+	opacity: 0;
+}
+
+#nav-toggle:checked ~ .nav-close {
+	opacity: 1;
+	transition: all 0.3s ease-in-out;
+	transition-delay: 5.5s;
+}
+
+.nav-toggle:hover {
+	transform: scale(1.1);
+	transition: all 0.2s ease-in-out;
+}
+
+#nav-toggle:checked + .nav-toggle {
+	transform: rotateZ(90deg);
+	transition: all 0.5s ease-in-out;
+	animation: nav-open 1s ease-in-out 1;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+#nav-toggle:checked + .nav-toggle::after {
+	opacity: 0;
+	transition: all 0.2s ease-in-out;
+}
+
+@keyframes nav-open {
+	0% {
+		width: 100px;
+		height: 90px;
+	}
+	100% {
+		width: 100%;
+		height: 4000px;
+	}
+}
+
+.nav-toggle > figure {
+	width: 100%;
+	height: 13%;
+	margin: 0;
+	transition: all 0.3s ease-in-out;
+}
+
+.nav-close > svg {
+	fill: white;
+	width: 35%;
+	height: auto;
+}
+
+.nav-close > figure:nth-child(2) {
+	position: relative;
+	top: 20px;
+}
+
+.nav-close > figure:nth-child(3) {
+	transform: rotateZ(-45deg);
+}
+
+.nav-toggle:hover > figure {
+	height: 33%;
+	transition: all 0.3s ease-in-out;
+}
+
+#nav-toggle:checked + .nav-toggle > figure {
+	height: 33.3%;
+	transition: all 1s ease-in-out;
+	transition-delay: 0.8s;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
+}
+
+.nav-toggle > figure:nth-child(2) {
+	background: #FAFAFA;
+}
+
+.nav-toggle > figure:nth-child(3) {
+	background: #FAFAFA;
+}
+
+.nav-toggle > figure:nth-child(4) {
+	background: #FAFAFA;
+}
+
+.nav-toggle > label,
+.nav-close > label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.nav-toggle > label:hover,
+#nav-toggle:checked ~ .nav-close > label:hover {
+	cursor: pointer;
+}
+
+.logo-draw {
+	position: absolute;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 60%;
+	height: auto;
+	z-index: 2;
+  animation-delay: 4s; 
+  animation-fill-mode: forwards;
+}
+
+.logo-draw > svg {
+	width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #f9cc41;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  transition: stroke-dashoffset 0.5s cubic-bezier(0.45, 0, 0.07, 1);
+}
+
+.cls-1 {
+	fill: none;
+	stroke: black;
+	stroke-width: 1px;
+	stroke-dasharray: 1;
+}
+
+#nav-toggle:checked ~ .logo-draw {
+	display: flex;
+}
+
+#nav-toggle:checked ~ .logo-draw .cls-1 {
+	animation: fade-in .8s ease-in-out 1;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
+}
+
+.cls-2 {
+	fill: black;
+}
+
+@keyframes dash {
+	0% {
+		stroke-dashoffset: 1;
+	}
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	70% {
+		opacity: 0;
+		transform: rotateY(-180deg);
+	}
+	100% {
+		fill: black;
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes nav-close {
+	0% {
+			width: 100%;
+			height: 4000px;
+	}
+	100% {
+			width: 100px;
+			height: 90px;
+	}
+}
+
+#nav-toggle:checked ~ .nav-close {
+	animation: nav-close 1s ease-in-out 1;
+	animation-delay: 3s; /* 원하는 경우 딜레이를 조정하세요 */
+	animation-fill-mode: forwards;
+}

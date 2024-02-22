@@ -39,12 +39,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // 메뉴바 x클릭 시 메뉴바 닫기
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   let closeButton = document.querySelector('.close');
   let menuContainer = document.querySelector('.menubar #menu-container ul');
 
   // 이미지가 클릭될 때 이벤트 핸들러 추가
-  closeButton.addEventListener('click', function() {
+  closeButton.addEventListener('click', function () {
 
     if (iconContainer.classList.contains('active')) {
       menubar.style.left = '-1220px'; // 클릭 후
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     menuContainer.classList.remove('active'); // 'active' 클래스 제거
 
-    
+
   });
 });
 // 메뉴 클릭 시 --> 각 li 아이템들 hover 시 동작
@@ -76,14 +76,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-let scrollHeight = Math.max(
-  document.body.scrollHeight, document.documentElement.scrollHeight,
-  document.body.offsetHeight, document.documentElement.offsetHeight,
-  document.body.clientHeight, document.documentElement.clientHeight
-);
 
-alert('스크롤에 의해 가려진 분을 포함한 전체 문서 높이: ' + scrollHeight);
-
+// 텍스트, 이미지  스크롤 내리면 애니메이션 적용
 function scroll() {
   let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.screenY;
 
@@ -98,3 +92,92 @@ function scroll() {
   requestAnimationFrame(scroll);
 }
 scroll();
+
+
+// 스크롤 올리기 위함 용도
+const toTopEl = document.querySelector('#to-top');
+
+window.addEventListener('scroll', _.throttle(function () {
+  if (window.scrollY > 700) { // 해당 스크롤 내린 위치값이 700보다 크다면
+    gsap.to(toTopEl, .6, { // toTopEl 적용 대상, 0.6초동안 애니메이션 진행
+      opacity: 1,
+      display: 'block'
+    });
+    toTopEl.classList.add('show'); // 클래스추가 : display : block을 하기 위함
+  } else {
+    gsap.to(toTopEl, .6, {
+      opacity: 0,
+      display: 'none'
+    });
+    toTopEl.classList.remove('show');
+  }
+}, 300));
+
+
+// 해당 버튼 클릭 시 맨 상단에 올라감
+toTopEl.addEventListener('click', function () {
+  gsap.to(window, .7, {
+    scrollTo: 0
+  });
+});
+
+
+const sections = document.querySelectorAll('section');
+let navItems = document.querySelectorAll('#parallax__dot ul li');
+console.log(navItems[0])
+console.log(sections[0].id)
+window.addEventListener('scroll', _.throttle(function () {
+  const scrollY = window.scrollY;
+
+  sections.forEach((section, index) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    const sectionBottom = sectionTop + sectionHeight;
+
+    if (scrollY >= sectionTop && scrollY <= sectionBottom) {
+      // 현재 섹션에 대응하는 메뉴 바의 a 태그 활성화
+      navItems.forEach((navItem) => {
+        if (navItem.href === `#${section.id}`) {
+          navItem.classList.add('active');
+        } else {
+          navItem.classList.remove('active');
+        }
+      });
+    }
+  });
+}, 300));
+
+// Create a new OpenLayers Map
+const map = new ol.Map({
+  target: 'map',
+  layers: [
+    new ol.layer.Tile({
+      source: new ol.source.OSM()
+    })
+  ],
+  view: new ol.View({
+    center: ol.proj.fromLonLat([126.97794, 37.5665]), // Seoul, South Korea
+    zoom: 10
+  }),
+  size: [500, 500]
+});
+
+// Add a WMS layer to the map
+const wmsLayer = new ol.layer.Tile({
+  source: new ol.source.TileWMS({
+    url: 'https://www.nie-ecobank.kr/ecoapi/BgtsInfoService/wms/getBirdsPointWMS',
+    params: {
+      'serviceKey': '48UV42UKKFW16R243UQT677L92T4CX5H11EMQ6OK', // 인증키
+      'LAYERS': 'mv_map_bgts_birds_point', // 레이아웃
+      'TRANSPARENT': true, // 배경 안보이게
+      'FORMAT': 'image/png', // 이미지
+      'SRS': 'EPSG:5186',
+      'BBOX': '314548.9311225004,401742.29949240043,320867.0145135768,409072.0397406582',
+      'WIDTH': 663, // 넓이
+      'HEIGHT': 768 // 높이
+    }
+  })
+});
+
+// Add the WMS layer to the map
+map.addLayer(wmsLayer);

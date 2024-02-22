@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+    <!-- SNS Icon -->
+    <script src="https://kit.fontawesome.com/9d06c79ea2.js" crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/free.css">
+    <link rel="stylesheet" href="../css/share.css"> <!-- 공용으로 들어가는 폰트 정리 -->
+    <link rel="stylesheet" href="../css/share_Typeface.css"> <!-- 공용 글꼴 폰트 -->
+
+    <!-- js -->
+    <script defer src="../js/free.js"></script>
+    <title>자유게시판</title>
+</head>
+
+<body>
+    <div id="container">
+
+        <!-- 로고 상단 영역 -->
+    <div class="logo-header">
+        <div class="logo"  onmouseover="showImage()" onmouseout="hideImage()">BIRDY</div>
+        <div class="logo-img">
+            <img src="image/birdyyy01.png" alt="Birdy Image" style="max-width: 80px; max-height: 80px;">
+        </div>
+        <div class="top-menu">
+            <ul class="menu-list">
+              <li><a href="#a">회원가입</a></li>
+              <li><a href="#a">로그인</a></li>
+              <li><a href="#a">마이페이지</a></li>
+              <li><a href="./free.html">게시판</a></li>
+            </ul>
+          </div>
+    </div>
+
+
+
+
+    <!-- 메뉴 영역 -->
+
+    <div class="menu">
+        <h2>카테고리</h2>
+        <nav class="menubar">
+            <div id="menu-container">
+              <ul class="menu_section">
+                <li><a href="#a">새의 종류</a>
+                  <ul>
+                    <li><a href="./residunt_bird.html" class="sub-menu">텃새</a></li>
+                    <li><a href="./protected_bird.html" class="sub-menu">철새</a></li>
+                    <li><a href="./migratory_bird.html" class="sub-menu">천연기념물</a></li>
+                  </ul>
+                </li>
+                <li><a href="#a">새용품</a></li>
+                <li><a href="./FAQ.html">문의사항</a></li>
+                <li><a href="#a">애완조 안내서</a></li>
+                <li><a href="./news.html">과학 <img src="../images/bird_icon.png" alt="+">새</a></li>
+                <li><a href="#a">후원하기</a></li>
+                <li><a href="#a">About Us</a></li>
+              </ul>
+          </nav>
+    </div>
+    <!-- 메뉴 영역 종료 -->
+
+
+    <div class="content">
+        <!-- 게시판 영역 -->
+        <div class="container">
+            <div class="board">
+                <h2>오늘의 지저귐</h2>
+                <div class="search-container">
+                    <input type="text" class="search-box" placeholder="검색어를 입력하세요">
+                    <button class="search-button">검색</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>글쓴이</th>
+                            <th>날짜</th>
+                            <th>조회</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>안녕하세요. 게시판 이용 공지사항입니다.</td>
+                            <td>관리자</td>
+                            <td>날짜1</td>
+                            <td>조회1</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>제목2</td>
+                            <td>글쓴이2</td>
+                            <td>날짜2</td>
+                            <td>조회2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>제목3</td>
+                            <td>글쓴이3</td>
+                            <td>날짜3</td>
+                            <td>조회3</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>제목4</td>
+                            <td>글쓴이4</td>
+                            <td>날짜4</td>
+                            <td>조회4</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>제목5</td>
+                            <td>글쓴이5</td>
+                            <td>날짜5</td>
+                            <td>조회5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- 게시판 영역 종료 -->
+    </div>
+    
+        <!-- footer 시작 -->
+        <footer>
+            <div id="footer-container">
+                <!-- 왼쪽 영역: 프로젝트 팀명 -->
+                <div class="footer-left">
+                    <img src="../images/icon.png" alt="Company Logo">
+                    <p>T e m O N E</p>
+                </div>
+
+                <!-- 중앙 영역: 링크 목록 -->
+                <div class="footer-center">
+                    <ul>
+                        <li><a href="#">홈</a></li>
+                        <li><a href="#">서비스</a></li>
+                        <li><a href="#">새 용품</a></li>
+                        <li><a href="#">고객 지원</a></li>
+                        <li><a href="#">문의하기</a></li>
+                    </ul>
+                </div>
+
+                <!-- 오른쪽 영역: 연락처 및 소셜 미디어 링크 -->
+                <div class="footer-right">
+                    <p>연락처 : 02-1234-5678</p>
+                    <p>이메일 : keduit@temone.com</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 저작권 정보 및 추가 내용 -->
+            <div class="copyright">
+                <p>&copy; <span class="more"></span> Birding</p>
+            </div>
+        </footer>
+        <!-- footer 종료 -->
+     
+</body>
+
+</html>

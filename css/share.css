@@ -1,40 +1,169 @@
 
 
-
-/* 공용 css  */
-/* font 글꼴의 폰트 */
-@font-face { /* Neo둥근모 폰트 */
-  font-family: 'NeoDunggeunmo';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+/* 공용 들어가는 기본 default 설정 */
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'GangwonEdu_OTFBoldA';
+}
+a, p, span{
+  text-decoration: none;
+  
+  font-size: 18px;
+}
+li{
+  list-style: none;
+}
+#container{
+  width: 1200px;
+  margin: 0 auto;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@500&family=Nanum+Pen+Script&display=swap');
-
-@font-face { /* 와글와글체 폰트*/
-  font-family: 'WagleWagle';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2301-wagle@1.0/WagleWagle.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+/* 0% ~ 100% 넓이 변환 */
+@keyframes width{
+  0%{
+    width: 20%;
+  }
+ 
+  100%{
+    width: 100%;
+  }
 }
 
-@font-face {/* 산돌 삼립호빵체 Outline 폰트*/
-  font-family: 'SDSamliphopangche_Outline';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+
+/* 메뉴바 영역 */
+.top-menu {
+  display: flex;
+  justify-content: flex-end; /* 오른쪽 정렬*/
+  position: absolute; /* container 기준*/
+  top: 0; /* 해당 기준으로 위*/
+  right: 0; /* 해당 기준으로 우측*/
 }
 
-@font-face { /*Rix이누아리두리네 폰트*/
-  font-family: 'RixInooAriDuriR';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/RixInooAriDuriR.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
+.top-menu .menu-list {
+  display: flex; /* 플렉스 컨테이너 및 가로 정렬*/
 }
-@font-face {
-  font-family: 'Ownglyph_meetme-Rg';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/Ownglyph_meetme-Rg.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
+
+.top-menu .menu-list li {
+  margin: 0 15px; /* left, right 15px씩 */
+  position: relative; 
+  /*.top-menu의 상대적 위치 지정이 되며, li이가 hover시 아래 애니메이션을 넣기 위해 */
 }
+.top-menu .menu-list li::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute; /* li의 기준으로 절대값*/
+  bottom: -8px; /* hover시 아래 li의 길이 만큼 줄이 생김 */
+  left: 0; /* li의 기준으로 왼쪽으로 붙이기*/
+}
+
+.top-menu .menu-list li:hover::after {
+  background-color: black; /* hover 줄 색상 black*/
+  animation: width 1s ease-in-out; /*width크기 기준*/
+}
+
+.top-menu .menu-list li a {
+  font-size: 20px; /* 메뉴바 글자크기 */
+  color: black; /* 글자 크기 색상*/
+}
+
+.top-menu .menu-list li:hover a {
+  opacity: .5; /* 메뉴 hover 시 투명도 50% */
+  font-weight: 600; /* 글자 굵게*/
+}
+
+
+/* footer 영역  */
+footer {
+  padding: 20px 0;
+  font-size: 18px;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  border-top: 2px solid #ccc;
+  background-color: #333;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+/* footer 시작 */
+footer #footer-container {
+  max-width: 1200px;
+  /* 최대 너비를 1200px로 유지 */
+  margin: 0 auto;
+  /* 가운데 정렬을 위해 추가 */
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-around;
+  margin-top: 75px;
+}
+
+
+footer #footer-container .footer-left img {
+  width: 60px;
+  /* 로고 크기 조절 */
+}
+
+footer #footer-container .footer-center ul {
+  list-style: none;
+  display: flex;
+}
+
+footer #footer-container .footer-left,
+footer #footer-container .footer-center,
+footer #footer-container .footer-right{
+  position: absolute;
+}
+
+footer #footer-container .footer-left{
+  left: 0;
+}
+footer #footer-container .footer-left p{
+  margin-top: 10px;
+}
+
+footer #footer-container .footer-center{
+  left: 38%;
+  top: -25px;
+}
+
+footer #footer-container .footer-right{
+  right: 0;
+}
+
+footer #footer-container .footer-center ul li {
+  margin-right: 20px;
+}
+
+footer #footer-container .footer-center ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer #footer-container .footer-right > p,
+footer #footer-container .footer-right .social-links a {
+  margin: 5px 5px 0 5px;
+  color: #fff;
+}
+
+footer #footer-container .footer-right>.social-links {
+  margin-top: 5px;
+}
+
+.social-links a {
+  margin-right: 10px;
+}
+
+/* Copyright Information */
+.copyright {
+  margin-top: 20px;
+  text-align: center;
+  color: #888;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* footer 영역 종료 */
