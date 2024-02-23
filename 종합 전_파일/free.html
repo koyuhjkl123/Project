@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자유게시판</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column; /* 주축을 수직으로 설정하여 상단부터 아래로 쌓이도록 설정 */
+        }
+        .menu {
+            width: 8%; /* 메뉴 영역의 폭을 조정 */
+            background-color: #f0f0f0;
+            padding: 20px;
+            position: fixed; /* 메뉴를 화면에 고정 */
+            top: 20%; /* 화면 상단으로부터 20% 위치에 고정 */
+            bottom: 0; /* 아래쪽으로 화면을 늘리기 */
+            overflow-y: auto; /* 내용이 넘치면 스크롤 생성 */
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            margin-top: 50px; 
+            margin-left: 10%; /* 메뉴 영역과 겹치지 않도록 왼쪽 여백 추가 */
+        }
+        .logo-header {
+            width: 100%;
+            height: 20%; /* 로고 상단 영역의 높이를 20%로 설정 */
+            display: flex;
+            justify-content: center; /* 가로 중앙 정렬 */
+            align-items: center; /* 세로 중앙 정렬 */
+        }
+        .logo {
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .logo-img {
+            display: none;
+            max-width: 100px; /* 이미지의 최대 너비를 100px로 설정 */
+            max-height: 100px; /* 이미지의 최대 높이를 100px로 설정 */ 
+        }
+        .board {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        .board h2 {
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        footer {
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            border-top: 2px solid #ccc;
+        }
+        .search-container {
+            margin-top: 20px;
+        }
+        .search-box {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+            margin-left:500px;
+        }
+        .search-button {
+            padding: 5px 10px;
+            text-align: right;
+            background-color: #595959;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 20px; /* 왼쪽 여백을 50px로 조정 */
+        }
+        .search-button:hover {
+            background-color: gray;
+        }
+
+        /* 추가한 CSS 부분 */
+        .sub-menu {
+            display: none; /* 처음에는 하위 카테고리를 숨김 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 로고 상단 영역 -->
+    <div class="logo-header" onmouseover="showImage()" onmouseout="hideImage()">
+        <div class="logo">BIRDY</div>
+        <div class="logo-img">
+            <img src="image/birdyyy01.png" alt="Birdy Image" style="max-width: 80px; max-height: 80px;">
+        </div>
+    </div>
+    
+    <!-- 메뉴 영역 -->
+    
+    <div class="menu">
+        <h2>메뉴영역</h2>
+        <ul>
+            <li class="category">새종류
+                <ul class="sub-menu">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </li>
+            <!-- 다른 메뉴 항목들 추가 -->
+        </ul>
+    </div>
+
+    
+    <div class="content">
+        <!-- 게시판 영역 -->
+        <div class="container">
+            <div class="board">
+                <h2>오늘의 지저귐</h2>
+                <div class="search-container">
+                    <input type="text" class="search-box" placeholder="검색어를 입력하세요">
+                    <button class="search-button">검색</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>글쓴이</th>
+                            <th>날짜</th>
+                            <th>조회</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>안녕하세요. 게시판 이용 공지사항입니다.</td>
+                            <td>관리자</td>
+                            <td>날짜1</td>
+                            <td>조회1</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>제목2</td>
+                            <td>글쓴이2</td>
+                            <td>날짜2</td>
+                            <td>조회2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>제목3</td>
+                            <td>글쓴이3</td>
+                            <td>날짜3</td>
+                            <td>조회3</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>제목4</td>
+                            <td>글쓴이4</td>
+                            <td>날짜4</td>
+                            <td>조회4</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>제목5</td>
+                            <td>글쓴이5</td>
+                            <td>날짜5</td>
+                            <td>조회5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <footer>FOOTER</footer>
+        <script>
+            // 이미지 보이기
+            function showImage() {
+                var logo = document.querySelector('.logo');
+                var logoImg = document.querySelector('.logo-img');
+                logo.style.display = 'none';
+                logoImg.style.display = 'block';
+            }
+
+            // 이미지 숨기기
+            function hideImage() {
+                var logo = document.querySelector('.logo');
+                var logoImg = document.querySelector('.logo-img');
+                logo.style.display = 'block';
+                logoImg.style.display = 'none';
+            }
+
+            // 문서가 로드될 때 실행되는 함수
+            document.addEventListener('DOMContentLoaded', function() {
+                var category = document.querySelector('.category');
+                var subMenu = category.querySelector('.sub-menu');
+
+                // 새종류 항목을 클릭하면 하위 카테고리를 펼치거나 숨기는 함수
+                category.addEventListener('click', function() {
+                    if (subMenu.style.display === 'none' || subMenu.style.display === '') {
+                        subMenu.style.display = 'block';
+                    } else {
+                        subMenu.style.display = 'none';
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

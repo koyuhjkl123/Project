@@ -1,0 +1,84 @@
+p,
+h2 {
+    font-family: 'Poiret One', 'Roboto Slab', serif;
+}
+
+section.module h2 {
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+section.module p {
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+section.module.content {
+    padding: 40px 0;
+}
+
+section.module.parallax {
+    height: 600px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+section.module.parallax h1 {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 48px;
+    line-height: 600px;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Parallax Backgrounds */
+section.module.parallax-1 {
+    background-image: url('https://i.pinimg.com/564x/a6/90/6f/a6906fe4e8d78c1b6b53a273a8011398.jpg');
+}
+section.module.parallax-2 {
+    background-image: url('https://desiresolve.com/wp-content/uploads/2023/11/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7-2023-11-26-17.24.04-1-2048x1189.png');
+}
+section.module.parallax-3 {
+    background-image: url('https://image.yes24.com/images/chyes24/froala/0/54920/90064.jpg');
+}
+
+@media all and (min-width: 600px) {
+    section.module h2 {
+        font-size: 42px;
+    }
+    section.module p {
+        font-size: 20px;
+    }
+    section.module.parallax h1 {
+        font-size: 96px;
+    }
+}
+
+@media all and (min-width: 960px) {
+    section.module.parallax h1 {
+        font-size: 160px;
+    }
+}
+
+.slide {
+    opacity: 0;
+    transition: all 500ms linear;
+    transform: translate3d(-100px, 0px, 0px);
+}
+
+.hasSlid {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.padding-enlarge {
+    transition: padding-top 0.15s ease-in-out, padding-bottom 0.15s ease-in-out;
+}
+
+.padding-enlarge:hover {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}

@@ -122,10 +122,9 @@ toTopEl.addEventListener('click', function () {
 });
 
 
-const sections = document.querySelectorAll('section');
+const sections = document.querySelectorAll('.content__item');
 let navItems = document.querySelectorAll('#parallax__dot ul li');
-console.log(navItems[0])
-console.log(sections[0].id)
+
 window.addEventListener('scroll', _.throttle(function () {
   const scrollY = window.scrollY;
 
@@ -136,48 +135,138 @@ window.addEventListener('scroll', _.throttle(function () {
 
     if (scrollY >= sectionTop && scrollY <= sectionBottom) {
       // 현재 섹션에 대응하는 메뉴 바의 a 태그 활성화
-      navItems.forEach((navItem) => {
-        if (navItem.href === `#${section.id}`) {
-          navItem.classList.add('active');
-        } else {
-          navItem.classList.remove('active');
-        }
+      console.log(navItems[index])
+      console.log(sections[index].id)
+
+      const currentNavItem = navItems[index].querySelector('a');
+      const sectionIdWithoutHash = currentNavItem.href.split('#')[1]; // #을 제외한 부분 추출
+
+
+      navItems.forEach((item) => {
+        item.classList.remove('active');
       });
+
+      if (sectionIdWithoutHash === sections[index].id) {
+        navItems[index].classList.add('active');
+      }
     }
   });
 }, 300));
 
-// Create a new OpenLayers Map
-const map = new ol.Map({
-  target: 'map',
-  layers: [
-    new ol.layer.Tile({
-      source: new ol.source.OSM()
-    })
-  ],
-  view: new ol.View({
-    center: ol.proj.fromLonLat([126.97794, 37.5665]), // Seoul, South Korea
-    zoom: 10
-  }),
-  size: [500, 500]
+//new Swiper(선택자, 옵션)
+new Swiper('.notice-line .swiper-container', {
+  direction: 'vertical',
+  autoplay: true,
+  loop: true
+})
+
+new Swiper('.promotion .swiper-container', {
+  slidesPerView: 3, // 한번에 보여줄 슬라이드 개수
+  spaceBetween: 10, // 슬라이드 사이 여백
+  centeredSlides: true, // 1번 슬라이드가 가운데 보이기
+  loop: true, // 반복재생 여부
+  autoplay: {
+      delay: 5000 // 0.5초
+  },
+  pagination: {
+      el: '.promotion .swiper-pagination', // 페이지 번호 요소 선택자
+      clickable: true // 사용자의 페이지 번호 요소 제어 가능 여부
+  },
+  navigation: {
+      prevEl: '.promotion .swiper-prev',
+      nextEl: '.promotion .swiper-next'
+  },
 });
 
-// Add a WMS layer to the map
-const wmsLayer = new ol.layer.Tile({
-  source: new ol.source.TileWMS({
-    url: 'https://www.nie-ecobank.kr/ecoapi/BgtsInfoService/wms/getBirdsPointWMS',
-    params: {
-      'serviceKey': '48UV42UKKFW16R243UQT677L92T4CX5H11EMQ6OK', // 인증키
-      'LAYERS': 'mv_map_bgts_birds_point', // 레이아웃
-      'TRANSPARENT': true, // 배경 안보이게
-      'FORMAT': 'image/png', // 이미지
-      'SRS': 'EPSG:5186',
-      'BBOX': '314548.9311225004,401742.29949240043,320867.0145135768,409072.0397406582',
-      'WIDTH': 663, // 넓이
-      'HEIGHT': 768 // 높이
-    }
+new Swiper('.awards .swiper-container',{
+  autoplay: true,
+  // loop: true,
+  spaceBetween: 30,
+  slidesPerView: 5,
+  navigation: {
+      prevEl: '.awards .swiper-prev',
+      nextEl: '.awards .swiper-next'
+  }
+});
+
+
+const promotionEl = document.querySelector('.promotion');
+const promotionToggleBtn = document.querySelector('.toggle-promotion');
+let isHidePromotion = false;
+
+
+promotionToggleBtn.addEventListener('click', function () {
+  isHidePromotion = !isHidePromotion
+  if(isHidePromotion) {
+      // 숨김 처리
+      promotionEl.classList.add('hide');
+  }else {
+      // 보이기 처리
+      promotionEl.classList.remove('hide');
+  }
+});
+
+// let mHtml = $(".body_scroll_section");
+// let page = 1;
+
+
+// mHtml.animate({scrollTop : 0},10);
+// $(window).on("wheel", function(e) {
+//   if(mHtml.is(":animated")) return;
+//   if(e.originalEvent.deltaY > 0) {
+//       if(page == 4) return;
+//       page++;
+//   } else if(e.originalEvent.deltaY < 0) {
+//       if(page == 1) return;
+//       page--;
+//   }
+//   let posTop =(page-1) * $(window).height();
+//   mHtml.animate({scrollTop : posTop});
+// });
+
+// ScrollMagic controller 초기화
+var controller = new ScrollMagic.Controller();
+
+// 각 이미지에 대한 Scene 생성
+$('.body_scroll').each(function (index, element) {
+  var scene = new ScrollMagic.Scene({
+    triggerElement: element,
+    triggerHook: 0.8, // 0에서 1 사이의 값, 이미지가 나타나는 위치 조절
+    reverse: false, // 한 번 재생된 애니메이션은 되감기되지 않도록 설정
   })
+    .setClassToggle(element, 'visible') // 클래스 토글
+    .addTo(controller);
 });
 
-// Add the WMS layer to the map
-map.addLayer(wmsLayer);
+const cursor = document.querySelector(".cursor");
+let timeout;
+
+document.addEventListener("mousemove", (e) => {
+  let x = e.pageX;
+  let y = e.pageY;
+
+  cursor.style.top = y + "px";
+  cursor.style.left = x + "px";
+  cursor.style.display = "block";
+
+  function mouseStopped() {
+    cursor.style.display = "none";
+  }
+
+  clearTimeout(timeout);
+  timeout = setTimeout(mouseStopped, 1000);
+});
+
+document.addEventListener("mouseout", () => {
+  cursor.style.display = "none";
+});
+
+// 스크롤 이벤트 발생 후 1초 후에 mouseStopped 함수 호출
+document.addEventListener("scroll", () => {
+  cursor.style.display = "block";
+
+  clearTimeout(timeout);
+  timeout = setTimeout(() => {
+    cursor.style.display = "none";
+  }, 1000);
+});

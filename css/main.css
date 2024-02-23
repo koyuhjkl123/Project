@@ -8,6 +8,7 @@
 /* 전체 배경 색상 */
 body {
   background-color: #FAFAFA;
+  /* background: linear-gradient(to top, rgb(136, 136, 136), 10%, #fafafa); */
 }
 
 /* a 스타일 제거 */
@@ -21,7 +22,6 @@ li {
 }
 
 /* ----- 공통 부문 종료 ----- */
-
 
 /* ----- 헤더 시작 ----- */
 
@@ -174,7 +174,8 @@ li {
 
 #container header .icon-container .menubar #menu-container {
   margin-top: 20px;
-  width: 500px;
+  width: 150px;
+  position: fixed;
 }
 
 #container header .icon-container .menubar #menu-container ul {
@@ -232,7 +233,7 @@ li {
   position: fixed;
   right: 0;
   z-index: 2000;
-  background-color: rgba(0, 0, 0, 0.4);
+  /* background-color: rgba(0, 0, 0, 0.4); */
   border-radius: 50px;
   transition: top .4s ease;
 }
@@ -244,6 +245,7 @@ li {
 #container #parallax__dot ul li {
   margin: 0 5px;
   text-align: center;
+  transition: all 1s ease-in;
 }
 
 #container #parallax__dot ul li a span {
@@ -260,12 +262,13 @@ li {
   margin: 0 10px;
 }
 
-#container #parallax__dot li.active a {
-  background: #fff;
+#container #parallax__dot li.active{
+  background: rgba(0, 0, 0, 0.4);
   color: #000;
-  border-radius: 50%;
+  border-radius: 30%;
   font-weight: bold;
   box-sizing: content-box;
+  transition: all 1s ease-in-out;
 }
 
 /* 본문 메뉴바 영역 종료 */
@@ -273,12 +276,178 @@ li {
 
 /* 메인 section 영역 */
 /* Set the size of the map */
-#map {
-  width: 80%;
-  /* 지도 넓이 */
-  margin-left: 10vw;
-  height: 500px;
-  /* 지도 높이 */
+/* notice */
+.notice{
+  margin-top: 150px;
+}
+.notice .notice-line {
+  position: relative;
+}
+.notice .notice-line .bg-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #333;
+}
+.notice .notice-line .bg-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #f6f5ef;
+}
+.notice .notice-line .inner {
+  height: 62px;
+  z-index: 1;
+  display: flex;
+}
+.notice .notice-line .inner__left {
+  width: 60%;
+  height: 100%;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+}
+.notice .notice-line .inner__left h2 {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  margin-right: 20px;
+}
+.notice .notice-line .inner__left .swiper-container {
+  height: 62px;
+  flex-grow: 1;
+}
+.notice .notice-line .inner__left .swiper-slide {
+  height: 62px;
+  display: flex;
+  align-items: center;
+}
+.notice .notice-line .inner__left .swiper-slide a {
+  color: #fff;
+}
+.notice .notice-line .inner__left .notice-line__more {
+  width: 62px;
+  height: 62px;
+  display: flex;
+  justify-content: center; /* 가로 정렬*/
+  align-items: center; /* 세로 정렬*/
+}
+.notice .notice-line .inner__left .notice-line__more .material-icons {
+  color: #fff;
+  font-size: 30px;
+  /* 아이콘 기본 크기 24px */
+}
+.notice .notice-line .inner__right {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end; /*수평 우측*/
+  align-items: center; /*수직 정렬 중앙*/
+}
+.notice .notice-line .inner__right h2 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #333;
+
+}
+.notice .notice-line .inner__right .toggle-promotion {
+  width: 62px;
+  height: 62px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notice .notice-line .inner__right .toggle-promotion .material-icons {
+  font-size: 30px;
+}
+
+.notice .promotion {
+  height: 693px;
+  background-color: #f6f5ef;
+  position: relative;
+  transition: height .4s;
+  overflow: hidden;
+}
+.notice .promotion.hide {
+  height: 0;
+}
+.notice .promotion .swiper-container {
+  /* width: 2477px;  총합 넓이*/
+  width: calc(819px * 3 + 20px); /* 넓이 계산*/
+  height: 553px;
+  position: absolute;
+  top: 40px;
+  left: 50%; /* 2477px의 50% 절반 완쪽으로 이동*/
+  margin-left: calc((819px * 3 + 20px) / -2); /*이동된 만큼의 50%인 px를 마진값을 준다*/
+}
+.notice .promotion .swiper-slide {
+  opacity: .5;
+  transition: opacity 1s;
+  position: relative;
+}
+.notice .promotion .swiper-slide-active {
+  opacity: 1;
+}
+.notice .promotion .swiper-slide .btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.notice .promotion .swiper-pagination {
+  bottom: 40px;
+  left: 0;
+  right: 0;
+}
+.notice .promotion .swiper-pagination .swiper-pagination-bullet {
+  background-color: transparent;
+  background-image: url("../images/promotion_slide_pager.png");
+  width: 13px;
+  height: 12px;
+  margin-right: 6px;
+  outline: none;
+}
+.notice .promotion .swiper-pagination .swiper-pagination-bullet:last-child {
+  margin-right: 0;
+}
+.notice .promotion .swiper-pagination .swiper-pagination-bullet-active {
+  background-image: url("../images/promotion_slide_pager_on.png");
+
+}
+.notice .promotion .swiper-prev,
+.notice .promotion .swiper-next {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  position: absolute;
+  top: 300px;
+  z-index: 1;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .4s;
+}
+.notice .promotion .swiper-prev {
+  left: 50%;
+  margin-left: -480px;
+}
+.notice .promotion .swiper-next {
+  right: 50%;
+  margin-right: -480px;
+}
+.notice .promotion .swiper-prev:hover,
+.notice .promotion .swiper-next:hover {
+  background-color: #333;
+  color: #fff;
 }
 
 #container #parallax__cont {
@@ -579,3 +748,71 @@ footer #footer-container .footer-right>.social-links {
   font-size: 18px;
   font-weight: bold;
 }
+
+
+/* 모바일 영역 */
+
+ /* 모바일 화면 스타일 조정 */
+ @media only screen and (max-width: 767px) {
+  #container {
+    flex-direction: column; /* 세로 방향으로 배치 */
+    align-items: center; /* 중앙 정렬 */
+  }
+
+  #parallax__cont {
+    width: 100%; /* 모바일에서 메인 컨텐츠 전체 너비를 사용 */
+  }
+
+  /* 나머지 모바일 화면에 따른 스타일 조정 추가 */
+  /* 필요한 경우 미디어 쿼리를 통해 다양한 화면 크기에 대응할 수 있습니다. */
+}
+
+
+/* .body_scroll_section{
+  display: block;
+  width: 100%;
+  height: 500px;
+  margin: 0;
+  overflow: hidden;
+  margin-top: 100px;
+}
+.body_scroll {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.body-scroll{
+  width: 80%;
+  height: 80%;
+}
+
+.body_scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.body_scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+#body_scroll1 {
+  background-color: aliceblue;
+  background-image: url(../images/bg0.jpg);
+}
+
+#body_scroll2 {
+  background-color: lightpink;
+  background-image: url(../images/bg0.jpg);
+}
+
+#body_scroll3 {
+  background-color: coral;
+  background-image: url(../images/bg0.jpg);
+}
+
+#body_scroll4 {
+  background-color: aqua;
+  background-image: url(../images/bg0.jpg);
+} */
