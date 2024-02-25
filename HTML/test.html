@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenLayers Example</title>
+	<script src="https://cdn.jsdelivr.net/npm/ol@v8.2.0/dist/ol.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v8.2.0/ol.css">
+
+  <style>
+    /* Set the size of the map */
+    #map {
+      margin: 0 auto;
+      width: 20%; /* 지도 넓이 */
+      height: 500px; /* 지도 높이 */
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <script>
+    // Create a new OpenLayers Map
+    const map = new ol.Map({
+  target: 'map',
+  layers: [
+    new ol.layer.Tile({
+      source: new ol.source.OSM()
+    })
+  ],
+  view: new ol.View({
+    center: ol.proj.fromLonLat([126.97794, 37.5665]), // Seoul, South Korea
+    zoom: 10
+  }),
+  size: [500, 500]
+});
+
+ 
+    // Add the WMS layer to the map
+    map.addLayer(wmsLayer);
+  </script>
+</body>
+</html>

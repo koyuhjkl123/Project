@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+/* 상단 영역 스타일 */
+.header {
+  background-color: #EAEAEA;
+  color: black;
+  padding: 10px;
+  text-align: center; /* 가운데 정렬 */
+  position: relative; /* 부모 요소로부터의 상대적 위치 */
+}
+
+.header img {
+  width: 40%;
+  position: absolute; /* 절대적으로 위치를 설정하기 위해 */
+  top:  50px; /* 헤더 로고 위로 50px 이동 */
+  left: 50%; /* 가운데 정렬 */
+  transform: translateX(-50%); /* 수평 가운데 정렬 */
+  max-width: 150%; /* 이미지 최대 너비를 설정하여 부모 요소에 맞게 조정 */
+  height: auto; /* 이미지 비율을 유지하면서 높이 자동 조정 */
+  max-height: calc(100vh - 120px - 20px); /* 이미지의 최대 높이를 설정하여 상단 영역과 중복되지 않도록 함 */
+}
+/* 왼쪽 영역 스타일 */
+.left {
+  background-color:#8C8C8C; 
+  color: #ffffff;
+  padding: 20px;
+  width: 10%;
+  float: left; /* 왼쪽 정렬 */
+  box-sizing: border-box; /* padding 값 포함 */
+  font-size: small;
+  height: calc(100vh - 120px); /* 높이를 상단 영역과 하단 영역의 높이만큼 조정 */
+}
+.left .menubar #menu-container ul img{
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+}
+
+.left .menubar #menu-container ul{
+  padding: 0;
+}
+
+.left .menubar #menu-container ul li{
+  margin-top: 20px;
+}
+
+.left .menubar #menu-container ul li a{
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+}
+
+.left .menubar #menu-container ul li > ul{
+  font-size: 0.5rem;
+}
+
+.left .menubar #menu-container ul li > ul li > a{
+  font-size: 16px;
+  font-weight: none;
+}
+
+.left .menubar #menu-container ul li:hover > a {
+  opacity: .5; /* 메뉴 hover 시 투명도 50% */
+  transition: all .5s;
+}
+
+
+
+
+
+
+/* 가운데 영역 스타일 */
+.center {
+  background-color: gray; 
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box; /* padding 값 포함 */
+  overflow: auto; /* 자식 요소의 내용이 넘치면 스크롤 생성 */
+  height: calc(100vh - 120px); /* 높이를 상단 영역과 하단 영역의 높이만큼 조정 */
+}
+/* 하단 영역 스타일 */
+.footer {
+  background-color: white; 
+  color: black;
+  padding: 20px;
+  clear: both; /* float 해제 */
+  text-align: center;
+  bottom: 0; /* 하단에 위치 */
+  width: 100%; /* 전체 너비 */
+  z-index: 1; /* 다른 요소 위로 표시 */
+  position: static;
+}
+/* 이미지 박스 스타일 */
+.image-container {
+display: flex; /* 요소들을 가로로 배열 */
+align-items: center; /* 수직 중앙 정렬 */
+margin-bottom: 20px; /* 각 이미지와 설명 사이에 간격 설정 */
+}
+
+.image-box {
+width: 30%; /* 이미지 박스 너비 설정 */
+}
+
+.description-box {
+width: 70%; /* 설명 박스 너비 설정 */
+padding-left: 10px; /* 이미지와 설명 사이 간격 조절 */
+}

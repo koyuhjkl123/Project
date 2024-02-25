@@ -1,0 +1,120 @@
+/* 상단 영역 스타일 */
+.header {
+  background-color: white;
+  color: black;
+  padding: 30px;
+  text-align: center;
+}
+
+/* 왼쪽 영역 스타일 */
+.left {
+  background-color: #EAEAEA;
+  color: black;
+  padding: 20px;
+  width: 10%;
+  float: left;
+  /* 왼쪽 정렬 */
+  box-sizing: border-box;
+  /* padding 값 포함 */
+  height: calc(100vh - 120px);
+  /* 높이를 상단 영역과 하단 영역의 높이만큼 조정 */
+}
+
+.left .menubar #menu-container ul img{
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+}
+
+.left .menubar #menu-container ul{
+  padding: 0;
+}
+
+.left .menubar #menu-container ul li{
+  margin-top: 20px;
+}
+
+.left .menubar #menu-container ul li a{
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+}
+
+.left .menubar #menu-container ul li > ul{
+  font-size: 0.5rem;
+}
+
+.left .menubar #menu-container ul li > ul li > a{
+  font-size: 16px;
+  font-weight: none;
+}
+
+.left .menubar #menu-container ul li:hover > a {
+  opacity: .5; /* 메뉴 hover 시 투명도 50% */
+  transition: all .5s;
+}
+
+
+/* 가운데 영역 스타일 */
+.center {
+  background-color: #D5D5D5;
+  color: #595959;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  /* padding 값 포함 */
+  overflow: auto;
+  /* 자식 요소의 내용이 넘치면 스크롤 생성 */
+  height: calc(100vh - 120px);
+  /* 높이를 상단 영역과 하단 영역의 높이만큼 조정 */
+}
+
+.center h2 {
+  font-size: 40px;
+  /* 원하는 크기로 설정 */
+}
+
+.box-container {
+  background-color: #EAEAEA;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.box {
+  background-color: white;
+  color: #000000;
+  padding: 10px;
+  width: calc(25% - 20px);
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  /* padding 값 포함 */
+  text-align: center;
+  /* 텍스트 가운데 정렬 */
+  border: 1px solid #ccc;
+  /* 테두리 추가 */
+  cursor: pointer;
+  /* 커서를 포인터로 변경하여 클릭 가능하게 함 */
+}
+
+.box:hover {
+  background-color: #999999;
+  /* 마우스 오버 시 회색으로 변경 */
+}
+
+.box-container2 {
+  text-align: left;
+  padding: 20px;
+  /* 안쪽 여백 설정 */
+  margin-top: 20px;
+  /* 위쪽 여백 설정 */
+  display: none;
+  /* 기본적으로는 숨김 */
+}
+
+
+/* 상단 메뉴바 영역 */
+.top-menu {
+  margin: 20px 30px 0 0;
+}

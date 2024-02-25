@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birding</title>
+  <script defer src="../js/main.js"></script>
+  <link rel="icon" href="../images/icon.png" style="border-radius: 50%;">
+
+
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/share.css">
+  <link rel="stylesheet" href="../css/share_Typeface.css">
+
+
+
+  <!-- Jquery 라이브러리 -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  <!-- 아이콘 라이브러리 -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <script src="https://kit.fontawesome.com/9d06c79ea2.js" crossorigin="anonymous"></script>
+
+
+  <!-- Gsap & ScrollToPlugin -->
+  <!-- Gsap은 웹 애니메이션을 도와주는 라이브러리 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- 유틸리티 라이브러리 배열 조작, 데이터 변환, 함수 조합 등을 지원-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+    integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Gsap와 같이 사용하여 스크롤 애니메이션에서 특정 위치에 자연스럽게 할 수 있도록 도와주는 라이브러리 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"
+    integrity="sha512-v/m68W+vaGN/6igoyFpd4GlQzu0jx9/n5gr2PKq5vif+RObyGKHse384YHrOULaxZ810XhlHUrmB3U8UnPB19Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- 스크롤 애니메이션을 만들기 위한 라이브러리 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+    integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+    integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script defer src="http://code.jquery.com/jquery-latest.js"></script>
+  <link rel="apple-touch-icon"
+    href="https://static.wixstatic.com/media/9f3881_127435022ad34cc78334dda50577d5d1%7Emv2.png/v1/fill/w_180%2Ch_180%2Clg_1%2Cusm_0.66_1.00_0.01/9f3881_127435022ad34cc78334dda50577d5d1%7Emv2.png"
+    type="image/png">
+
+  <!-- SWIPER -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+    integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+  <!-- map 라이브러리 -->
+  <script src="https://cdn.jsdelivr.net/npm/ol@v8.2.0/dist/ol.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v8.2.0/ol.css">
+
+</head>
+
+<body>
+
+  <div class="cursor"></div>
+
+  <!-- header 헤더 시작 -->
+  <div id="container">
+    <header>
+      <!-- 로고 -->
+      <div class="logo">
+        <img src="../images/icon.png" alt="">
+      </div>
+
+      <!-- 우측 상단 메뉴-->
+      <div class="top-menu">
+        <ul class="menu-list">
+          <li><a href="#a">회원가입</a></li>
+          <li><a href="#a">로그인</a></li>
+          <li><a href="#a">마이페이지</a></li>
+          <li><a href="./free.html">게시판</a></li>
+        </ul>
+      </div>
+
+      <!-- 좌측 본문 메뉴바 -->
+      <div class="icon-container">
+        <div class="icon"></div>
+        <nav class="menubar">
+          <div id="menu-container">
+            <ul class="menu_section">
+              <img src="../images/bird_icon_x.png" alt="" class="close">
+              <li><a href="#a">새의 종류</a>
+                <ul>
+                  <li><a href="./residunt_bird.html">텃새</a></li>
+                  <li><a href="./protected_bird.html">철새</a></li>
+                  <li><a href="./migratory_bird.html">천연기념물</a></li>
+                </ul>
+              </li>
+              <li><a href="#a">새용품</a></li>
+              <li><a href="./FAQ.html">문의사항</a></li>
+              <li><a href="#a">애완조 안내서</a></li>
+              <li><a href="./news.html">과학 <img src="../images/bird_icon.png" alt="+">새</a></li>
+              <li><a href="#a">후원하기</a></li>
+              <li><a href="#a">About Us</a></li>
+            </ul>
+        </nav>
+        <!-- nav 좌측 메뉴바 종료 -->
+      </div>
+    </header>
+
+    <!-- 본문 우측 nav 시작-->
+    <nav id="parallax__dot">
+      <ul>
+        <li class="section1"><a href="#section1"><span>새의 종류</span></a></li>
+        <li class="section2"><a href="#section2"><span>새용품</span></a></li>
+        <li class="section3"><a href="#section3"><span>문의사항</span></a></li>
+        <li class="section4"><a href="#section4"><span>애완조 안내서</span></a></li>
+        <li class="section5"><a href="#section5"><span>과학<img src="../images/bird_icon.png" alt="+">새</span></a></li>
+        <li class="section6"><a href="#section6"><span>후원하기</span></a></li>
+        <li class="section7"><a href="#section7"><span>About Us</span></a></li>
+      </ul>
+    </nav>
+    <!-- nav 종료 -->
+    <!-- 본문 영역 -->
+
+    <section class="notice">
+      <div class="notice-line">
+        <div class="bg-left"></div>
+        <div class="bg-right"></div>
+        <div class="inner">
+          <div class="inner__left">
+            <h2>공지사항</h2>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#a">이벤트?</a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#a">게시판?</a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#a">하늘을 높이 날아댕긴다</a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#a">높은 곳을 도약하자</a>
+                </div>
+              </div>
+            </div>
+            <a href="#a" class="notice-line__more">
+              <div class="material-icons">add_circle</div>
+            </a>
+          </div>
+          <div class="inner__right">
+            <h2 class="image-close">이미지 닫기</h2>
+            <h2 class="image-block hide">이미지 열기</h2>
+            <div class="toggle-promotion">
+              <div class="material-icons">upload</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="promotion">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="../images/bg0.jpg" alt="새의 이미지 사진" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/bg0.jpg" alt="새의 이미지 사진" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/bg0.jpg" alt="새의 이미지 사진" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/bg0.jpg" alt="새의 이미지 사진" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/bg0.jpg" alt="새의 이미지 사진" />
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="swiper-prev">
+          <div class="material-icons">arrow_back</div>
+        </div>
+        <div class="swiper-next">
+          <div class="material-icons">arrow_forward</div>
+        </div>
+      </div>
+    </section>
+
+    <main id="parallax__cont">
+
+
+
+      <div id="contents">
+        <section id="section1" class="content__item">
+          <span class="content__item__num">01</span>
+          <h2 class="content__item__title">새의 종류</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">새는 다양한 종류가 있으며, 각각의 특징과 흠뻑 빠지는 매력!</p>
+        </section>
+        <!-- //section1 -->
+
+        <!-- section2 -->
+        <section id="section2" class="content__item">
+          <span class="content__item__num">02</span>
+          <h2 class="content__item__title">새용품</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">다양한 새 용품</p>
+        </section>
+        <!-- //section2 -->
+
+        <!-- section3 -->
+        <section id="section3" class="content__item">
+          <span class="content__item__num">03</span>
+          <h2 class="content__item__title">문의사항</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">문제는 목적지에 얼마나 빨리 가느내가 아니라 그 목적지가 어디냐는 것이다.</p>
+        </section>
+        <!-- //section3 -->
+
+        <!-- section4 -->
+        <section id="section4" class="content__item">
+          <span class="content__item__num">04</span>
+          <h2 class="content__item__title">애완조 안내서</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">도저히 손댈 수가 없는 곤란에 부딪혔다면 과감하게 그 속으로 뛰어들라.</p>
+        </section>
+        <!-- //section4 -->
+
+        <!-- section5 -->
+        <section id="section5" class="content__item">
+          <span class="content__item__num">05</span>
+          <h2 class="content__item__title">과학 + 새</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">당신이 할수 있다고 믿든 할수 없다고 믿든 믿는 대로 될것이다.</p>
+        </section>
+        <!-- //section5 -->
+
+        <!-- section6 -->
+        <section id="section6" class="content__item">
+          <span class="content__item__num">06</span>
+          <h2 class="content__item__title">후원하기</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">마음만을 가지고 있어서는 안된다. 반드시 실천하여야 한다.</p>
+        </section>
+        <!-- //section6 -->
+
+        <!-- section7 -->
+        <section id="section7" class="content__item">
+          <span class="content__item__num">07</span>
+          <h2 class="content__item__title">About Us</h2>
+          <figure class="content__item__imgWrap">
+            <div class="content__item__img"></div>
+          </figure>
+          <p class="content__item__desc">다양한 새의 품종을 볼 수 있습니다</p>
+        </section>
+        <!-- //section7 -->
+
+      </div>
+    </main>
+  </div>
+  <!-- main 종료 -->
+  <!-- footer 시작 -->
+  <footer>
+    <div id="footer-container">
+      <!-- 왼쪽 영역: 프로젝트 팀명 -->
+      <div class="footer-left">
+        <img src="../images/icon.png" alt="Company Logo">
+        <p>T e m O N E</p>
+      </div>
+
+      <!-- 중앙 영역: 링크 목록 -->
+      <div class="footer-center">
+        <ul>
+          <li><a href="#">홈</a></li>
+          <li><a href="#">구독하기</a></li>
+          <li><a href="#">새 용품</a></li>
+          <li><a href="#">후원하기</a></li>
+          <li><a href="#">문의하기</a></li>
+        </ul>
+      </div>
+
+      <!-- 오른쪽 영역: 연락처 및 소셜 미디어 링크 -->
+      <div class="footer-right">
+        <p>연락처 : 02-1234-5678</p>
+        <p>이메일 : keduit@temone.com</p>
+        <div class="social-links">
+          <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+          <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+          <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 저작권 정보 및 추가 내용 -->
+    <div class="copyright">
+      <p>&copy; <span class="more"></span> Birding</p>
+    </div>
+  </footer>
+  <!-- footer 종료 -->
+
+
+  <!-- 맨 하단 스크롤 올려주는 역할 -->
+  <div id="to-top">
+    <div class="material-icons">arrow_upward</div>
+  </div>
+  <div id="to-bottom">
+    <div class="material-icons">arrow_upward</div>
+  </div>
+
+
+
+</body>
+
+</html>
