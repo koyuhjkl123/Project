@@ -71,26 +71,26 @@ document.querySelectorAll('a[href="#"]').forEach(link => {
 });
 
 document.addEventListener('scroll', function () {
-    var parallaxSpeed = 0.5;
+    let parallaxSpeed = 0.5;
     document.querySelectorAll('.parallax-section').forEach(function (section) {
-        var offset = window.pageYOffset - section.offsetTop;
+        let offset = window.pageYOffset - section.offsetTop;
         section.style.backgroundPositionY = offset * parallaxSpeed + 'px';
     });
 });
 $(document).ready(function () {
-    var $animation_elements = $('.slide');
-    var $window = $(window);
+    let $animation_elements = $('.slide');
+    let $window = $(window);
 
     function check_if_in_view() {
-        var window_height = $window.height();
-        var window_top_position = $window.scrollTop();
-        var window_bottom_position = window_top_position + window_height;
+        let window_height = $window.height();
+        let window_top_position = $window.scrollTop();
+        let window_bottom_position = window_top_position + window_height;
 
         $.each($animation_elements, function () {
-            var $element = $(this);
-            var element_height = $element.outerHeight();
-            var element_top_position = $element.offset().top;
-            var element_bottom_position = element_top_position + element_height;
+            let $element = $(this);
+            let element_height = $element.outerHeight();
+            let element_top_position = $element.offset().top;
+            let element_bottom_position = element_top_position + element_height;
 
             if (element_bottom_position >= window_top_position && element_top_position <= window_bottom_position) {
                 $element.addClass('hasSlid');
@@ -149,8 +149,8 @@ function toggleMenu() {
   
   // 메뉴바 x클릭 시 메뉴바 닫기
   document.addEventListener('DOMContentLoaded', function () {
-    let closeButton = document.querySelector('.close');
-    let menuContainer = document.querySelector('.menubar #menu-container ul');
+    const closeButton = document.querySelector('.close');
+    const menuContainer = document.querySelector('.menubar #menu-container ul');
   
     // 이미지가 클릭될 때 이벤트 핸들러 추가
     closeButton.addEventListener('click', function () {
@@ -167,7 +167,7 @@ function toggleMenu() {
   });
   // 메뉴 클릭 시 --> 각 li 아이템들 hover 시 동작
   document.addEventListener('DOMContentLoaded', function () {
-    let menuItems = document.querySelectorAll('header .menubar #menu-container ul > li a');
+    const menuItems = document.querySelectorAll('header .menubar #menu-container ul > li a');
   
     // 각 메뉴 아이템에 이벤트 리스너 추가
     menuItems.forEach(function (item) {

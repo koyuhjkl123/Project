@@ -19,6 +19,34 @@ body {
     border-radius: 0.25rem;
 }
 
+header .logo{
+    /* 상단로고 */
+    position: fixed;
+    z-index: 6;
+    text-align: center;
+    box-shadow: 0 0 5px rgb(101, 101, 101);
+    border-radius: 50%;
+    top: 10px;
+    left: 20px;
+    margin-left: 120px;
+    width: 70px;
+    cursor: pointer;
+    height: 70px;
+  }
+  
+  /* 사이트명: 버디(임시) */
+  header .logo h1{
+      margin: -65px 0 0 95px;
+      cursor: pointer;
+  }
+  header .logo h1 a{
+      font-size: 35px;
+      font-family: 'GangwonEdu_OTFBoldA';
+      color: black;
+  }
+
+
+
 h1 {
     font-size: 5rem;
     font-weight: bold;

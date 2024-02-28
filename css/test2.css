@@ -5,12 +5,6 @@ header .icon-container {
 
 /* 헤더 영역 */
 /* 이미지 로고 영역 */
-header .logo {
-  /* margin-top: 20px; */
-  margin-left: 20px;
-  width: 70px;
-  height: 70px;
-}
 
 header .logo img {
   width: 70px;
@@ -18,12 +12,6 @@ header .logo img {
   border-radius: 50%;
 }
 
-/* 헤더영역 */
-/* 상단 메뉴바 영역 */
-header .top-menu .menu-list li a {
-  font-size: 30px;
-  /* font-family: 'Ownglyph_meetme-Rg' */
-}
 
 /* 헤더 본문 메뉴바 영역 */
 .icon-container .menubar #menu-container ul li a {
@@ -32,7 +20,7 @@ header .top-menu .menu-list li a {
 
 /* 공용(헤더, 푸터, 사이드메뉴)추가 코드 조정 */
 .top-menu {
-  margin: 20px 30px 0 0;
+  margin: 30px 20px 0 0;
 }
 .icon-container {
   z-index: 3;
@@ -43,7 +31,6 @@ header .top-menu {
   width: 70px;
 }
 .icon-container .menu_section {
-  margin-left: -60px;
 }
 header .logo{
   /* 상단로고 */
@@ -58,7 +45,6 @@ header .logo{
 /* 사이트명: 버디(임시) */
 header .logo h1{
   margin: -60px 0 0 100px;
-  font-size: 50px;
   font-family: 'GangwonEdu_OTFBoldA';
 }
 header .top-menu {

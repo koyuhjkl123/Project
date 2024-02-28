@@ -7,15 +7,15 @@
     <title>새 관찰하는 방법</title>
 
     <!-- css -->
-    <link rel="stylesheet" href="/siwook/css/onlyCssBirdy.css">
-    <link rel="stylesheet" href="/siwook/css/share.css"> <!-- menubar, footer-->
-    <link rel="stylesheet" href="/siwook/css/share_Typeface.css"> <!-- css : 폰트 -->
-    <link rel="stylesheet" href="/siwook/css/test2.css">
+    <link rel="stylesheet" href="/css/onlyCssBirdy.css">
+    <link rel="stylesheet" href="/css/share.css"> <!-- menubar, footer-->
+    <link rel="stylesheet" href="/css/share_Typeface.css"> <!-- css : 폰트 -->
+    <link rel="stylesheet" href="/css/test2.css">
 
     <!-- js -->
-    <script defer src="/siwook/js/test2.js"></script>
+    <script defer src="/js/test2.js"></script>
+    <script defer src="/js/onlyCssBirdy.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script defer src="/siwook/js/onlyCssBirdy.js"></script>
 
     <!-- SNS 아이콘 -->
     <script src="https://kit.fontawesome.com/9d06c79ea2.js" crossorigin="anonymous"></script>
@@ -48,17 +48,17 @@
     <header>
         <!-- 로고 -->
         <div class="logo">
-            <img src="/sejin/pic_bird/con_2.jpg" alt="#">
-            <h1>Birdy</h1>
+            <img src="../images/bird_logo.jpg" alt="#">
+            <h1><a href="./main.html">Birdy</a></h1>
         </div>
 
         <!-- 우측 상단 메뉴-->
         <div class="top-menu">
             <ul class="menu-list">
-                <li><a href="#a">회원가입</a></li>
-                <li><a href="#a">로그인</a></li>
-                <li><a href="#a">마이페이지</a></li>
-                <li><a href="./free.html">게시판</a></li>
+                <li><a href="loginsignup.html">회원가입</a></li>
+                <li><a href="loginsignup.html">로그인</a></li>
+                <li><a href="MyPage.html">마이페이지</a></li>
+                <li><a href="./board.html">게시판</a></li>
             </ul>
         </div>
 
@@ -76,18 +76,18 @@
                                 <li><a href="./migratory_bird.html">천연기념물</a></li>
                             </ul>
                         </li>
-                        <li><a href="#a">새용품</a></li>
+                        <li><a href="./goods.html">새용품</a></li>
                         <li><a href="./FAQ.html">문의사항</a></li>
-                        <li><a href="#a">애완조 안내서</a></li>
-                        <li><a href="./news.html">과학 <img src="/siwook/images/bird_icon.png" alt="+">새</a></li>
+                        <li><a href="./onlyCssBirdyVer2.html">애완조 안내서</a></li>
+                        <li><a href="./news.html">과학 <img src="../images/icon/bird_icon.png" alt="+">새</a></li>
                         <li><a href="#a">후원하기</a></li>
-                        <li><a href="#a">About Us</a></li>
+                        <li><a href="/HTML/AboutUs 1.html">About Us</a></li>
                     </ul>
             </nav>
             <!-- nav 좌측 메뉴바 종료 -->
         </div>
     </header>
-    
+
     <div id="container">
         <div class="header-image">
             <div>
@@ -206,11 +206,11 @@
             <!-- 중앙 영역: 링크 목록 -->
             <div class="footer-center">
                 <ul>
-                    <li><a href="#">홈</a></li>
-                    <li><a href="#">서비스</a></li>
-                    <li><a href="#">새 용품</a></li>
+                    <li><a href="./main.html">홈</a></li>
+                    <li><a href="./AboutUs1.html">회사 소개</a></li>
+                    <li><a href="goods.html">새 용품</a></li>
                     <li><a href="#">고객 지원</a></li>
-                    <li><a href="#">문의하기</a></li>
+                    <li><a href="./FAQ.html">문의하기</a></li>
                 </ul>
             </div>
 
@@ -228,7 +228,7 @@
 
         <!-- 저작권 정보 및 추가 내용 -->
         <div class="copyright">
-            <p>&copy; <span class="more"></span> Birding</p>
+            <p>&copy; <span class="more"></span> Birdy</p>
         </div>
     </footer>
     <!-- footer 종료 -->
@@ -238,6 +238,10 @@
     <div id="to-top">
         <div class="material-icons">arrow_upward</div>
     </div>
+    <!-- 맨 상단 스크롤 올려주는 역할 -->
+  <div id="to-bottom">
+    <div class="material-icons">arrow_upward</div>
+  </div>
 
 </body>
 
