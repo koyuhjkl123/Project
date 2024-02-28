@@ -1,0 +1,92 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    max-width: 100%;
+    margin: auto;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    /* flex-direction: column; */
+    /* background-position: center; */
+    /* background-repeat: repeat; */
+}
+.attachment {
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; */
+    /* display: grid;
+    place-items: center; */
+    text-align: center;
+}
+.attachment img {
+    width: 70%;
+    /* max-width: 100%; */
+    height: auto;
+}
+
+.product {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px #eee;
+    flex-basis: 22%;
+    /* width: calc(25% - 20px); */
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+main h1 {
+    font-size: 70px;
+    text-align: left;
+    margin: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.product h2 {
+    color: #333;
+    font-size: 35px;
+}
+.product p {
+    font-size: 30px;
+}
+.buy-button,
+.like-button {
+    border: none;
+    padding: 8px 16px;
+    margin-bottom: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.buy-button {
+    background-color: tomato;
+    color: white;
+    border-radius: 4px;
+}
+.buy-button:hover {
+    background-color: purple;
+    color: white;
+}
+.like-button {
+    background: none;
+    color: #dc3545;
+    font-size: 1.5em;
+}
+.product a {
+    text-decoration: none;
+    font-size: 20px;
+}
+.product a:hover {
+    text-decoration: underline;
+}

@@ -1,3 +1,5 @@
+
+
 function toggleMenu() {
   let menuContainer = document.getElementById("menu-container");
   // 현재 투명도 값 가져오기
@@ -13,8 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
   let iconContainer = document.querySelector('#container header .icon-container');
   let menubar = document.querySelector('.menubar');
   let icon = document.querySelector('.icon');
-  let menuUl = document.querySelector('.menubar #menu-container ul');
-  let menuSubUl = document.querySelector('header .menubar #menu-container ul li > ul');
 
   iconContainer.addEventListener('click', function () {
     iconContainer.classList.toggle('active');
@@ -27,16 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
       menubar.style.left = '-1220px'; // 클릭 전
       icon.style.display = 'block'; // 햄버거 나타내기
     }
-
-    if (iconContainer.classList.contains('active')) {
-      menuUl.style.opacity = '1'; // 클릭 후
-      menuSubUl.style.opacity = '1';
-    } else {
-      menuUl.style.opacity = '0'; // 클릭 전
-    }
   });
 });
-
 
 // 메뉴바 x클릭 시 메뉴바 닫기
 document.addEventListener('DOMContentLoaded', function () {
@@ -52,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
       menubar.style.left = '0'; // 클릭 전
     }
     menuContainer.classList.remove('active'); // 'active' 클래스 제거
-
 
   });
 });
@@ -93,35 +84,6 @@ function scroll() {
 }
 scroll();
 
-
-// 스크롤 올리기 위함 용도
-const toTopEl = document.querySelector('#to-top');
-
-window.addEventListener('scroll', _.throttle(function () {
-  if (window.scrollY > 700) { // 해당 스크롤 내린 위치값이 700보다 크다면
-    gsap.to(toTopEl, .6, { // toTopEl 적용 대상, 0.6초동안 애니메이션 진행
-      opacity: 1,
-      display: 'block'
-    });
-    toTopEl.classList.add('show'); // 클래스추가 : display : block을 하기 위함
-  } else {
-    gsap.to(toTopEl, .6, {
-      opacity: 0,
-      display: 'none'
-    });
-    toTopEl.classList.remove('show');
-  }
-}, 300));
-
-
-// 해당 버튼 클릭 시 맨 상단에 올라감
-toTopEl.addEventListener('click', function () {
-  gsap.to(window, .7, {
-    scrollTo: 0
-  });
-});
-
-
 const sections = document.querySelectorAll('.content__item');
 let navItems = document.querySelectorAll('#parallax__dot ul li');
 
@@ -135,8 +97,6 @@ window.addEventListener('scroll', _.throttle(function () {
 
     if (scrollY >= sectionTop && scrollY <= sectionBottom) {
       // 현재 섹션에 대응하는 메뉴 바의 a 태그 활성화
-      console.log(navItems[index])
-      console.log(sections[index].id)
 
       const currentNavItem = navItems[index].querySelector('a');
       const sectionIdWithoutHash = currentNavItem.href.split('#')[1]; // #을 제외한 부분 추출
@@ -189,84 +149,130 @@ new Swiper('.awards .swiper-container',{
   }
 });
 
-
-const promotionEl = document.querySelector('.promotion');
-const promotionToggleBtn = document.querySelector('.toggle-promotion');
+// section 이미지 열기 닫기 버튼 
+const promotionEl = document.querySelector('.promotion'); // swiper auto 감싸는 전체 태그
+const imageClose = document.querySelector('.image-close'); // 이미지 닫기
+const imageblock = document.querySelector('.notice .notice-line .inner .inner__right .image-block'); // 이미지 열기
+const promotionToggleBtn = document.querySelector('.toggle-promotion'); // 버튼
 let isHidePromotion = false;
+// true : 이미지 닫기
+// false : 이미지 열기
 
-
+// 버튼을 클릭 시 
 promotionToggleBtn.addEventListener('click', function () {
   isHidePromotion = !isHidePromotion
   if(isHidePromotion) {
       // 숨김 처리
-      promotionEl.classList.add('hide');
+      promotionEl.classList.add('hide'); // 버튼 누르면 .hide 클래스 생성
+      imageblock.classList.remove('hide'); // 이미지 열기 텍스트 보이게
+      imageClose.classList.add('hide'); // 이미지 닫기 텍스트 안보이게
   }else {
       // 보이기 처리
-      promotionEl.classList.remove('hide');
+      promotionEl.classList.remove('hide'); // 버튼 다시 누르면 .hide 클래스 제거
+      imageblock.classList.add('hide'); // 이미지 열기 텍스트 안보이게
+      imageClose.classList.remove('hide'); // 이미지 닫기 텍스트 보이게
   }
 });
 
-// let mHtml = $(".body_scroll_section");
-// let page = 1;
 
 
-// mHtml.animate({scrollTop : 0},10);
-// $(window).on("wheel", function(e) {
-//   if(mHtml.is(":animated")) return;
-//   if(e.originalEvent.deltaY > 0) {
-//       if(page == 4) return;
-//       page++;
-//   } else if(e.originalEvent.deltaY < 0) {
-//       if(page == 1) return;
-//       page--;
-//   }
-//   let posTop =(page-1) * $(window).height();
-//   mHtml.animate({scrollTop : posTop});
-// });
+// 인트로 영역 애니메이션 옵션 설정
+const animationOptions = {
+  ease: 'expo.inOut'  // Easing 함수를 'expo.inOut'으로 설정
+}
 
-// ScrollMagic controller 초기화
-var controller = new ScrollMagic.Controller();
-
-// 각 이미지에 대한 Scene 생성
-$('.body_scroll').each(function (index, element) {
-  var scene = new ScrollMagic.Scene({
-    triggerElement: element,
-    triggerHook: 0.8, // 0에서 1 사이의 값, 이미지가 나타나는 위치 조절
-    reverse: false, // 한 번 재생된 애니메이션은 되감기되지 않도록 설정
+// 인트로 애니메이션 함수 정의
+const introAnimation = () => {
+  // GSAP 타임라인 생성
+  const tl = gsap.timeline({
+    defaults: {
+      ease: animationOptions.ease,  // 기본적으로 사용할 Easing 함수 설정
+      duration: 1,  // 기본 애니메이션 지속 시간
+    }
+  });
+  
+  // 1. 제목이 위로 이동하면서 나타남
+  tl.to('.intro__title', {
+    duration: 1.5,  // 애니메이션 지속 시간
+    y: 0,  // y축 방향으로 0만큼 이동
+    autoAlpha: 1,  // 투명도를 1로 설정하여 나타남
+    delay: 0.5,  // 0.5초의 딜레이
   })
-    .setClassToggle(element, 'visible') // 클래스 토글
-    .addTo(controller);
+  // 2. 왼쪽, 오른쪽 배경이 나타나면서 확장됨
+  .to('.intro__background--left, .intro__background--right', {
+    scaleX: 1,  // x축 방향으로 1만큼 확장
+  })
+  // 3. 배경이 위로 축소되고 투명도가 0이 됨
+  .to('.intro__background--left, .intro__background--right', {
+    scaleY: 0,  // y축 방향으로 0만큼 축소
+    transformOrigin: 'top center',  // 축소 기준을 상단 중앙으로 설정
+  })
+  // 4. 제목이 다시 위로 이동하면서 투명도가 0으로 설정됨
+  .to('.intro__title', {
+    duration: 1.5,  // 애니메이션 지속 시간
+    y: -60,  // y축 방향으로 -60만큼 이동
+    autoAlpha: 0,  // 투명도를 0으로 설정하여 사라짐
+  }, '-=0.6')  // 앞서 진행된 애니메이션의 0.6초 전에 시작
+  // 5. 인트로 영역이 위로 이동하면서 화면을 떠남
+  .to('.intro', {
+    y: '-100%',  // y축 방향으로 -100%만큼 이동하여 사라짐
+  }, '-=0.5');  // 앞서 진행된 애니메이션의 0.5초 전에 시작
+  
+  // 생성된 타임라인 반환
+  return tl;
+}
+
+// 요소들을 기울이는 애니메이션 함수
+const skewInElements = elements => {
+  const tl = gsap.timeline();
+  
+  // 주어진 요소들에 대해 애니메이션 설정
+  tl.from(elements, {
+    duration: 1,  // 애니메이션 지속 시간
+    ease: animationOptions.ease,  // Easing 함수 설정
+    skewY: -5,  // y축 방향으로 -5만큼 기울임
+    autoAlpha: 0,  // 투명도를 0으로 설정하여 나타남
+    y: 40,  // y축 방향으로 40만큼 이동
+  });
+  
+  // 생성된 타임라인 반환
+  return tl;
+}
+
+// 요소들을 페이드인하는 애니메이션 함수
+const fadeInElements = elements => {
+  const tl = gsap.timeline();
+  
+  // 주어진 요소들에 대해 애니메이션 설정
+  tl.from(elements, {
+    duration: 1,  // 애니메이션 지속 시간
+    ease: animationOptions.ease,  // Easing 함수 설정
+    y: '20px',  // y축 방향으로 20px만큼 이동
+    autoAlpha: 0,  // 투명도를 0으로 설정하여 나타남
+    stagger: 0.1,  // 요소들 간에 0.1초 간격을 두고 순차적으로 애니메이션 실행
+  });
+  
+  // 생성된 타임라인 반환
+  return tl;
+}
+
+// 메인 타임라인 정의
+const master = gsap.timeline({
+  paused: false,  // 타임라인을 자동으로 실행
+  delay: 0.2,  // 0.2초의 딜레이
 });
 
-const cursor = document.querySelector(".cursor");
-let timeout;
+// 메인 타임라인에 각 애니메이션 추가
+master
+  .add(introAnimation())  // 인트로 애니메이션
+  .add(fadeInElements('.header'))  // 헤더 요소들의 페이드인 애니메이션
+  .add(skewInElements('.header'), '-=1');  // 헤더 요소들을 기울이는 애니메이션 (앞선 애니메이션의 1초 전에 시작)
 
-document.addEventListener("mousemove", (e) => {
-  let x = e.pageX;
-  let y = e.pageY;
 
-  cursor.style.top = y + "px";
-  cursor.style.left = x + "px";
-  cursor.style.display = "block";
+// 모바일 영역 //
 
-  function mouseStopped() {
-    cursor.style.display = "none";
-  }
-
-  clearTimeout(timeout);
-  timeout = setTimeout(mouseStopped, 1000);
+document.querySelector('.phone-icon').addEventListener('click', function() {
+  let body = document.querySelector('body');
+  body.classList.toggle('mobile-version');
 });
 
-document.addEventListener("mouseout", () => {
-  cursor.style.display = "none";
-});
-
-// 스크롤 이벤트 발생 후 1초 후에 mouseStopped 함수 호출
-document.addEventListener("scroll", () => {
-  cursor.style.display = "block";
-
-  clearTimeout(timeout);
-  timeout = setTimeout(() => {
-    cursor.style.display = "none";
-  }, 1000);
-});

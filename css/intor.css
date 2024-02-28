@@ -80,7 +80,7 @@ body {
 #nav-toggle:checked ~ .nav-close {
 	opacity: 1;
 	transition: all 0.3s ease-in-out;
-	transition-delay: 5.5s;
+	transition-delay: 2.5s;
 }
 
 .nav-toggle:hover {
@@ -141,11 +141,20 @@ body {
 
 #nav-toggle:checked + .nav-toggle > figure {
 	height: 33.3%;
-	transition: all 1s ease-in-out;
 	transition-delay: 0.8s;
 	animation-delay: 1s;
 	animation-fill-mode: forwards;
 }
+
+@keyframes width_test{
+	0%{
+		width: 100%;
+	}
+	100%{
+		width: 35%;
+	}
+}
+
 
 .nav-toggle > figure:nth-child(2) {
 	background: #FAFAFA;
@@ -211,8 +220,8 @@ body {
 }
 
 #nav-toggle:checked ~ .logo-draw .cls-1 {
-	animation: fade-in .8s ease-in-out 1;
-	animation-delay: 2s;
+	animation: fade-in 1s ease-in-out 1;
+	animation-delay: 1s;
 	animation-fill-mode: forwards;
 }
 
@@ -256,6 +265,8 @@ body {
 
 #nav-toggle:checked ~ .nav-close {
 	animation: nav-close 1s ease-in-out 1;
-	animation-delay: 3s; /* 원하는 경우 딜레이를 조정하세요 */
+	animation-delay: 1.5s; 
 	animation-fill-mode: forwards;
+	
 }
+

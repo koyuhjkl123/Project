@@ -1,0 +1,31 @@
+header .icon-container {
+  left: 45px;
+  top: 120px;
+}
+
+/* 헤더 영역 */
+/* 이미지 로고 영역 */
+header .logo {
+  /* margin-top: 20px; */
+  margin-left: 20px;
+  width: 70px;
+  height: 70px;
+}
+
+header .logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+/* 헤더영역 */
+/* 상단 메뉴바 영역 */
+header .top-menu .menu-list li a {
+  font-size: 22px;
+  /* font-family: 'Ownglyph_meetme-Rg' */
+}
+
+/* 헤더 본문 메뉴바 영역 */
+.icon-container .menubar #menu-container ul li a {
+  font-size: 24px;
+}

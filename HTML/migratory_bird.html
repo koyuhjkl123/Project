@@ -6,41 +6,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>우리나라를 찾는 철새들</title>
 
-     <!-- SNS Icon -->
-     <script src="https://kit.fontawesome.com/9d06c79ea2.js" crossorigin="anonymous"></script>
+    <!-- title icon -->
+    <link rel="icon" href="../pic_bird/con_2.jpg">
 
-     <!-- CSS -->
-     <link rel="stylesheet" href="../css/gallury.css">
-     <link rel="stylesheet" href="../css/share.css"> <!-- 공용으로 들어가는 폰트 정리 -->
-     <link rel="stylesheet" href="../css/share_Typeface.css"> <!-- 공용 글꼴 폰트 -->
-
-     <!-- js -->
-     <script src="https://kit.fontawesome.com/9d06c79ea2.js" crossorigin="anonymous"></script>
-     <script defer src="../js/gallury.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="/css/gallury.css">
+    <link rel="stylesheet" href="/css/share.css">
 
 
+    <!-- javascript -->
+    <script defer src="/js/gallury.js"></script>
+    <script defer src="/js/to_bottom_scroll.js"></script>
+    <script defer src="/js/menubar.js"></script>
+
+
+    <!-- title icon -->
+    <link rel="icon" href="../images/con_2.jpg">
+
+
+    <!-- 아이콘 라이브러리 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <script src="https://kit.fontawesome.com/9d06c79ea2.js" crossorigin="anonymous"></script>
+
+    <!-- Gsap & ScrollToPlugin -->
+    <!-- Gsap은 웹 애니메이션을 도와주는 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- 유틸리티 라이브러리 배열 조작, 데이터 변환, 함수 조합 등을 지원-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+        integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Gsap와 같이 사용하여 스크롤 애니메이션에서 특정 위치에 자연스럽게 할 수 있도록 도와주는 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"
+        integrity="sha512-v/m68W+vaGN/6igoyFpd4GlQzu0jx9/n5gr2PKq5vif+RObyGKHse384YHrOULaxZ810XhlHUrmB3U8UnPB19Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
-<body id="back_g">
-    <!-- 우측 상단 메뉴-->
-    <div class="top-menu">
-        <ul class="menu-list">
-          <li><a href="#a">회원가입</a></li>
-          <li><a href="#a">로그인</a></li>
-          <li><a href="#a">마이페이지</a></li>
-          <li><a href="./free.html">게시판</a></li>
-        </ul>
-      </div>
+<body id="back_m">
+
+
+    <header>
+        <div class="logo">
+            <img src="../images/bird_logo.jpg" alt="#">
+            <h1><a href="./main.html">Birdy</a></h1>
+        </div>
+
+        <div class="mobile">
+            <div class="pc-icon"><img src="../images/icon/pc-icon.png" alt="PC 변환"></div>
+            <div class="phone-icon"><img src="../images/icon/phone-icon.png" alt="모바일 변환"></div>
+        </div>
+        <!-- 우측 상단 메뉴리스트 -->
+
+        <div class="top-menu">
+            <ul class="menu-list">
+                <li><a href="./loginsignup.html">회원가입</a></li>
+                <li><a href="./loginsignup.html">로그인</a></li>
+                <li><a href="./MyPage.html">마이페이지</a></li>
+                <li><a href="./board.html">게시판</a></li>
+            </ul>
+        </div>
+
+        <!-- 본문 메뉴바 -->
+        <div class="icon-container">
+            <div class="icon"></div>
+            <nav class="menubar">
+                <div id="menu-container">
+                    <ul class="menu_section">
+                        <img src="../images/icon/bird_icon_x.png" alt="" class="close">
+                        <br>
+                        <!-- **한 줄 띄어 여유 공간 주기 -->
+                        <li><a href="#a">새의 종류</a>
+                            <ul>
+                                <li><a href="./residunt_bird.html">텃새</a></li>
+                                <li><a href="./migratory_bird.html">철새</a></li>
+                                <li><a href="./protected_bird.html">천연기념물</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./goods.html">새용품</a></li>
+                        <li><a href="./FAQ.html">문의사항</a></li>
+                        <li><a href="./onlyCssBirdyVer2.html">애완조 안내서</a></li>
+                        <li><a href="./news.html">과학 <img src="../images/icon/bird_icon.png" alt="+">새</a></li>
+                        <li><a href="#a">후원하기</a></li>
+                        <li><a href="/HTML/AboutUs 1.html">About Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="h_container" id="bird_m">
+        <div id="bird_ps">
+            <div id="bird_pss">
+                <h2>한국을 찾는 철새들</h2>
+                <br>
+                <div>계절마다, 시기마다 우리 나라를 찾아와 한 계절 쉬어가는 새들입니다.</div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="wrap">
         <!-- 여름철새 -->
         <!-- 제비 -->
         <div class="container" id="bird_m1">
-            <img class="pic_bird"
-                src="https://i.namu.wiki/i/VRkL4kaVzLlarcI15B_6Bt0yWWoijXR1zk2W8tyH0ASXz1UUL5oe8ZJO7JzTVY_mQWQSh8uq8zw9Vw_mYhAnog.webp"
-                alt="제비">
-            <h3>제비 
-            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m1')"></i></h3> 
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/제비.webp" alt="제비">
+            <h3>제비</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m1')"></i>
             <p>제비는 참새목 제비과의 철새다.<br>
                 벼랑이나 처마 밑에 진흙으로 만든 둥지를 만들어서 번식하며, 곤충을 잡아먹는다.<br>
                 집을 지을때는 해조류나 진흙을 이용해, 자신의 침과 섞어 수직벽에 붙도록 짓는다.<br>
@@ -51,10 +126,10 @@
         </div>
         <!-- 물총새 -->
         <div class="container" id="bird_m2">
-            <img class="pic_bird" src="https://cdn.jjan.kr/data2/content/image/2014/11/26/.cache/512/20141126165729.jpg"
-                alt="물총새">
-            <h3>물총새 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m2')"></i></h3> 
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/물총새.jpg" alt="물총새">
+            <h3>물총새</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m2')"></i>
             <p>물총새는 파랑새목 물총새과에 속하는 새이다.<br> 크기는 17cm 안팎이다.<br> 빠른 속도로 물속에 뛰어들어서 물고기, 올챙이, 개구리 등을
                 잡아먹는다.<br> 이때 눈에 비늘이 생기기 때문에 눈을 보호할 수 있다.<br> 여름새이기 때문에 봄에 한국에서 번식한 뒤 가을에 따뜻한 곳으로 이동한다.<br>
                 수컷이 암컷에게 물고기를 선물해서 마음을
@@ -64,11 +139,10 @@
         </div>
         <!-- 뻐꾸기 -->
         <div class="container" id="bird_m3">
-            <img class="pic_bird"
-                src="https://media.istockphoto.com/id/179028137/ko/%EC%82%AC%EC%A7%84/%EB%BB%90%EA%BE%B8%EA%B8%B0-cuculus-canorus.jpg?s=612x612&w=0&k=20&c=IEKmxYF2yRWBCczr20O-JIBIALRiqo-c4kaz7FEz50o="
-                alt="뻐꾸기">
-            <h3>뻐꾸기 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m3')"></i></h3> 
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/뻐꾸기.jpg" alt="뻐꾸기">
+            <h3>뻐꾸기</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m3')"></i>
             <p>뻐꾸기는 두견과의 새이다.<br> 한국에서 흔히 볼 수 있는 여름철새이다.<br> 수컷의 겨울깃은 등이
                 회청색이며, 아랫가슴과 배는 흰색 바탕에 어두운 갈색 줄무늬가 있다.<br>
                 암컷의 여름깃과 겨울깃은 수컷과 아주 비슷하나 배는 잿빛에 갈색 줄무늬가 있으며, 윗가슴과 아랫목에는 갈색 줄무늬가
@@ -81,11 +155,10 @@
         </div>
         <!-- 백로 -->
         <div class="container" id="bird_m4">
-            <img class="pic_bird"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Snowy_Egret.jpg/450px-Snowy_Egret.jpg"
-                alt="백로">
-            <h3>백로 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m4')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/백로.jpg" alt="백로">
+            <h3>백로</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m4')"></i>
             <p>백로(白鷺)는 왜가리과에 속하는 일부 새를 총칭하는 말이다.<br> 키는 30-140cm 정도로 종에 따라 차이가 크며 몸은 작은 데 비해 머리와 다리가 매우 길다.<br>
                 날개는 발달했고
                 날개 면적은 몸무게에 비하여 크며 날개를 서서히 흔들어 날 수 있다.<br> 꼬리는 작다.<br>
@@ -98,11 +171,10 @@
         </div>
         <!-- 뜸부기 -->
         <div class="container" id="bird_m5">
-            <img class="pic_bird"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Gallicrex_cinerea_-Basai_Wetlands%2C_near_Gurgaon%2C_Haryana%2C_India-8.jpg/450px-Gallicrex_cinerea_-Basai_Wetlands%2C_near_Gurgaon%2C_Haryana%2C_India-8.jpg"
-                alt="뜸부기">
-            <h3>뜸부기 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m5')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/뜸부기.jpg" alt="뜸부기">
+            <h3>뜸부기</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m5')"></i>
             <p>뜸부기는 뜸부기과에 속하는 물새이며 대한민국에서 흔히 볼 수 있는 여름새이다.<br> 수컷이 울 때 '뜸북 뜸북 뜸뜸뜸' 하는
                 소리를 낸다고 뜸부기라는 이름이 붙었다.<br> 몸길이는 수컷이 약 40cm, 암컷이 약 33cm이다.<br>
                 체형은 길고 날씬하며, 날개와 꼬리는 짧고, 다리와 발톱이 길다.<br> 깃털은
@@ -116,11 +188,10 @@
         </div>
         <!-- 개개비 -->
         <div class="container" id="bird_m6">
-            <img class="pic_bird"
-                src="https://i.namu.wiki/i/DeH0cxqEht3LNbfwPayEot5UA1SWdDku4D9DJfia6OzLnb2gY54fuUC0BckNp9siBw-NG9JjtdZGQVj2agx3Hg.webp"
-                alt="개개비">
-            <h3>개개비 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m6')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/개개비.webp" alt="개개비">
+            <h3>개개비</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m6')"></i>
             <p>개개비는 참새목 개개비과 개개비속에 속하는 명금류이다.<br>
                 부위(剖葦)라고도 한다.<br> 학명 Acrocephalus arundinaceus는 유럽의 명금류를 가리키며, 한국에서는 동양개개비를 개개비로 부르기도 한다.<br>
                 개개비류(Old World Warblers) 집합에 소속되곤 했지만 오늘날에는 참새목 개개비과의 일부로 간주한다.<br>
@@ -129,11 +200,10 @@
         </div>
         <!-- 쇠물닭 -->
         <div class="container" id="bird_m7">
-            <img class="pic_bird"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Common_moorhen_%28Gallinula_chloropus%29_young_adult.jpg/450px-Common_moorhen_%28Gallinula_chloropus%29_young_adult.jpg"
-                alt="쇠물닭">
-            <h3>쇠물닭 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m7')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/쇠물닭.jpg" alt="쇠물닭">
+            <h3>쇠물닭</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m7')"></i>
             <p>쇠물닭은 두루미목 뜸부기과의 조류이다.<br>
                 쇠물닭은 식물이 풍부한 습지, 연못, 운하 및 기타 습지 주변에 산다.<br>
                 쇠물닭은 특유의 품종으로, 꼬리는 흰색이다.<br> 다리가 노란색이고 이마판이 빨간색인 것과는 달리 깃털은 어두운 색이다.<br>
@@ -142,9 +212,10 @@
         </div>
         <!-- 팔색조 -->
         <div class="container" id="bird_m8">
-            <img class="pic_bird" src="https://cdn.newspenguin.com/news/photo/202004/273_3840_1214.jpg" alt="팔색조">
-            <h3>팔색조 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m8')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/팔색조.jpg" alt="팔색조">
+            <h3>팔색조</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m8')"></i>
             <p>팔색조는 팔색조과의 여름철새이다.<br> 동남아시아의 말레이 반도에서 살다가 여름에 제주도, 거제 학동의 동백림
                 및 팔색조 번식지에 와서 번식하며, 먹이는 곤충과 지렁이이다.<br>
                 어미는 둥지에서 새끼가 태어나면, 알 껍질을 먹고 새끼의 흔적을 없애, 천적으로부터 새끼들을 보호한다.<br>
@@ -152,11 +223,10 @@
         </div>
         <!-- 청호반새 -->
         <div class="container" id="bird_m9">
-            <img class="pic_bird"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Black-capped-kf.jpg/450px-Black-capped-kf.jpg"
-                alt="청호반새">
-            <h3>청호반새 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m10')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/청호반새.jpg" alt="청호반새">
+            <h3>청호반새</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m9')"></i>
             <p>청호반새는 파랑새목 물총새과에 속하는 한 종이다.<br> 최근엔 환경부에 의해 멸종위기 2급으로 지정되었다.
                 청호반새는 등이 짙은 파란색을 띠고 있다.<br> 머리는 검은색이며, 턱 밑과 목, 가슴 윗부분은 하얀색을 띠고 있다.<br>
                 배 아래쪽은 주황색을 띠며, 다리는 붉은색이다.<br> 부리는 크고 길며 선병한
@@ -166,21 +236,19 @@
         </div>
         <!-- 솔부엉이 -->
         <div class="container" id="bird_m10">
-            <img class="pic_bird"
-                src="https://i.namu.wiki/i/rxhJjeANFhMR6_UIK2T2SuIKbiPaDzIJqLiEVebuY7M2-XvCvt1fFrs4BadQbNyCa66ZfNQJHeC3QYlb-owGcQ.webp"
-                alt="솔부엉이">
-            <h3>솔부엉이 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m11')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/솔부엉이.webp" alt="솔부엉이">
+            <h3>솔부엉이</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m10')"></i>
             <p>솔부엉이는 올빼미목 올빼미과의 여름철새이다.<br> 먹이는 주로 곤충이며, 가끔은 들쥐도 잡아먹는다.<br> 한반도에는 2 아종이 서식하고 있다.<br>
                 대한민국 1982년 11월 4일 천연기념물 제324-3호로 지정되었다.</p>
         </div>
         <!-- 왜가리 -->
         <div class="container" id="bird_m11">
-            <img class="pic_bird"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Ardea_cinerea_-_Pak_Thale.jpg/450px-Ardea_cinerea_-_Pak_Thale.jpg"
-                alt="왜가리">
-            <h3>왜가리 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m12')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/왜가리.jpg" alt="왜가리">
+            <h3>왜가리</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m11')"></i>
             <p>왜가리는 백로과의 새이다.<br> 약 94~97cm로 중대백로보다 크고 대백로와 비슷하거나 작다.<br> 날개길이
                 42-48cm, 꼬리길이 16-18cm, 몸무게 1.1-1.3kg 정도이다.<br> 온몸이 회색이고 다리가 길다.<br>
                 등은 회색, 배와 머리는 흰색인데, 검은색 줄이 눈에서 머리 뒤까지 이어져 긴
@@ -190,11 +258,10 @@
         </div>
         <!-- 파랑새 -->
         <div class="container" id="bird_m12">
-            <img class="pic_bird"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Eurystomus_orientalis_-Miami_Metrozoo%2C_USA_-singing-8a.jpg/450px-Eurystomus_orientalis_-Miami_Metrozoo%2C_USA_-singing-8a.jpg"
-                alt="파랑새">
-            <h3>파랑새 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m13')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/파랑새.jpg" alt="파랑새">
+            <h3>파랑새</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m12')"></i>
             <p>파랑새는 파랑새과에 속하는 새로서, 한국에서는 여름 철새인 새이다.<br> 몸길이 28cm이고 몸색깔은 선명한
                 청록색이며 머리·꽁지·날개는 검은색이고 부리와 다리는 선명한 붉은색이다.<br> 나뭇가지나 전봇대 꼭대기에서 굴러가는 듯한 날개짓이 독특하다.
                 주로 큰 나무가 있는 활엽수나 혼효림, 도시공원과 농경지 부근에서 생활한다.<br>
@@ -204,11 +271,10 @@
         </div>
         <!-- 할미새사촌 -->
         <div class="container" id="bird_m13">
-            <img class="pic_bird"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Ashy_Minivet_by_Jason_Thompson_%28Cropped%29.jpg/450px-Ashy_Minivet_by_Jason_Thompson_%28Cropped%29.jpg"
-                alt="할미새사촌">
-            <h3>할미새사촌 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m14')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/할미새사촌.jpg" alt="할미새사촌">
+            <h3>할미새사촌</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m13')"></i>
             <p>할미새사촌은 참새목 할미새사촌과 할미새사촌속의 한 종으로 동아시아 지역에 주로 서식한다.<br>
                 할미새사촌속에 속하는 종들 대부분은 노란색, 주황색,
                 빨간색 음영의 깃털을 가진 반면에, 할미새사촌은 회색, 흰색, 검은색 깃털만을 가진다.<br>
@@ -218,11 +284,10 @@
         </div>
         <!-- 되지빠귀 -->
         <div class="container" id="bird_m14">
-            <img class="pic_bird"
-                src="https://img1.daumcdn.net/thumb/C500x500/?fname=http://t1.daumcdn.net/brunch/service/user/d0Gp/image/S5txFcGYPe_S65Sottt5Eo21eGo.jpg"
-                alt="되지빠귀">
-            <h3>되지빠귀 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m15')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/되지빠귀.jpeg" alt="되지빠귀">
+            <h3>되지빠귀</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m14')"></i>
             <p>봄과 가을철 이동 중 우리나라의 숲에 머물렀다 떠나는 여름 철새이다.<br> 몸길이는 약 23cm, 날개 길이는 10cm가량이다.<br>
                 수컷의 머리, 등, 멱 및 윗가슴은 회색이며 아랫가슴과 배는 흰색이다.<br>
                 옆구리는 주황색이며 날개와 꼬리는 어두운 회색이다.<br> 암컷의 등은 갈색이며 배는 흰색이다.<br>
@@ -233,11 +298,10 @@
         </div>
         <!-- 꾀꼬리 -->
         <div class="container" id="bird_m15">
-            <img class="pic_bird"
-                src="https://i.namu.wiki/i/i1q31eq1PzZA6rS17r7irLDRNb9Z_eZjliwQ83pm4DfXRW_0NQmgyyPaWdf_vTaNe4nGGbr375DqVhbxTuIeUrKv9JLqR4rj343e0OpUToWne8sOpWY60PrXBx5Y15C7z7WzCnLT7jDcYUjg0_T6Fw.webp"
-                alt="꾀꼬리">
-            <h3>꾀꼬리 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m16')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/꾀꼬리.webp" alt="꾀꼬리">
+            <h3>꾀꼬리</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m15')"></i>
             <p>꾀꼬리는 참새목 꾀꼬리과에 속하는 새이다.<br> 여름철새로, 중국 남부·인도
                 남부·인도차이나 등에서 겨울을 나고 4월 말 경에 한반도 등을 찾는다.<br> 노란색과 검은색이 조화를 이룬 몸 색깔이 특징이다.<br>
                 또한 꾀꼬리는 '황조'라고도 불리며 곤충류를 잡아먹는다.<br> 서울시
@@ -254,11 +318,10 @@
         </div>
         <!-- 두견이 -->
         <div class="container" id="bird_m16">
-            <img class="pic_bird"
-                src="https://mblogthumb-phinf.pstatic.net/MjAyMDA0MDNfMTk2/MDAxNTg1ODUwNDAyMjE2.UaXH9Xb_DTyxwmKXrtIjOlV3x3ZcRUYOTd_AKaMNyJsg.E2nQT_d9m9Wq0xNM_DY2zxNZDWxZe6pMayV8iem4UVwg.PNG.akekdthkl200/untitled.png?type=w800"
-                alt="두견이">
-            <h3>두견이 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m17')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/두견이.jpg" alt="두견이">
+            <h3>두견이</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m16')"></i>
             <p>두견은 두견과의 새이다.
                 뻐꾸기와 마찬가지로 다른 새의 둥지에 알을 낳는 탁란을 한다.<br>
                 몸길이는 약 25cm이고 등은 회색을 띤 파란색이고, 아랫가슴과 배는 흰색 바탕에 암갈색 가로줄무늬가 있다.<br>
@@ -267,11 +330,10 @@
         </div>
         <!-- 후투티 -->
         <div class="container" id="bird_m17">
-            <img class="pic_bird"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/7._Common_Hoopoe_%28Upupa_epops%29_photograph_by_Shantanu_Kuveskar.jpg/450px-7._Common_Hoopoe_%28Upupa_epops%29_photograph_by_Shantanu_Kuveskar.jpg"
-                alt="후투티">
-            <h3>후투티 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m18')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/후투티.jpg" alt="후투티">
+            <h3>후투티</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m17')"></i>
             <p>후투티는 머리에 화려한 댕기가 있고, 날개와 꼬리에는 검은색과 흰색의 줄무늬가 있는 새이다.<br>
                 한자어로는 대승(戴勝)이라고 일컫는다.<br>
                 오디새라고도 불린다.<br>
@@ -288,11 +350,10 @@
         </div>
         <!-- 해오라기 -->
         <div class="container" id="bird_m18">
-            <img class="pic_bird"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Nycticorax-nycticorax-004.jpg/450px-Nycticorax-nycticorax-004.jpg"
-                alt="해오라기">
-            <h3>해오라기 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m19')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/해오라기.jpg" alt="해오라기">
+            <h3>해오라기</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m18')"></i>
             <p>해오라기는 사다새목 백로과에 속하는 새로, 한국에선 여름철새다.<br>
                 몸길이 약 56-61cm, 날개길이 26-31cm, 꼬리길이 9.4-12cm이다.<br>
                 머리와 등은 녹청색 금속 광택이 나는 검은색이며, 뒷머리에 여러 가닥의 길고 얇은 흰색 댕기가 있다.<br>
@@ -309,11 +370,10 @@
 
         <!-- 두루미 -->
         <div class="container" id="bird_m19">
-            <img class="pic_bird" src="https://jmagazine.joins.com/_data/photo/2019/03/3717398825_AI5hieG0_1.jpg"
-                alt="두루미">
-            <h3>두루미 
-            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m20')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/두루미2.jpg" alt="두루미">
+            <h3>두루미</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m19')"></i>
             <p>두루미 또는 학(鶴)은 두루미목 두루미과 한 종으로, 한국에서도 관찰할 수 있는
                 겨울철새이다.<br> 몸길이 140cm의 대형 조류이며 목과 다리가 길다 수명은 최대 30~50년 정도이다.<br>
                 두루미 보존을 위해 남북한과 러시아가 공동으로 협력이 필요하다고 전문가들은
@@ -321,11 +381,10 @@
         </div>
         <!-- 재두루미 -->
         <div class="container" id="bird_m20">
-            <img class="pic_bird"
-                src="https://species.nibr.go.kr/UPLOAD/digital/species/12000000/120000001650/BIMGAV0000376245_2021061518241417669.jpeg"
-                alt="재두루미">
-            <h3>재두루미 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m21')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/재두루미.jpeg" alt="재두루미">
+            <h3>재두루미</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m20')"></i>
             <p>재두루미는 두루미과의 새이다.<br> 몸길이는 약 119cm이다.<br> 몸은 푸른색을 띈 회색이며 이마와 눈 가장자리 그리고 뺨은 피부가
                 노출되어 붉은색을 띤다.<br> 목은 흰색으로 가슴에서 이어지는 회색이 목 앞으로 뾰족한 모양으로 올라와 있다.<br>
                 새끼는 머리꼭대기에서 뒷목까지 갈색이다.<br> 부리는 황록색이고 다리는 붉은색이다.<br>
@@ -338,9 +397,10 @@
         </div>
         <!-- 흑두루미 -->
         <div class="container" id="bird_m21">
-            <img class="pic_bird" src="https://www.ibric.org/upload/board/files/spcont/spc_4/0003234_1.jpg" alt="흑두루미">
-            <h3>흑두루미 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m22')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/흑두루미.jpg" alt="흑두루미">
+            <h3>흑두루미</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m21')"></i>
             <p>흑두루미는 두루미과의 새이다.<br> 몸길이는 약 100cm로 몸은 암회색을 띤다.<br> 머리는 흰색이고, 머리꼭대기에 붉은색 반점이 있다.<br>
                 논·습지 같은 곳에 50~500마리씩 떼를 지어 다니며, 물고기·조개·곤충·지렁이 등과 식물의 줄기·잎·뿌리 곡식의 낟알 등을 먹는다.<br>
                 알은 엷은 갈색 바탕에 검은색 반점이 있다.<br>
@@ -350,22 +410,20 @@
         </div>
         <!-- 큰기러기 -->
         <div class="container" id="bird_m22">
-            <img class="pic_bird"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Tundra_Bean_Goose.jpg/450px-Tundra_Bean_Goose.jpg"
-                alt="큰기러기">
-            <h3>큰기러기 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m23')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/큰기러기.jpg" alt="큰기러기">
+            <h3>큰기러기</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m22')"></i>
             <p>큰기러기는 기러기목 오리과의 조류이다.<br> 검은색 부리에 주황색 띠가 있다.<br> 몸 윗면은 어두운 갈색이며, 몸 아랫면은 연한 회갈색이다.<br>
                 하천, 하구, 저수지, 농경지, 개활지 등에서 서식한다.<br> 유럽 북부에서 시베리아 동북부에 이르는 타이가와 툰드라 지역에서 번식하며, 유럽 중부와 남부,
                 아시아 남서부, 중위도 지역 등에서 월동한다.<br>대한민국에서는 흔한 겨울철새이지만 멸종위기 야생생물 2급으로 지정되어 있다.</p>
         </div>
         <!-- 쇠기러기 -->
         <div class="container" id="bird_m23">
-            <img class="pic_bird"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/White-fronted.goose.2.750pix.jpg/450px-White-fronted.goose.2.750pix.jpg"
-                alt="쇠기러기">
-            <h3>쇠기러기 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m24')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/쇠기러기.jpg" alt="쇠기러기">
+            <h3>쇠기러기</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m23')"></i>
             <p>쇠기러기는 오리과에 속하며 학명은 Anser albifrons이다.<br> 몸길이는 66-86cm로 부리는 분홍색, 이마는 흰색, 다리는 오렌지색이다.<br>
                 학명과 영어명은 모두 '이마가 흰 기러기'라는 뜻이 있다.<br> 목과 등은 갈색이며, 배는 회갈색으로 검은색 줄무늬가 있다.<br>
                 어린 새끼는 이마의 흰 점과 배의 검은색 줄무늬가 없다.<br> 큰 떼를 지어 논·밭·연못·초원 등에서 풀씨·줄기·싹 등을 먹고 살며 흰색 알을 4-8개 낳는다.<br>
@@ -374,11 +432,10 @@
         </div>
         <!-- 고니 -->
         <div class="container" id="bird_m24">
-            <img class="pic_bird"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Cygnus_bewickii_01.jpg/450px-Cygnus_bewickii_01.jpg"
-                alt="고니">
-            <h3>고니 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m25')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/고니.jpg" alt="고니">
+            <h3>고니</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m24')"></i>
             <p>고니는 오리과에 고니속에 속한 물새로, 한반도에서는 같은 속에 속한 흑고니·큰고니와 함께 월동하는 겨울철새이다.<br>
                 흰 깃을 가지고 있어 한자어로는 백조(白鳥)라고 한다.<br> 날개길이는 50-55cm이고 떼를 지어 해만·연못에서 수초·조개·물고기 등을 잡아먹고 산다.<br>
                 백조의 호수등 여러 가지 매체, 문화에서 사용되었다.<br>
@@ -389,11 +446,10 @@
         </div>
         <!-- 가창오리 -->
         <div class="container" id="bird_m25">
-            <img class="pic_bird"
-                src="https://img1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/d0Gp/image/i9Xt6bV5iZ-CTHKqpm2XirboV7I.jpg"
-                alt="가창오리">
-            <h3>가창오리 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m26')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/가창오리.jpg" alt="가창오리">
+            <h3>가창오리</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m25')"></i>
             <p>가창오리는 오리속의 철새이다.<br> 북방 한계지는 시베리아동부에서 캄차카반도지역이다.<br> 겨울이 되면 한국, 일본, 중국 북부및 동부에서 월동한다.<br>
                 유전자 조사에 의하면 다른 오리와는 근연성이 없다고 하여 가창오리속에 분류되어야 한다는 의견도 있다.<br>
                 대구광역시 달성군 가창면에서 처음 발견되어 이름이 붙었다는 설이 있지만, 사실이 아니다.<br>
@@ -401,9 +457,10 @@
         </div>
         <!-- 청머리오리 -->
         <div class="container" id="bird_m26">
-            <img class="pic_bird" src="https://cdn.gbprimenews.com/news/photo/202303/132475_97568_219.jpg" alt="청머리오리">
-            <h3>청머리오리 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m27')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/청머리오리.jpg" alt="청머리오리">
+            <h3>청머리오리</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m26')"></i>
             <p>수컷은 녹색과 적갈색 무늬가 있고 몸은 전체적으로 회색이다.<br> 셋째날개깃이 늘어져 있는 것이 특징이다.<br>
                 암컷은 전체적으로 갈색이고 큰날개덮깃 부분에 회백색 무늬가 있다.<br> 어린새는 암컷과 생김새가 매우 유사하다.
                 사할린, 시베리아 동부, 캄차카반도 등에서 번식하고 한국, 일본, 중국 남부 등에서 겨울을 보낸다.<br> 강, 호수, 하구 등에서 관찰된다.<br>
@@ -411,32 +468,29 @@
         </div>
         <!-- 홍머리오리 -->
         <div class="container" id="bird_m27">
-            <img class="pic_bird"
-                src="https://file.alphawiki.org/30/300f25c66ee18b3a4509a51ccc2700411fdf0cecadccef5eaf00f2a85d1c24d5.jpg"
-                alt="홍머리오리">
-            <h3>홍머리오리 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m28')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/홍머리오리.jpg" alt="홍머리오리">
+            <h3>홍머리오리</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m27')"></i>
             <p>홍머리오리는 오리과에 속하며 학명은 Mareca penelope이다.<br> 몸길이는 약 48cm이고 수컷은 머리 위와 이마가 흰색이다.<br>
                 암컷은 물가 근처에 둥지를 짓고, 크림빛이 도는 흰색 알을 7-12개 낳는다.<br> 유럽과 북아메리카에 분포하며 한국에서는 겨울에 볼 수 있다.</p>
         </div>
         <!-- 고방오리 -->
         <div class="container" id="bird_m28">
-            <img class="pic_bird"
-                src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Northern_Pintails_%28Male_%26_Female%29_I_IMG_0911.jpg"
-                alt="고방오리">
-            <h3>고방오리 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m29')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/고방오리.jpg" alt="고방오리">
+            <h3>고방오리</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m28')"></i>
             <p>고방오리는 기러기목 오리과의 한 종으로, 남아메리카를 제외한 모든 대륙에서 서식하는 철새이다.<br>
                 한국에서는 겨울철새이며, 몸길이는 수컷이 최대 75cm, 암컷이 최대 56cm 정도이다.<br>
                 강, 하구, 하천, 간척지, 초습지, 저수지 등에서 생활한다.<br> 낮에는 큰 무리가 물 위에서 휴식을 취하며 일몰시에서 새벽까지 땅 위의 논과 밭에서 먹이를 구한다.</p>
         </div>
         <!-- 청둥오리 -->
         <div class="container" id="bird_m29">
-            <img class="pic_bird"
-                src="https://i.namu.wiki/i/AT-LhqmpwQa5C3uA4uo-EDVtThENuIWnPRb-XBaL0zKEt5sHKaOKf7gOXoYsdka_piYu9oux321slvqy1UCYPQ.webp"
-                alt="청둥오리">
-            <h3>청둥오리 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m30')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/청둥오리.webp" alt="청둥오리">
+            <h3>청둥오리</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m29')"></i>
             <p>청둥오리는 오리과의 새이다.<br> 야생오리 중 가장 흔한 종으로 집오리의 원종이다.
                 대한민국에 서식하는 오리류 중 흰뺨검둥오리와 함께 가장 흔하게 관찰되는 종이며, 겨울철새이자 텃새이다.<br>
                 낮에는 주로 물이나 물가의 모래톱 등에서 먹이활동을 하거나 휴식을 하다가 해질녘에 농경지로 이동해 낱알 등을 먹는다.<br>
@@ -445,21 +499,20 @@
         </div>
         <!-- 쇠오리 -->
         <div class="container" id="bird_m30">
-            <img class="pic_bird"
-                src="https://i.namu.wiki/i/3HrU5InJDZcqjGlhok6hkWT80v5W-pTX09wloAoRmMxa4zmwGBx2tQHa1k1XdE6JVzl-3KR8fljj637rtjpRWQ.webp"
-                alt="쇠오리">
-            <h3>쇠오리 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m31')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/쇠오리.webp" alt="쇠오리">
+            <h3>쇠오리</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m30')"></i>
             <p>쇠오리는 오리과에 속하며 학명은 Anas crecca이다.<br> 몸길이는 약 35cm로 수컷은 머리가 적갈색이고, 눈 주위에 녹색 반점이 있어 암컷과 구분된다.<br>
                 강물의 수면이나 얕은 호수와 연못가의 무성한 풀숲에서 번식하며 수생식물과 그 씨를 뜯어먹고 산다.<br>
                 암컷은 혼자서 알을 부화시키고 새끼를 키운다.<br> 북반부에 널리 분포하며 우리나라에서는 겨울에 볼 수 있다.</p>
         </div>
         <!-- 독수리 -->
         <div class="container" id="bird_m31">
-            <img class="pic_bird" src="https://img.khan.co.kr/news/2019/12/04/l_2019120501000519500046731.jpg"
-                alt="독수리">
-            <h3>독수리 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m32')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/독수리.jpg" alt="독수리">
+            <h3>독수리</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m31')"></i>
             <p>독수리(禿-, Cinereous Vulture, Eurasian black vulture, monk vulture)는 수리과의 새이다.
                 대륙의 풀밭, 바위로 된 산, 큰 삼림 등에 서식하며, 단독 생활 또는 암수가 같이 생활하는 것이 많다.<br>
                 산란기는 2-4월 사이이며 한배에 한 개의 알을 낳는다.<br>
@@ -475,11 +528,10 @@
         </div>
         <!-- 물닭 -->
         <div class="container" id="bird_m32">
-            <img class="pic_bird"
-                src="https://flexible.img.hani.co.kr/flexible/normal/933/622/imgdb/original/2019/1231/20191231502791.jpg"
-                alt="물닭">
-            <h3>물닭 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m33')"></i></h3>
-            <button class="text" onclick="imgClick()">click!</button>
+            <img class="pic_bird" src="/images/물닭.jpg" alt="물닭">
+            <h3>물닭</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_m32')"></i>
             <p>물닭은 뜸부기과에 속하는 새이다.<br> 학명은 라틴어에서 비롯되었으며, Fulica는 검둥오리를, atra는 "검은색"을 뜻한다.<br>
                 유럽, 아시아, 오스트레일리아, 아프리카의 일부 지역에서 볼 수 있다.<br>
                 오스트레일리아의 아종은 오스트레일리안 쿳(Australian coot)이라고 부른다.<br>
@@ -493,53 +545,60 @@
         </div>
 
     </div>
+
+
+
     <!-- footer 시작 -->
-        <footer>
-            <div id="footer-container">
-                <!-- 왼쪽 영역: 프로젝트 팀명 -->
-                <div class="footer-left">
-                    <img src="../images/icon.png" alt="Company Logo">
-                    <p>T e m O N E</p>
-                </div>
-
-                <!-- 중앙 영역: 링크 목록 -->
-                <div class="footer-center">
-                    <ul>
-                        <li><a href="#">홈</a></li>
-                        <li><a href="#">서비스</a></li>
-                        <li><a href="#">새 용품</a></li>
-                        <li><a href="#">고객 지원</a></li>
-                        <li><a href="#">문의하기</a></li>
-                    </ul>
-                </div>
-
-                <!-- 오른쪽 영역: 연락처 및 소셜 미디어 링크 -->
-                <div class="footer-right">
-                    <p>연락처 : 02-1234-5678</p>
-                    <p>이메일 : keduit@temone.com</p>
-                    <div class="social-links">
-                        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
-                        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-                        <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
+    <footer>
+        <div id="footer-container">
+            <!-- 왼쪽 영역: 프로젝트 팀명 -->
+            <div class="footer-left">
+                <img src="../images/bird_logo.jpg" alt="Company Logo">
+                <p>T e a m O N E</p>
             </div>
 
-            <!-- 저작권 정보 및 추가 내용 -->
-            <div class="copyright">
-                <p>&copy; <span class="more"></span> Birding</p>
+            <!-- 중앙 영역: 링크 목록 -->
+            <div class="footer-center">
+                <ul>
+                    <li><a href="./main.html">홈</a></li>
+                    <li><a href="./AboutUs1.html">회사 소개</a></li>
+                    <li><a href="goods.html">새 용품</a></li>
+                    <li><a href="#">고객 지원</a></li>
+                    <li><a href="./FAQ.html">문의하기</a></li>
+                </ul>
             </div>
-        </footer>
-        <!-- footer 종료 -->
-    
-    
-      <!-- 맨 하단 스크롤 올려주는 역할 -->
-      <div id="to-top">
+
+            <!-- 오른쪽 영역: 연락처 및 소셜 미디어 링크 -->
+            <div class="footer-right">
+                <p>연락처 : 02-1234-5678</p>
+                <p>이메일 : keduit@temone.com</p>
+                <div class="social-links">
+                    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 저작권 정보 및 추가 내용 -->
+        <div class="copyright">
+            <p>&copy; <span class="more"></span> Birdy</p>
+        </div>
+    </footer>
+    <!-- footer 종료 -->
+
+    <!-- 맨 하단 스크롤 내려주는 역할 -->
+    <div id="to-top">
         <div class="material-icons">arrow_upward</div>
-      </div>
-    
+    </div>
 
-    
+    <!-- 맨 상단 스크롤 올려주는 역할 -->
+    <div id="to-bottom">
+        <div class="material-icons">arrow_upward</div>
+    </div>
+
+
+
 </body>
 
 </html>

@@ -1,0 +1,276 @@
+/* 공용(헤더, 푸터, 사이드메뉴)추가 코드 조정 */
+.top-menu {
+    margin: 20px 30px 0 0;
+}
+.icon-container {
+    z-index: 3;
+    margin-top: 70px;
+}
+header .top-menu {
+    position: fixed;
+    z-index: 5;
+}
+.icon-container .menu_section {
+    margin-left: -60px;
+}
+header .logo{
+    /* 상단로고 */
+    position: fixed;
+    z-index: 6;
+    text-align: center;
+    box-shadow: 0 0 5px rgb(101, 101, 101);
+    border-radius: 50%;
+    top: 10px;
+    left: 20px;
+}
+/* 사이트명: 버디(임시) */
+header .logo h1{
+    margin: -60px 0 0 100px;
+    font-size: 40px;
+    font-family: 'GangwonEdu_OTFBoldA';
+}
+header .top-menu {
+    position: fixed;
+    /* 항상 상단에 고정 */
+    z-index: 5;
+    /* 다른 요소에 가려지지 않도록 우선순위 */
+    background: white;
+    /* background: linear-gradient(to bottom, white, 95%, rgba(255,255,255,0.2)); */
+    width: 100%;
+    margin: 0;
+    padding: 15px 20px 0 0;
+    height: 60px;
+}
+
+header .top-menu {
+    position: fixed;
+    /* 항상 상단에 고정 */
+    z-index: 5;
+    /* 다른 요소에 가려지지 않도록 우선순위 */
+    /* background: linear-gradient(to bottom, white, 95%, rgba(255,255,255,0.2)); */
+    background: white;
+    width: 100%;
+    margin: 0;
+    padding: 30px 20px 0 0;
+    height: 60px;
+}
+/* 사이드 메뉴 화면에 붙도록 조절 */
+.icon-container .menu_section {
+    margin-top: -100px;
+    margin-left: -100px;
+    background: linear-gradient(to top left, rgba(116, 116, 116, 0.3), rgba(255,255,255,0.8),white,white);
+    border-radius: 0 20px 20px 0;
+    padding: 20px;
+}
+/* 헤어 top메뉴 글씨 라인 */
+.top-menu .menu-list li::after{
+    /* 공용의 bottom 값 주석처리해놓았음 */
+    top:25px;
+}
+/* 끝 */
+
+
+/* 개인css */
+/* 본문 바디 */
+/* 철새 */
+#back_m {
+    background-image: linear-gradient(to bottom, #ffffff, #fbf7fb, #fceef2, #fbe6e4, #f5e0d3, #f0e0cf, #e9dfcc, #e2dfca, #e3e1d1, #e5e4d8, #e6e6de, #e8e8e5);
+    background-attachment: fixed;
+    /* 백그라운드는 항상 똑같이 보이도록 고정 */
+    overflow: scroll;
+    /* 페이지를 넘어가면 스크롤하기 */
+}
+/* 텃새 */
+#back_r {
+    background-image: linear-gradient(to bottom, #ffffff, #f9f7fb, #f6eef7, #f4e5f0, #f3dce7, #f1dae4, #efd7e2, #edd5df, #ead8e3, #e7dce5, #e5dfe6, #e4e2e6);
+    background-attachment: fixed;
+    /* 백그라운드는 항상 똑같이 보이도록 고정 */
+    overflow: scroll;
+    /* 페이지를 넘어가면 스크롤하기 */
+}
+/* 멸종위기종 */
+#back_p {
+    background-image: linear-gradient(to bottom, #ffffff, #edf0f4, #d7e2e8, #c1d5d7, #afc8c1, #acc6bf, #aac4be, #a7c2bc, #b3cace, #c5d1da, #d6d9e1, #e4e2e6);
+    background-attachment: fixed;
+    /* 백그라운드는 항상 똑같이 보이도록 고정 */
+    overflow: scroll;
+    /* 페이지를 넘어가면 스크롤하기 */
+}
+
+/* 앨범 영역 전체 감싼 div */
+.wrap {
+    position: relative;
+    /* 포지션의 기준점 */
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    /* 가로정렬, 넘어가면 다음줄로 넘기기, 요소와 끝 간격 모두 동일하게 */
+    padding: 0 20px;
+}
+
+/* 머릿말 부분 배경 */
+/* 기본_텃새 */
+.h_container{
+    background: url(/pic_bird/h3.jpg);
+    background-size: 100% 500px;
+    /* 영역 안에 항상 사진 전체가 가득차도록 사이즈 조절 */
+    width: 100%;
+    height: 500px;
+    padding: 0;
+    font-size: large;
+    /* 글씨 좀 더 크게.. */
+    margin-bottom: 50px;
+    /* 다른요소와 margin으로 간격조절 */
+    z-index: -1;
+    /* 혹시 모르니..요소의 우선순위 가장 뒤로 빼두기 */
+}
+/* 철새 */
+#bird_m{
+    background: url(/pic_bird/h1.jpg);
+    background-size: 100% 500px;
+}
+/* 멸종위기종 */
+#bird_p{
+    background: url(/pic_bird/h_4.jpg);
+    background-size: 90% 500px;
+}
+
+
+/* 머릿말 내용부분 */
+#bird_ps {
+    float: left;
+    width: 35%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(255, 255, 255, 1), rgba(255, 255, 255, 0.7), rgb(255, 255, 255, 0.0));
+    /* 뒷배경 흐리게 */
+    backdrop-filter: blur(5px);
+    padding-left:5%;
+}
+#bird_pss {
+    margin: 200px 20px;
+}
+
+/* 앨범 하나씩의 단락(공통이름) */
+.container {
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    border-radius: 32px;
+    box-shadow: 0px 0px 10px rgb(151, 151, 151);
+    background: white;
+    margin: 20px;
+    /* 모든 동작에 1초의 전환시간 부여 */
+    transition: all 1s;
+    /* 필터 살짝만 넣어서 색감 낮추기 */
+    filter: grayscale(.6);
+    animation: motion 1s linear 0s
+        /* 처음부터 끝까지 일정 속도로 진행 */
+        alternate;
+    /* 첫 로딩때에만 애니메이션 적용 */
+}
+
+@keyframes motion {
+    0% {
+        filter: grayscale(1.0);
+        border-radius: 0;
+    }
+
+    80% {
+        filter: grayscale(0.6);
+    }
+}
+
+/* 사진 */
+.container .pic_bird {
+    display: block;
+    /* 함수 먹이기 위해 기본 block 상태 부여 */
+    margin: auto;
+    width: 95%;
+    height: 300px;
+    top: 10px;
+    border-radius: 24px;
+    position: relative;
+}
+
+
+/* 박스에 마우스 올라가면 동작 */
+.container:hover {
+    transition: all 800ms;
+    filter: grayscale(0.0);
+    transform: scale(1.2);
+    z-index: 1;
+    background: white;
+}
+
+/* 새 이름 */
+.container h3 {
+    padding: 45px 0 0 30px;
+    float: left;
+    font-size: 20px;
+}
+
+/* 하트 이모티콘 */
+.fa-heart {
+    float: right;
+    padding: 45px 30px 0 0;
+    font-size: 15px;
+    color: black;
+}
+
+/* 마우스 올리면 초록색으로 조금 커지게 동작 */
+.fa-heart:hover {
+    /* transform: scale(1.5); */
+    text-shadow: 0px 0px 10px green;
+    color: green;
+}
+
+/* 클릭하는 순간에 흰색으로 변환 */
+.fa-heart:active {
+    color: white;
+}
+
+/* 클릭되고 나면 초록색으로 고정(함수 사용으로 아이콘 자체가 바뀜) */
+.fa-heart.fa-solid {
+    color: green;
+}
+
+/* 새 설명 */
+.container p {
+    margin: 0 auto;
+    width: 80%;
+    height: 70%;
+    overflow-x: hidden;
+    /* 영역 벗어나면 세로 스크롤만 나타내기 */
+    text-align: center;
+    font-size: 15px;
+    line-height: 20px;
+    /* 줄 간격 */
+    padding: 10px;
+    top: 10%;
+    left: 9%;
+    border-radius: 10px;
+    display: none;
+    /* 처음엔 보이지 않음 상태, 함수로 클릭시 보이기 */
+    background: linear-gradient(to bottom, rgba(222, 222, 222, 0.4), 95%,gray);
+}
+
+/* 설명보기 click 버튼 */
+.text {
+    border: none;
+    background: none;
+    float: left;
+    margin: 47px 0 0 10px;
+    color: rgb(44, 117, 146);
+}
+
+/* 마우스 올리면 흰 그림자 */
+.text:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 10px white;
+}
+
+/* 클릭하면 하얗게 + 함수로 사진 없어지고 설명문 드러남 */
+.text:active {
+    color: white;
+}

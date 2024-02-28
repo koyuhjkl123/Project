@@ -1,0 +1,105 @@
+header .icon-container {
+  left: 45px;
+  top: 200px;
+}
+
+/* 헤더 영역 */
+/* 이미지 로고 영역 */
+header .logo {
+  /* margin-top: 20px; */
+  margin-left: 20px;
+  width: 70px;
+  height: 70px;
+}
+
+header .logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+/* 헤더영역 */
+/* 상단 메뉴바 영역 */
+header .top-menu .menu-list li a {
+  font-size: 30px;
+  /* font-family: 'Ownglyph_meetme-Rg' */
+}
+
+/* 헤더 본문 메뉴바 영역 */
+.icon-container .menubar #menu-container ul li a {
+  font-size: 24px;
+}
+
+/* 공용(헤더, 푸터, 사이드메뉴)추가 코드 조정 */
+.top-menu {
+  margin: 20px 30px 0 0;
+}
+.icon-container {
+  z-index: 3;
+}
+header .top-menu {
+  position: fixed;
+  z-index: 5;
+  width: 70px;
+}
+.icon-container .menu_section {
+  margin-left: -60px;
+}
+header .logo{
+  /* 상단로고 */
+  position: fixed;
+  z-index: 6;
+  text-align: center;
+  box-shadow: 0 0 5px rgb(101, 101, 101);
+  border-radius: 50%;
+  top: -20px;
+  left: 20px;
+}
+/* 사이트명: 버디(임시) */
+header .logo h1{
+  margin: -60px 0 0 100px;
+  font-size: 50px;
+  font-family: 'GangwonEdu_OTFBoldA';
+}
+header .top-menu {
+  position: fixed;
+  /* 항상 상단에 고정 */
+  z-index: 5;
+  /* 다른 요소에 가려지지 않도록 우선순위 */
+  background: white;
+  /* background: linear-gradient(to bottom, white, 95%, rgba(255,255,255,0.2)); */
+  width: 100%;
+  margin: 0;
+  padding: 15px 20px 0 0;
+  height: 60px;
+}
+
+header .top-menu {
+  position: fixed;
+  /* 항상 상단에 고정 */
+  z-index: 5;
+  /* 다른 요소에 가려지지 않도록 우선순위 */
+  /* background: linear-gradient(to bottom, white, 95%, rgba(255,255,255,0.2)); */
+  background: white;
+  width: 100%;
+  margin: 0;
+  padding: 30px 20px 0 0;
+  height: 60px;
+}
+/* 사이드 메뉴 화면에 붙도록 조절 */
+.icon-container .menu_section {
+  margin-top: -100px;
+  margin-left: -100px;
+  background: linear-gradient(to top left, rgba(116, 116, 116, 0.3), rgba(255,255,255,0.8),white,white);
+  border-radius: 0 20px 20px 0;
+  padding: 20px;
+}
+/* 헤어 top메뉴 글씨 라인 */
+.top-menu .menu-list li::after{
+  /* 공용의 bottom 값 주석처리해놓았음 */
+  top:35px;
+}
+
+ footer{
+  font-size: 25px;
+ }

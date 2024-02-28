@@ -6,33 +6,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>우리나라 멸종 위기의 새들</title>
 
-    <script src="https://kit.fontawesome.com/9d06c79ea2.js" crossorigin="anonymous"></script>
-    <script defer src="../js/gallury.js"></script>
-    <link rel="stylesheet" href="../css/gallury.css">
+    <!-- title icon -->
+    <link rel="icon" href="../images/icon/con_2.jpg">
 
+    <!-- css -->
+    <link rel="stylesheet" href="/css/gallury.css">
+    <link rel="stylesheet" href="/css/share.css">
+
+    <!-- javascript -->
+    <script defer src="/js/gallury.js"></script>
+    <script defer src="/js/to_bottom_scroll.js"></script>
+    <script defer src="/js/menubar.js"></script>
 
     <!-- 아이콘 라이브러리 -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <script src="https://kit.fontawesome.com/9d06c79ea2.js" crossorigin="anonymous"></script>
+
+    <!-- Gsap & ScrollToPlugin -->
+    <!-- Gsap은 웹 애니메이션을 도와주는 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- 유틸리티 라이브러리 배열 조작, 데이터 변환, 함수 조합 등을 지원-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+        integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Gsap와 같이 사용하여 스크롤 애니메이션에서 특정 위치에 자연스럽게 할 수 있도록 도와주는 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"
+        integrity="sha512-v/m68W+vaGN/6igoyFpd4GlQzu0jx9/n5gr2PKq5vif+RObyGKHse384YHrOULaxZ810XhlHUrmB3U8UnPB19Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
 
-<body id="protected">
+<body id="back_p">
 
-    <div class="container" id="bird_p">
-        <h2>한국의 멸종위기종 (1급)</h2>
-        <h3>멸종위기의 동물들...</h3>
-        <div>자연적 또는 인위적 위협요인으로 개체수가 현저하게 감소되어 멸종위기에 처한 야생생물 중, 관계중앙행정기관의 장과 협의하여 환경부령이 정한 종들입니다.<br>
-            한국에는 이 곳에 소개된 새들 이외에도 수 많은 새들이 멸종위기를 겪고 있습니다.</div>
+    <header>
+        <div class="logo">
+            <img src="../images/bird_logo.jpg" alt="#">
+            <h1><a href="./main.html">Birdy</a></h1>
+        </div>
+
+        <div class="mobile">
+            <div class="pc-icon"><img src="../images/icon/pc-icon.png" alt="PC 변환"></div>
+            <div class="phone-icon"><img src="../images/icon/phone-icon.png" alt="모바일 변환"></div>
+        </div>
+
+        <!-- 우측 상단 메뉴리스트 -->
+
+        <div class="top-menu">
+            <ul class="menu-list">
+                <li><a href="./loginsignup.html">회원가입</a></li>
+                <li><a href="./loginsignup.html">로그인</a></li>
+                <li><a href="./MyPage.html">마이페이지</a></li>
+                <li><a href="./board.html">게시판</a></li>
+            </ul>
+        </div>
+
+        <!-- 본문 메뉴바 -->
+        <div class="icon-container">
+            <div class="icon"></div>
+            <nav class="menubar">
+                <div id="menu-container">
+                    <ul class="menu_section">
+                        <img src="../images/icon/bird_icon_x.png" alt="" class="close">
+                        <br>
+                        <li><a href="#a">새의 종류</a>
+                            <ul>
+                                <li><a href="./residunt_bird.html">텃새</a></li>
+                                <li><a href="./migratory_bird.html">철새</a></li>
+                                <li><a href="./protected_bird.html">천연기념물</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./goods.html">새용품</a></li>
+              <li><a href="./FAQ.html">문의사항</a></li>
+              <li><a href="./onlyCssBirdyVer2.html">애완조 안내서</a></li>
+              <li><a href="./news.html">과학 <img src="../images/icon/bird_icon.png" alt="+">새</a></li>
+              <li><a href="#a">후원하기</a></li>
+              <li><a href="/HTML/AboutUs 1.html">About Us</a></li>
+                    </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <div class="h_container" id="bird_p">
+        <div id="bird_ps">
+            <div id="bird_pss">
+                <h2>한국의 멸종위기종 (1급)</h2>
+                <br>
+                <div>자연적 또는 인위적 위협요인으로 개체수가 현저하게 감소되어 멸종위기에 처한 새들입니다.</div>
+            </div>
+        </div>
     </div>
-    
+
     <div class="wrap">
         <!-- 멸종위기 1급 -->
         <div class="container" id="bird_p1">
-            <span><img class="pic_bird" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Golden_Eagle_in_flight_-_5.jpg/450px-Golden_Eagle_in_flight_-_5.jpg"
-            alt="검독수리"></span>
-            <h3>검독수리 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p1')"></i></h3>
-            <button class="text" onclick="imgClick()">설명보기</button>
-           
+            <span><img class="pic_bird" src="/images/검독수리.jpg" alt="검독수리"></span>
+            <h3>검독수리</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p1')"></i>
             <p>대한민국에서 멸종위기 야생생물 1급으로 희귀한 겨울철새이자 텃새다.<br>
                 또한 천연기념물 243-2호로 지정해 보호하고 있다.
                 대한민국에서는 경기도 천마산, 내장산, 영월 동강, 두타연 등지에서 번식하였으나, 현재 거의 사라졌다.
@@ -40,30 +115,29 @@
                 대한민국 환경부 조사에 따르면, 비무장지대에도 서식한다고 한다.</p>
         </div>
         <div class="container" id="bird_p2">
-            <img class="pic_bird" src="https://cdn.yhtoday.co.kr/news/photo/fee/202312/22046_21670_344.jpg" alt="고니"></img>
-            <h3>고니 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p2')"></i></h3>
-            <button class="text" onclick="imgClick()">설명보기</button>
+            <img class="pic_bird" src="/images/고니.jpg" alt="고니"></img>
+            <h3>고니</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p2')"></i>
             <p>흰 깃을 가지고 있어 한자어로는 백조(白鳥)라고 한다.<br>
                 날개길이는 50-55cm이고 떼를 지어 해만·연못에서 수초·조개·물고기 등을 잡아먹고 산다.<br>
                 백조의 호수등 여러 가지 매체, 문화에서 사용되었다.<br>
                 대한민국에서는 천연기념물 제201-1호 및 멸종위기 야생생물 1급으로 지정되어 있다.</p>
         </div>
         <div class="container" id="bird_p3">
-            <img class="pic_bird"
-             src="https://i.namu.wiki/i/AvpCfqwqm17hrHt4pVuQy9zXg37PDJb3FlqSSHx7YpYSG0EDXc-rzA9TU1ui0M9Mu33kDs4u_tbZAm9N69B-dQ.webp"
-                alt="흑고니"></img>
-            <h3>흑고니 <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p3')"></i></h3>
-            <button class="text" onclick="imgClick()">설명보기</button>
+            <img class="pic_bird" src="/images/흑고니.webp" alt="흑고니"></img>
+            <h3>흑고니</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p3')"></i>
             <p>흑고니는 오스트레일리아에 사는 새이며, 웨스턴오스트레일리아주의 상징 새이다.<br>
                 아종인 뉴질랜드고니는 마오리족에 의해 멸종했다.<br>
                 오스트레일리아는 1974년부터 흑고니를 법적으로 보호하고 있다.</p>
         </div>
         <div class="container" id="bird_p4">
-            <img class="pic_bird" src="https://t1.daumcdn.net/cfile/tistory/21044837523E9ED034" alt="넓적부리도요"></img>
-            <h3>넓적부리도요
-                <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p4')"></i>
-            </h3>
-            <button class="text" onclick="imgClick()">설명보기</button>
+            <img class="pic_bird" src="/images/넓적부리도요.jpeg" alt="넓적부리도요"></img>
+            <h3>넓적부리도요</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p4')"></i>
             <p>여름에 시베리아와 알래스카에서 번식하며 동아시아와 동남아시아로 내려와서 겨울을 나는 철새이다.<br>
                 국제적 멸종위기종이며, 대한민국에서는 멸종위기 야생생물 1급으로 지정되어 있다.<br>
                 몸길이 14.5cm로 부리는 색이 검고, 끝이 주걱 모양으로 생긴 것이 특징이다.<br>
@@ -73,13 +147,10 @@
             </p>
         </div>
         <div class="container" id="bird_p5">
-            <img class="pic_bird"
-             src="https://upload.wikimedia.org/wikipedia/commons/1/17/Zengwen_River_Mouth_Wetlands_Yi-Cheng%2C_Chen_555594020_-_9.jpg"
-                alt="노랑부리백로"></img>
-            <h3>노랑부리백로
-                <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p5')"></i>
-            </h3>
-            <button class="text" onclick="imgClick()">설명보기</button>
+            <img class="pic_bird" src="/images/노랑부리백로.JPG" alt="노랑부리백로"></img>
+            <h3>노랑부리백로</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p5')"></i>
             <p>노랑부리백로는 백로과에 속한 새이다.<br>
                 몸길이 약 61cm로 온몸이 흰색이며 번식기에는 뒷머리에 8cm쯤 되는 장식깃이 발달한다.<br>
                 부리는 노란색이고 수컷의 겨울깃은 뒷머리·아랫목·어깨에 장식깃이 없다.<br>
@@ -91,12 +162,10 @@
                 안산의 시조로 지정됐다.</p>
         </div>
         <div class="container" id="bird_p6">
-            <img class="pic_bird"
-             src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Dabao.jpg/450px-Dabao.jpg" alt="느시"></img>
-            <h3>느시
-                <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p6')"></i>
-            </h3>
-            <button class="text" onclick="imgClick()">설명보기</button>
+            <img class="pic_bird" src="/images/느시.jpg" alt="느시"></img>
+            <h3>느시</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p6')"></i>
             <p>느시(Great bustard)는 느시목 느시과의 새이다.<br>
                 대한민국에서는 천연기념물로 지정되어 있다.<br>
                 광활한 평야, 건조한 구릉의 초지, 잡초가 우거진 초원 등지에 서식하며, 우리나라에는 11월경에 남하하여 월동하고 3월경에 북상한다.<br>
@@ -105,13 +174,10 @@
             </p>
         </div>
         <div class="container" id="bird_p7">
-            <img class="pic_bird"
-             src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Red-crowned_Cranes_-_Hokkaido_-_Japan_S4E4202_%2815525814846%29.jpg/450px-Red-crowned_Cranes_-_Hokkaido_-_Japan_S4E4202_%2815525814846%29.jpg"
-                alt="두루미"></img>
-            <h3>두루미
-                <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p7')"></i>
-            </h3>
-            <button class="text" onclick="imgClick()">설명보기</button>
+            <img class="pic_bird" src="/images/두루미.jpg" alt="두루미"></img>
+            <h3>두루미</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p7')"></i>
             <p>매년 10월 말에서 3월 중순까지 한국에 도래하며 강원특별자치도 철원군이 가장 큰 월동지이다.<br>
                 경기도(파주시, 연천군), 인천광역시(강화군)에 일부 도래하며, 강원특별자치도(고성), 전라북도(김제시)의 만경강하구(새만금 갯벌) 등이 소규모 도래지이다.<br>
                 1982년 이후부터 발행된 대한민국의 500원 동전 앞면에는 날고 있는 두루미의 모습이 그려져 있다.<br>
@@ -130,26 +196,20 @@
             </p>
         </div>
         <div class="container" id="bird_p8">
-            <img class="pic_bird"
-             src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Ciconia_nigra_1_%28Marek_Szczepanek%29.jpg/450px-Ciconia_nigra_1_%28Marek_Szczepanek%29.jpg"
-                alt="먹황새"></img>
-            <h3>먹황새
-                <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p8')"></i>
-            </h3>
-            <button class="text" onclick="imgClick()">설명보기</button>
+            <img class="pic_bird" src="/images/먹황새.jpg" alt="먹황새"></img>
+            <h3>먹황새</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p8')"></i>
             <p>먹황새는 황새목 황새과의 한 종으로, 한국에서는 드문 겨울철새이다.<br>
                 한국에서는 천연기념물 제200호 및 멸종위기 야생생물 1급으로 지정하여 보호하고 있다.<br>
                 대한민국에서 텃새 개체는 1968년까지 안동시 도산면 강송리 절벽에서 서식한 것을 끝으로 발견되지 않았으나, 최근 몇 년간 전라남도 함평군에서 겨울을 나는 모습이 발견되었다.
             </p>
         </div>
         <div class="container" id="bird_p9">
-            <img class="pic_bird"
-             src="https://image.fnnews.com/resource/media/image/2022/12/09/202212091003080629_l.jpg"
-                alt="뿔제비갈매기"></img>
-            <h3>뿔제비갈매기
-                <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p9')"></i>
-            </h3>
-            <button class="text" onclick="imgClick()">설명보기</button>
+            <img class="pic_bird" src="/images/뿔제비갈매기.jpg" alt="뿔제비갈매기"></img>
+            <h3>뿔제비갈매기</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p9')"></i>
             <p>부리는 전체적으로 노랑색이며 끝부분이 까맣다.<br>
                 여름깃은 머리 위가 검은색이고 겨울깃은 이마에서 머리꼭대기 부분이 하얀색으로 바뀐다.<br>
                 어린새는 등과 날개에 검은 반점들이 있다.<br>
@@ -161,13 +221,10 @@
             </p>
         </div>
         <div class="container" id="bird_p10">
-            <img class="pic_bird"
-             src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Black_faced_spoonbill_at_Niigata.JPG/450px-Black_faced_spoonbill_at_Niigata.JPG"
-                alt="저어새"></img>
-            <h3>저어새
-                <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p10')"></i>
-            </h3>
-            <button class="text" onclick="imgClick()">설명보기</button>
+            <img class="pic_bird" src="/images/저어새.JPG" alt="저어새"></img>
+            <h3>저어새</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p10')"></i>
             <p>저어새는 사다새목 저어새과에 속하는 새이다.<br>
                 몸 길이는 60~78 cm 정도 되며, 수컷이 더 크지만 그 차이는 크지 않다.<br>
                 얼굴, 부리, 다리는 검은색이며 몸은 흰색의 깃털로 덮여있다.<br>
@@ -183,13 +240,10 @@
             </p>
         </div>
         <div class="container" id="bird_p11">
-            <img class="pic_bird"
-             src="https://flexible.img.hani.co.kr/flexible/normal/650/420/imgdb/resize/2017/1227/00503345_20171227.JPG"
-                alt="참수리"></img>
-            <h3>참수리
-                <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p11')"></i>
-            </h3>
-            <button class="text" onclick="imgClick()">설명보기</button>
+            <img class="pic_bird" src="/images/참수리.jpeg" alt="참수리"></img>
+            <h3>참수리</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p11')"></i>
             <p>참수리는 수리과에 속한다.<br>
                 몸길이는 약 88-102cm이며 암수가 모두 검은색을 띤다.<br>
                 암컷이 수컷보다 크다.<br>
@@ -201,11 +255,10 @@
                 울음소리는 낮은 음으로 구욱국국국국(구욱 부분에서 욱 부분에서 갑자기 음이 올라갔다 내려온다.)거린다.</p>
         </div>
         <div class="container" id="bird_p12">
-            <img class="pic_bird" src="https://www.knps.or.kr/upload/Editor/20180809043106673.jpg" alt="청다리도요사촌"></img>
-            <h3>청다리도요사촌
-                <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p12')"></i>
-            </h3>
-            <button class="text" onclick="imgClick()">설명보기</button>
+            <img class="pic_bird" src="/images/청다리도요사촌.jpg" alt="청다리도요사촌"></img>
+            <h3>청다리도요사촌</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p12')"></i>
             <p>우리나라의 서해안과 남해안에 주로 서식하는데, 강화도, 영종도, 남양만, 아산만, 만경강, 순천만 및 낙동강 하구 등지에서 확인되었다.<br>
                 국제적으로는 캄차카반도, 사할린, 오호츠크 연안, 아무르, 우수리, 일본, 중국, 타이완, 필리핀, 보르네오, 미얀마, 인디아 등에서 서식한다.<br>
                 환경부지정 멸종위기 야생생물 1급으로 보호되고 있으며 세계자연보전연맹(IUCN)의 적색자료집(Red List)에는 멸종위기종(EN: Endangered)으로 분류되어 있다.<br>
@@ -214,11 +267,10 @@
                 우리나라에서도 주요 서식지인 서해안과 남해안 갯벌을 보호해야 국제적 멸종위기종을 보호할 수 있다.</p>
         </div>
         <div class="container" id="bird_p13">
-            <img class="pic_bird" src="https://cdn.newspenguin.com/news/photo/202211/12767_39099_4936.jpg" alt="크낙새"></img>
-            <h3>크낙새
-                <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p13')"></i>
-            </h3>
-            <button class="text" onclick="imgClick()">설명보기</button>
+            <img class="pic_bird" src="/images/크낙새.jpg" alt="크낙새"></img>
+            <h3>크낙새</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p13')"></i>
             <p>한반도에서는 한국 전쟁 이전에는 황해도에서 부산에 이르는 일대에 서식하고 있었지만, 전쟁 이후 수가 줄었다.<br>
                 1974년부터 국립수목원에서 한 쌍이 번식한 이래 수목원 이외 지역에서는 목격되지 않다가 1993년부터 수목원에서도 자취를 감추었다.<br>
                 일본에서는 대마도에 서식하고 있었으나 절멸한 것으로 여겨진다.<br>
@@ -228,11 +280,10 @@
                 2021년 현재 환경부 지정 멸종위기 야생생물 1급에 포함되어 있다.</p>
         </div>
         <div class="container" id="bird_p14">
-            <img class="pic_bird" src="https://img.sbs.co.kr/newimg/news/20150310/200818960_700.jpg" alt="호사비오리"></img>
-            <h3>호사비오리
-                <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p14')"></i>
-            </h3>
-            <button class="text" onclick="imgClick()">설명보기</button>
+            <img class="pic_bird" src="/images/호사비오리.jpg" alt="호사비오리"></img>
+            <h3>호사비오리</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p14')"></i>
             <p>호사비오리는 오리과의 새로, 한국에서는 겨울철새이다.<br>
                 러시아 남동부, 중국 북동부, 한반도 북부(백두산)에서 번식하며, 한반도 남부와 일본에서 월동한다.<br>
                 전 세계에 2400~4500마리가 생존해 있는 것으로 보인다.<br>
@@ -242,13 +293,10 @@
             </p>
         </div>
         <div class="container" id="bird_p15">
-            <img class="pic_bird"
-             src="https://i.namu.wiki/i/J_HhuWOew4Ur9NYlkGTc3Ao7LA9PlcRjdMu0s_uF1YP9oQCGfKRlFWJJbJ1OAgOA4jR0H0AcTGTOJdMBhBB0JQ.webp"
-                alt="황새"></img>
-            <h3>황새
-                <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p15')"></i>
-            </h3>
-            <button class="text" onclick="imgClick()">설명보기</button>
+            <img class="pic_bird" src="/images/황새.webp" alt="황새"></img>
+            <h3>황새</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p15')"></i>
             <p>황새는 크고 흰 몸에 검은 날갯깃을 가진 황새과의 새이다.<br>
                 황새는 온몸이 흰색이고 날개 끝은 검은색이다.<br>
                 황새는 목과 윗가슴을 가로지르는 목둘레의 긴 깃털로 식별할 수 있다.<br>
@@ -262,12 +310,10 @@
                 함께 살던 암컷도 1983년에 창경원동물원(지금의 서울대공원동물원)으로 옮겨졌으나 1994년 9월에 숨을 거두었다.</p>
         </div>
         <div class="container" id="bird_p16">
-            <img class="pic_bird" src="https://www.viva100.com/mnt/images/file/2024y/01m/04d/20240104001347194_1.jpg"
-                alt="흰꼬리수리"></img>
-            <h3>흰꼬리수리
-                <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p16')"></i>
-            </h3>
-            <button class="text" onclick="imgClick()">설명보기</button>
+            <img class="pic_bird" src="/images/흰꼬리수리.jpg" alt="흰꼬리수리"></img>
+            <h3>흰꼬리수리</h3>
+            <button class="text" onclick="imgClick()">▲click!▲</button>
+            <i class="fa-regular fa-heart" onclick="toggleHeart('bird_p16')"></i>
             <p>흰꼬리수리는 수리과에 속한다.<br>
                 혼자 생활하지만 번식이 끝난 뒤에는 어린 새와 같이 다니기도 한다.<br>
                 유라시아대륙 전역에 걸쳐 폭넓게 분포하며 한국에서는 겨울에 볼 수 있으며 환경부 지정 멸종위기 1급인 동물이다.<br>
@@ -279,6 +325,58 @@
             </p>
         </div>
     </div>
+
+
+
+    <!-- footer 시작 -->
+    <footer>
+        <div id="footer-container">
+            <!-- 왼쪽 영역: 프로젝트 팀명 -->
+            <div class="footer-left">
+                <img src="../images/bird_logo.jpg" alt="Company Logo">
+                <p>T e a m O N E</p>
+            </div>
+
+            <!-- 중앙 영역: 링크 목록 -->
+            <div class="footer-center">
+                <ul>
+                    <li><a href="./main.html">홈</a></li>
+                    <li><a href="./AboutUs1.html">회사 소개</a></li>
+                    <li><a href="goods.html">새 용품</a></li>
+                    <li><a href="#">고객 지원</a></li>
+                    <li><a href="./FAQ.html">문의하기</a></li>
+                </ul>
+            </div>
+
+            <!-- 오른쪽 영역: 연락처 및 소셜 미디어 링크 -->
+            <div class="footer-right">
+                <p>연락처 : 02-1234-5678</p>
+                <p>이메일 : keduit@temone.com</p>
+                <div class="social-links">
+                    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 저작권 정보 및 추가 내용 -->
+        <div class="copyright">
+            <p>&copy; <span class="more"></span> Birdy</p>
+        </div>
+    </footer>
+    <!-- footer 종료 -->
+    <!-- 맨 하단 스크롤 내려주는 역할 -->
+    <div id="to-top">
+        <div class="material-icons">arrow_upward</div>
+    </div>
+
+    <!-- 맨 상단 스크롤 올려주는 역할 -->
+    <div id="to-bottom">
+        <div class="material-icons">arrow_upward</div>
+    </div>
+
+
 
 </body>
 

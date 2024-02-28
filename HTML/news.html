@@ -6,24 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BIRDY news</title>
 
-    <link rel="stylesheet" href="../css/share.css">
-    <link rel="stylesheet" href="../css/share_Typeface.css">
-    <link rel="stylesheet" href="../css/news.css">
+    <link rel="stylesheet" href="/css/share.css">
+    <link rel="stylesheet" href="/css/share_Typeface.css">
+    <link rel="stylesheet" href="/css/news.css">
+
+    <!-- title icon -->
+    <link rel="icon" href="../images/bird_logo.jpg">
+
+    <script defer src="/js/news.js"></script>
+    <script defer src="/js/to_bottom_scroll.js"></script>
 
 </head>
 
 <body>
     <div class="header">
 
-        <img src="image\istockphoto.png" alt="로고 이미지" width="200px" height="auto">
-        <h1>BIRDY NEWS</h1>
+        <div class="logo">
+            <img src="../images/bird_logo.jpg" alt="Company Logo" href="./main.html">
+        </div>
+        <h1><a href="./main.html">BIRDY NEWS</a></h1>
 
         <div class="top-menu">
             <ul class="menu-list">
-                <li><a href="#a">회원가입</a></li>
-                <li><a href="#a">로그인</a></li>
-                <li><a href="#a">마이페이지</a></li>
-                <li><a href="./free.html">게시판</a></li>
+                <li><a href="./loginsignup.html">회원가입</a></li>
+                <li><a href="./loginsignup.html">로그인</a></li>
+                <li><a href="MyPage.html">마이페이지</a></li>
+                <li><a href="./board.html">게시판</a></li>
             </ul>
         </div>
 
@@ -47,97 +55,117 @@
                     <li><a href="#a">애완조 안내서</a></li>
                     <li><a href="./news.html">과학 <img src="../images/bird_icon.png" alt="+">새</a></li>
                     <li><a href="#a">후원하기</a></li>
-                    <li><a href="#a">About Us</a></li>
+                    <li><a href="./AboutUs1.html">About Us</a></li>
                 </ul>
         </nav>
+
+
     </div>
     <div class="center">
-        <h2>주간조류</h2>
+        <h4>"월간조류"는 새에 관한 새로운 소식, 알지 못했던 정보를 업데이트합니다.</h4>
+        <br>
+        <h3>24년 2월호</h3>
+        <div class="custom-box">
 
-        <div class="image-container">
-            <div class="image-box" onclick="location.href='링크1.html'">
-                <img src="image\galluscam.png" alt="이미지1" width="150px" height="auto">
-            </div>
-            <div class="description-box">
-                <p class="image-description">이미지 설명 1</p>
-                <p class="detail-description">상세 설명</p>
-            </div>
-        </div>
-        <div class="image-container">
-            <div class="image-box" onclick="location.href='링크2.html'">
-                <img src="image\white.png" alt="이미지2" width="150px" height="auto">
-            </div>
-            <div class="description-box">
-                <p class="image-description">이미지 설명 2</p>
-                <p class="detail-description">상세 설명</p>
-            </div>
-        </div>
-        <div class="image-container">
-            <div class="image-box" onclick="location.href='링크3.html'">
-                <img src="image\ship.png" alt="이미지3" width="150px" height="auto">
-            </div>
-            <div class="description-box">
-                <p class="image-description">이미지 설명 3</p>
-                <p class="detail-description">상세 설명</p>
-            </div>
-        </div>
-        <div class="image-container">
-            <div class="image-box" onclick="location.href='링크4.html'">
-                <img src="image\dark.png" alt="이미지4" width="150px" height="auto">
-            </div>
-            <div class="description-box">
-                <p class="image-description">이미지 설명 4</p>
-                <p class="detail-description">상세 설명</p>
-            </div>
-        </div>
-        <div class="image-container">
-            <div class="image-box" onclick="location.href='링크5.html'">
-                <img src="image\zxzx.png" alt="이미지5" width="150px" height="auto">
-            </div>
-            <div class="description-box">
-                <p class="image-description">이미지 설명 5</p>
-                <p class="detail-description">상세 설명</p>
-            </div>
-        </div>
+            <div class="slider">
+                <input type="radio" name="slide" id="slide1" checked>
+                <input type="radio" name="slide" id="slide2">
+                <input type="radio" name="slide" id="slide3">
+                <!--<input type="radio" name="slide" id="slide4"> -->
+                <ul id="imgholder" class="imgs">
+                    <li><img src="../images/chicken.JPG"></li>
+                    <li><img src="../images/humm.JPG"></li>
+                    <li><img src="../images/airplane.JPG"></li>
+                    <!-- <li><img src="../images/bird640.png"></li> -->
+                </ul>
+                <div class="bullets">
+                    <label for="slide1">&nbsp;</label>
+                    <label for="slide2">&nbsp;</label>
+                    <label for="slide3">&nbsp;</label>
+                    <!-- <label for="slide4">&nbsp;</label> -->
+                </div>
+                <div class="text-box" id="text-box1">
 
-    </div>
-      <!-- footer 시작 -->
-   <footer>
-    <div id="footer-container">
-        <!-- 왼쪽 영역: 프로젝트 팀명 -->
-        <div class="footer-left">
-            <img src="../images/icon.png" alt="Company Logo">
-            <p>T e m O N E</p>
-        </div>
+                    <h2>닭의 머리와 카메라?</h2>
+                    <p>새의 머리 안정성을 모델로 한 이미지 스태빌라이제이션 기술은 카메라나 렌즈 내부 센서를 사용하여 흔들림을 감지하고 보정하여 영상 안정성을 유지합니다.
+                        이 기술은 영상 품질을 향상시키고 다양한 분야에서 활용됩니다.
+                        <br>
+                        <출처:LG"Gallluscam"광고>
+                    </p>
+                </div>
+                <div class="text-box" id="text-box2">
+                    <h2>드론과 벌새</h2>
+                    <p>
+                        벌새의 비행능력과 사회적 구조는 드론 기술의 발전에 영감을 주었습니다.
+                        벌새의 뛰어난 비행능력은 안정적이고 다양한 조건에서 비행할 수 있는 드론의 설계에 영향을 주었으며,
+                        벌새의 사회적 협력 구조는 드론의 스완무어 기술과 같은 협력적 작업에 적용되었습니다. 또한, 벌새의 생리학적 특성은 드론의 디자인과 제어 시스템 개발에 영향을 미치고
+                        있습니다.
+                        이러한 관련성은 드론 기술의 혁신과 발전을 이끄는 중요한 역할을 합니다
+                        <br>
+                        <출처:테크플러스 에디터 '나유권'>
+                    </p>
+                </div>
+                <div class="text-box" id="text-box3">
+                    <h2>비행기와 새</h2>
+                    <p>새들의 비행과 비행기의 발명은 밀접하게 연관되어 있습니다.
+                        새들의 비행은 인류에게 오랫동안 비행에 대한 영감을 주었으며,
+                        비행기의 발명과 발전에 큰 영향을 미쳤습니다.
+                        새들의 날개 구조와 비행 원리는 비행기 설계에 영감을 주었고,
+                        새들의 비행 동작은 비행기의 제어와 조종에 영향을 미쳤습니다.
+                        또한, 새들이 다양한 환경에서 비행할 수 있는 능력은 비행기가 다양한 조건에서 안전하고 효율적으로 비행할 수 있도록 설계되는 데 도움이 되었습니다</p>
+                    <출처:https: //brunch.co.kr/@leedh200/509>
 
-        <!-- 중앙 영역: 링크 목록 -->
-        <div class="footer-center">
-            <ul>
-                <li><a href="#">홈</a></li>
-                <li><a href="#">서비스</a></li>
-                <li><a href="#">새 용품</a></li>
-                <li><a href="#">고객 지원</a></li>
-                <li><a href="#">문의하기</a></li>
-            </ul>
-        </div>
-
-        <!-- 오른쪽 영역: 연락처 및 소셜 미디어 링크 -->
-        <div class="footer-right">
-            <p>연락처 : 02-1234-5678</p>
-            <p>이메일 : keduit@temone.com</p>
-            <div class="social-links">
-                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
-                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                </div>
+                <!-- <div class="text-box" id="text-box4">
+                <h2>Slide 4 Text</h2>
+                <p>Slide 4에 대한 내용</p>
+            </div> -->
             </div>
         </div>
     </div>
-
-    <!-- 저작권 정보 및 추가 내용 -->
-    <div class="copyright">
-        <p>&copy; <span class="more"></span> Birding</p>
+    <!-- 게시판 영역 종료-->
     </div>
-</footer>
-<!-- footer 종료 -->
+    </div>
+
+    <!-- footer 시작 -->
+    <footer>
+        <div id="footer-container">
+            <!-- 왼쪽 영역: 프로젝트 팀명 -->
+            <div class="footer-left">
+                <img src="../images/icon.png" alt="Company Logo">
+                <p>T e m O N E</p>
+            </div>
+
+            <!-- 중앙 영역: 링크 목록 -->
+            <div class="footer-center">
+                <ul>
+                    <li><a href="./main.html">홈</a></li>
+                    <li><a href="./AboutUs1.html">회사 소개</a></li>
+                    <li><a href="#">새 용품</a></li>
+                    <li><a href="#">고객 지원</a></li>
+                    <li><a href="./FAQ.html">문의하기</a></li>
+                </ul>
+            </div>
+
+            <!-- 오른쪽 영역: 연락처 및 소셜 미디어 링크 -->
+            <div class="footer-right">
+                <p>연락처 : 02-1234-5678</p>
+                <p>이메일 : keduit@temone.com</p>
+                <div class="social-links">
+                    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 저작권 정보 및 추가 내용 -->
+        <div class="copyright">
+            <p>&copy; <span class="more"></span> Birdy</p>
+        </div>
+    </footer>
+    <!-- footer 종료 -->
 
 </body>
+
+</html>

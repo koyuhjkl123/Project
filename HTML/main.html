@@ -5,14 +5,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Birding</title>
+  <title>Birdy</title>
+
+
+  <!-- javascript -->
   <script defer src="../js/main.js"></script>
-  <link rel="icon" href="../images/icon.png" style="border-radius: 50%;">
+  <script defer src="../js/to_bottom_scroll.js"></script>
+
+  <!-- title icon -->
+  <link rel="icon" href="../images/bird_logo.jpg">
 
 
+  <!-- css -->
   <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/share.css">
-  <link rel="stylesheet" href="../css/share_Typeface.css">
+  <link rel="stylesheet" href="/css/share.css">
 
 
 
@@ -61,31 +67,36 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-  <!-- map 라이브러리 -->
-  <script src="https://cdn.jsdelivr.net/npm/ol@v8.2.0/dist/ol.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v8.2.0/ol.css">
-
 </head>
 
 <body>
 
-  <div class="cursor"></div>
+  <section class="intro">
+    <h2 class="intro__title hidden">새들에 대한 이해와 애정을 높이는 여정에 여러분을 초대합니다.</h2>
+    <div class="intro__background intro__background--left"></div>
+    <div class="intro__background intro__background--right"></div>
+  </section>
 
   <!-- header 헤더 시작 -->
   <div id="container">
     <header>
       <!-- 로고 -->
       <div class="logo">
-        <img src="../images/icon.png" alt="">
+        <img src="../images/bird_logo.jpg" alt="Company Logo" href="./main.html">
+      </div>
+
+      <div class="mobile">
+        <div class="pc-icon"><img src="../images/icon/pc-icon.png" alt="PC 변환"></div>
+        <div class="phone-icon"><img src="../images/icon/phone-icon.png" alt="모바일 변환"></div>
       </div>
 
       <!-- 우측 상단 메뉴-->
       <div class="top-menu">
         <ul class="menu-list">
-          <li><a href="#a">회원가입</a></li>
-          <li><a href="#a">로그인</a></li>
-          <li><a href="#a">마이페이지</a></li>
-          <li><a href="./free.html">게시판</a></li>
+          <li><a href="loginsignup.html">회원가입</a></li>
+          <li><a href="loginsignup.html">로그인</a></li>
+          <li><a href="MyPage.html">마이페이지</a></li>
+          <li><a href="free.html">게시판</a></li>
         </ul>
       </div>
 
@@ -95,7 +106,7 @@
         <nav class="menubar">
           <div id="menu-container">
             <ul class="menu_section">
-              <img src="../images/bird_icon_x.png" alt="" class="close">
+              <img src="../images/icon/bird_icon_x.png" alt="" class="close">
               <li><a href="#a">새의 종류</a>
                 <ul>
                   <li><a href="./residunt_bird.html">텃새</a></li>
@@ -103,12 +114,12 @@
                   <li><a href="./migratory_bird.html">천연기념물</a></li>
                 </ul>
               </li>
-              <li><a href="#a">새용품</a></li>
+              <li><a href="./goods.html">새용품</a></li>
               <li><a href="./FAQ.html">문의사항</a></li>
-              <li><a href="#a">애완조 안내서</a></li>
-              <li><a href="./news.html">과학 <img src="../images/bird_icon.png" alt="+">새</a></li>
+              <li><a href="./onlyCssBirdyVer2.html">애완조 안내서</a></li>
+              <li><a href="./news.html">과학 <img src="../images/icon/bird_icon.png" alt="+">새</a></li>
               <li><a href="#a">후원하기</a></li>
-              <li><a href="#a">About Us</a></li>
+              <li><a href="/HTML/AboutUs 1.html">About Us</a></li>
             </ul>
         </nav>
         <!-- nav 좌측 메뉴바 종료 -->
@@ -122,7 +133,8 @@
         <li class="section2"><a href="#section2"><span>새용품</span></a></li>
         <li class="section3"><a href="#section3"><span>문의사항</span></a></li>
         <li class="section4"><a href="#section4"><span>애완조 안내서</span></a></li>
-        <li class="section5"><a href="#section5"><span>과학<img src="../images/bird_icon.png" alt="+">새</span></a></li>
+        <li class="section5"><a href="#section5"><span>과학<img src="../images/icon/bird_icon.png" alt="+">새</span></a>
+        </li>
         <li class="section6"><a href="#section6"><span>후원하기</span></a></li>
         <li class="section7"><a href="#section7"><span>About Us</span></a></li>
       </ul>
@@ -140,10 +152,10 @@
             <div class="swiper-container">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <a href="#a">하늘을 나는 가장 대표적인 동물이다</a>
+                  <a href="#a">이벤트?</a>
                 </div>
                 <div class="swiper-slide">
-                  <a href="#a">하늘을 날아댕긴다</a>
+                  <a href="#a">게시판?</a>
                 </div>
                 <div class="swiper-slide">
                   <a href="#a">하늘을 높이 날아댕긴다</a>
@@ -158,7 +170,8 @@
             </a>
           </div>
           <div class="inner__right">
-            <h2>후원 하기</h2>
+            <h2 class="image-close">이미지 닫기</h2>
+            <h2 class="image-block hide">이미지 열기</h2>
             <div class="toggle-promotion">
               <div class="material-icons">upload</div>
             </div>
@@ -167,6 +180,7 @@
 
       </div>
 
+      <!-- section swiper auto 이미지 -->
       <div class="promotion">
         <div class="swiper-container">
           <div class="swiper-wrapper">
@@ -174,20 +188,21 @@
               <img src="../images/bg0.jpg" alt="새의 이미지 사진" />
             </div>
             <div class="swiper-slide">
-              <img src="../images/zxzx.png" alt="새의 이미지 사진" />
+              <img src="../images/bg0.jpg" alt="새의 이미지 사진" />
             </div>
             <div class="swiper-slide">
-              <img src="../images/galluscam.png" alt="새의 이미지 사진" />
+              <img src="../images/bg0.jpg" alt="새의 이미지 사진" />
             </div>
             <div class="swiper-slide">
-              <img src="../images/dark.png" alt="새의 이미지 사진" />
+              <img src="../images/bg0.jpg" alt="새의 이미지 사진" />
             </div>
             <div class="swiper-slide">
-              <img src="../images/white.png" alt="새의 이미지 사진" />
+              <img src="../images/bg0.jpg" alt="새의 이미지 사진" />
             </div>
           </div>
         </div>
 
+        <!-- 이전, 다음 버튼 -->
         <div class="swiper-pagination"></div>
         <div class="swiper-prev">
           <div class="material-icons">arrow_back</div>
@@ -198,54 +213,35 @@
       </div>
     </section>
 
-
-
-    <!-- <div class="body_scroll_section">
-      <div class="body-scroll">
-        <div class="body_scroll" id="body_scroll1">
-          <div id="section1_detail">
-
-          </div>
-        </div>
-        <div class="body_scroll" id="body_scroll2"></div>
-        <div class="body_scroll" id="body_scroll3"></div>
-        <div class="body_scroll" id="body_scroll4"></div>
-
-      </div>
-
-    </div> -->
-
-    <!-- section1 -->
+    <!-- section   -->
     <main id="parallax__cont">
-
-
 
       <div id="contents">
         <section id="section1" class="content__item">
           <span class="content__item__num">01</span>
-          <h2 class="content__item__title">section1</h2>
+          <h2 class="content__item__title">새의 종류</h2>
           <figure class="content__item__imgWrap">
             <div class="content__item__img"></div>
           </figure>
-          <p class="content__item__desc">우선 무엇이 되고자 하는가를 자신에게 말하라 그리고 해야 할일을 하라.</p>
+          <p class="content__item__desc">새는 다양한 종류가 있으며, 각각의 특징과 흠뻑 빠지는 매력!</p>
         </section>
         <!-- //section1 -->
 
         <!-- section2 -->
         <section id="section2" class="content__item">
           <span class="content__item__num">02</span>
-          <h2 class="content__item__title">section2</h2>
+          <h2 class="content__item__title">새용품</h2>
           <figure class="content__item__imgWrap">
             <div class="content__item__img"></div>
           </figure>
-          <p class="content__item__desc">이미 끝나버린 일을 후회하기 보다는 하고 싶었던 일들을 하지 못한 것을 후회하라.</p>
+          <p class="content__item__desc">다양한 새 용품</p>
         </section>
         <!-- //section2 -->
 
         <!-- section3 -->
         <section id="section3" class="content__item">
           <span class="content__item__num">03</span>
-          <h2 class="content__item__title">section3</h2>
+          <h2 class="content__item__title">문의사항</h2>
           <figure class="content__item__imgWrap">
             <div class="content__item__img"></div>
           </figure>
@@ -256,7 +252,7 @@
         <!-- section4 -->
         <section id="section4" class="content__item">
           <span class="content__item__num">04</span>
-          <h2 class="content__item__title">section4</h2>
+          <h2 class="content__item__title">애완조 안내서</h2>
           <figure class="content__item__imgWrap">
             <div class="content__item__img"></div>
           </figure>
@@ -267,7 +263,7 @@
         <!-- section5 -->
         <section id="section5" class="content__item">
           <span class="content__item__num">05</span>
-          <h2 class="content__item__title">section5</h2>
+          <h2 class="content__item__title">과학 + 새</h2>
           <figure class="content__item__imgWrap">
             <div class="content__item__img"></div>
           </figure>
@@ -278,7 +274,7 @@
         <!-- section6 -->
         <section id="section6" class="content__item">
           <span class="content__item__num">06</span>
-          <h2 class="content__item__title">section6</h2>
+          <h2 class="content__item__title">후원하기</h2>
           <figure class="content__item__imgWrap">
             <div class="content__item__img"></div>
           </figure>
@@ -289,11 +285,11 @@
         <!-- section7 -->
         <section id="section7" class="content__item">
           <span class="content__item__num">07</span>
-          <h2 class="content__item__title">section7</h2>
+          <h2 class="content__item__title">About Us</h2>
           <figure class="content__item__imgWrap">
             <div class="content__item__img"></div>
           </figure>
-          <p class="content__item__desc">꿈을 계속 간직하고 있으면 반드시 실현할 때가 온다.</p>
+          <p class="content__item__desc">저희 사이트를 소개합니다</p>
         </section>
         <!-- //section7 -->
 
@@ -306,18 +302,18 @@
     <div id="footer-container">
       <!-- 왼쪽 영역: 프로젝트 팀명 -->
       <div class="footer-left">
-        <img src="../images/icon.png" alt="Company Logo">
-        <p>T e m O N E</p>
+        <img src="../images/bird_logo.jpg" alt="Company Logo">
+        <p>T e a m O N E</p>
       </div>
 
       <!-- 중앙 영역: 링크 목록 -->
       <div class="footer-center">
         <ul>
-          <li><a href="#">홈</a></li>
-          <li><a href="#">서비스</a></li>
-          <li><a href="#">새 용품</a></li>
+          <li><a href="./main.html">홈</a></li>
+          <li><a href="./AboutUs1.html">회사 소개</a></li>
+          <li><a href="goods.html">새 용품</a></li>
           <li><a href="#">고객 지원</a></li>
-          <li><a href="#">문의하기</a></li>
+          <li><a href="./FAQ.html">문의하기</a></li>
         </ul>
       </div>
 
@@ -335,14 +331,19 @@
 
     <!-- 저작권 정보 및 추가 내용 -->
     <div class="copyright">
-      <p>&copy; <span class="more"></span> Birding</p>
+      <p>&copy; <span class="more"></span> Birdy</p>
     </div>
   </footer>
   <!-- footer 종료 -->
 
 
-  <!-- 맨 하단 스크롤 올려주는 역할 -->
+  <!-- 맨 하단 스크롤 내려주는 역할 -->
   <div id="to-top">
+    <div class="material-icons">arrow_upward</div>
+  </div>
+
+  <!-- 맨 상단 스크롤 올려주는 역할 -->
+  <div id="to-bottom">
     <div class="material-icons">arrow_upward</div>
   </div>
 

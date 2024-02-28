@@ -8,6 +8,9 @@
     <!-- SNS Icon -->
     <script src="https://kit.fontawesome.com/9d06c79ea2.js" crossorigin="anonymous"></script>
 
+    <!-- title icon -->
+    <link rel="icon" href="../images/bird_logo.jpg">
+
     <!-- CSS -->
     <link rel="stylesheet" href="../css/share.css"> <!-- 공용으로 들어가는 폰트 정리 -->
     <link rel="stylesheet" href="../css/share_Typeface.css"> <!-- 공용 글꼴 폰트 -->
@@ -15,27 +18,32 @@
 
     <!-- js -->
     <script src="../js/FAQ.js"></script>
+    <script defer src="/js/to_bottom_scroll.js"></script>
 
 
     <title>BIRDY FAQ</title>
     <style>
 
-        
+
     </style>
 </head>
 
 <body>
     <div class="header">
-        <h1>BIRDY</h1>
+        <!-- 로고 -->
+        <div class="logo">
+            <img src="../images/bird_logo.jpg" alt="Company Logo" href="./main.html">
+        </div>
+        <h1><a href="./main.html">BIRDY</a></h1>
 
         <div class="top-menu">
             <ul class="menu-list">
-              <li><a href="#a">회원가입</a></li>
-              <li><a href="#a">로그인</a></li>
-              <li><a href="#a">마이페이지</a></li>
-              <li><a href="./free.html">게시판</a></li>
+                <li><a href="./loginsignup.html">회원가입</a></li>
+                <li><a href="./loginsignup.html">로그인</a></li>
+                <li><a href="./MyPage.html">마이페이지</a></li>
+                <li><a href="./board.html">게시판</a></li>
             </ul>
-          </div>
+        </div>
     </div>
     <!-- 메뉴 영역 -->
     <div class="left">
@@ -55,7 +63,7 @@
                     <li><a href="#a">애완조 안내서</a></li>
                     <li><a href="./news.html">과학 <img src="../images/bird_icon.png" alt="+">새</a></li>
                     <li><a href="#a">후원하기</a></li>
-                    <li><a href="#a">About Us</a></li>
+                    <li><a href="./AboutUs1.html">About Us</a></li>
                 </ul>
         </nav>
     </div>
@@ -64,27 +72,33 @@
         <h2>FAQ</h2>
 
         <div class="box-container">
-            <div class="box" onclick="toggleInfo()">
+            <div class="box"
+                onclick="toggleInfo('입점문의는 [대표자 성함, 연락처, 브랜드명, 입점제품참고사이트 혹은 자사몰 홈페이지] 첨부 후 keduit@temone.com 문의 부탁드립니다. ')">
+                <!-- 클릭할 때 메시지 전달 -->
                 <h3>입점문의</h3>
             </div>
-            <div class="box" onclick="location.href='#';">
+            <div class="box"
+                onclick="toggleInfo('환불은 마이페이지->환불신청을 이용해 주십시오. <br>교환문의는 BIRDY상담전화 02-1234-5678로 문의 부탁드립니다 ')">
                 <h3>교환/환불</h3>
             </div>
-            <div class="box" onclick="location.href='#';">
+            <div class="box"
+                onclick="toggleInfo('결제취소 문의는 BIRDY상담전화 02-1234-5678로 문의 부탁드립니다. <br> 결제 취소는 배송전 상태에서만 가능합니다. 배송중상태이거나, 배송완료 된 결제건의 경우 교환환불 문의로 이동해주십시오. ')">
                 <h3>결제/취소</h3>
             </div>
-            <div class="box" onclick="location.href='#';">
+            <div class="box"
+                onclick="toggleInfo('배송문의는 마이페이지->주문확인에서 확인하실 수 있습니다. 주문 전후 주문자정보 변경은 BIRDY상담전화 02-1234-5678로 문의 부탁드립니다. ')">
                 <h3>배송문의</h3>
             </div>
-            <div class="box" onclick="location.href='#';">
+            <div class="box" onclick="toggleInfo('구독문의는 마이페이지->구독하기에서 확인하실 수 있습니다.')">
                 <h3>구독문의</h3>
             </div>
-            <div class="box" onclick="location.href='#';">
+            <div class="box" onclick="toggleInfo('후원문의는[성함,연락처,이메일,문의내용] keduit@temone.com 문의 부탁드립니다.')">
                 <h3>후원문의</h3>
             </div>
         </div>
-        <div class="box-container2" id="infoBox">
-            <p>안녕하세요, 조류용품 입점문의는 taelyyy@naver.com로 부탁드립니다.</p>
+
+        <div class="box-container2" id="infoBox" style="display: none;"> <!-- 처음에는 안 보이도록 설정 -->
+            <!-- 여기에 메시지 추가. -->
         </div>
     </div>
     <!-- footer 시작 -->
@@ -92,18 +106,18 @@
         <div id="footer-container">
             <!-- 왼쪽 영역: 프로젝트 팀명 -->
             <div class="footer-left">
-                <img src="../images/icon.png" alt="Company Logo">
+                <img src="../images/bird_logo.jpg" alt="Company Logo">
                 <p>T e m O N E</p>
             </div>
 
             <!-- 중앙 영역: 링크 목록 -->
             <div class="footer-center">
                 <ul>
-                    <li><a href="#">홈</a></li>
-                    <li><a href="#">서비스</a></li>
+                    <li><a href="./main.html">홈</a></li>
+                    <li><a href="./AboutUs1.html">회사 소개</a></li>
                     <li><a href="#">새 용품</a></li>
                     <li><a href="#">고객 지원</a></li>
-                    <li><a href="#">문의하기</a></li>
+                    <li><a href="./FAQ.html">문의하기</a></li>
                 </ul>
             </div>
 
@@ -121,7 +135,7 @@
 
         <!-- 저작권 정보 및 추가 내용 -->
         <div class="copyright">
-            <p>&copy; <span class="more"></span> Birding</p>
+            <p>&copy; <span class="more"></span> Birdy</p>
         </div>
     </footer>
     <!-- footer 종료 -->

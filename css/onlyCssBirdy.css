@@ -3,7 +3,9 @@ body {
     color: #1f2937;
     font-family: sans-serif;
 }
-
+#container{
+    padding: 60px;
+}
 .header-image {
     height: 256px;
     /* height: 100vh; */
@@ -18,7 +20,7 @@ body {
 }
 
 h1 {
-    font-size: 2.25rem;
+    font-size: 5rem;
     font-weight: bold;
 }
 
@@ -30,13 +32,12 @@ a {
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 4rem;
     font-weight: bold;
 }
 
-
 /* 상단 로고 이미지 */
-.logo{
+.logo {
     margin-left: 30px;
 }
 
@@ -44,13 +45,16 @@ h2 {
     /* padding: 40px; */
     padding-top: 24px;
     padding-bottom: 24px;
-    /* background-attachment: fixed; */
     background-position: center;
-    /* background-repeat: no-repeat; */
     background-size: cover;
-    /* height: 100vh; */
+    height: 400px;
+    /* width: 1200px; */
+    /* object-fit: fill; */
     /* display: flex; */
-    justify-content: center;
+    /* background-attachment: fixed; */
+    /* background-repeat: no-repeat; */
+
+    /* justify-content: center; */
     /* align-items: center; */
 }
 
@@ -77,7 +81,7 @@ h2 {
 }
 
 .step-background h2 {
-    font-size: 24px; /* 원하는 폰트 크기로 설정 */
+    font-size: 20px; /* 원하는 폰트 크기로 설정 */
     font-weight: bold; /* 원하는 폰트 두께로 설정 */
     color: #333; /* 원하는 폰트 색상으로 설정 */
 }
@@ -116,6 +120,7 @@ h2 {
 .add-read {
     color: #2563eb;
     text-decoration: none;
+    font-size: 1.5rem;
 }
 
 .add-read:hover {
@@ -123,6 +128,7 @@ h2 {
 }
 
 .step-number {
+    font-size: 5rem;
     font-weight: bold;
     margin-right: 8px;
 }
@@ -147,39 +153,41 @@ h2 {
 }
 
 .header-image {
-    background-image: url('https://source.unsplash.com/featured/?eagle');
+    background-image: url('https://source.unsplash.com/featured/?albatross');
     background-size: cover;
     background-position: center;
 }
 
 .step-1-background {
-    background-image: url('https://source.unsplash.com/featured/?start');
+    /* background-image: url('https://source.unsplash.com/featured/?start');
+} */
+    background-image: url('https://www.wikihow.com/images/thumb/9/9d/Bird-Watch-Step-1-Version-2.jpg/aid50860-v4-728px-Bird-Watch-Step-1-Version-2.jpg.webp');
 }
 
-/* .step-2-background {
-    background-image: url('https://source.unsplash.com/featured/?birdwatcher');
-} */
+.step-2-background {
+    background-image: url('https://www.wikihow.com/images/thumb/8/8f/Bird-Watch-Step-2-Version-2.jpg/aid50860-v4-728px-Bird-Watch-Step-2-Version-2.jpg.webp');
+}
 
 .step-3-background {
-    background-image: url('https://source.unsplash.com/featured/?binoculars');
+    background-image: url('https://www.wikihow.com/images/thumb/7/70/Bird-Watch-Step-3-Version-2.jpg/aid50860-v4-728px-Bird-Watch-Step-3-Version-2.jpg.webp');
 }
 
-/* .step-4-background {
-    background-image: url('https://source.unsplash.com/featured/?straps');
-} */
+.step-4-background {
+    background-image: url('https://www.wikihow.com/images/thumb/9/9b/Bird-Watch-Step-4-Version-2.jpg/aid50860-v4-728px-Bird-Watch-Step-4-Version-2.jpg.webp');
+}
 
 .step-5-background {
-    background-image: url('https://source.unsplash.com/featured?binoculars');
+    background-image: url('https://www.wikihow.com/images/thumb/0/02/Bird-Watch-Step-5-Version-2.jpg/aid50860-v4-728px-Bird-Watch-Step-5-Version-2.jpg.webp');
 }
 
-/* .step-6-background {
-    background-image: url('https://source.unsplash.com/featured/?bird');
-} */
+.step-6-background {
+    background-image: url('https://www.wikihow.com/images/thumb/0/07/Bird-Watch-Step-6-Version-2.jpg/aid50860-v4-728px-Bird-Watch-Step-6-Version-2.jpg.webp');
+}
 
 .step-7-background {
-    background-image: url('https://source.unsplash.com/featured/?camera');
+    background-image: url('https://www.wikihow.com/images/thumb/d/d9/Bird-Watch-Step-7-Version-2.jpg/aid50860-v4-728px-Bird-Watch-Step-7-Version-2.jpg.webp');
 }
 
-/* .step-8-background {
-    background-image: url('https://source.unsplash.com/featured/?Gradation');
-} */
+.step-8-background {
+    background-image: url('https://www.wikihow.com/images/thumb/7/78/Bird-Watch-Step-8.jpg/aid50860-v4-728px-Bird-Watch-Step-8.jpg.webp');
+}

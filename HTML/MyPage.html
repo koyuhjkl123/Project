@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이페이지</title>
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="/css/mypage.css">
+    <link rel="stylesheet" href="/css/share.css">
+
+    <!-- js -->
+    <script defer src="/js/to_bottom_scroll.js"></script>
+
+
+    <!-- title icon -->
+    <link rel="icon" href="../images/bird_logo.jpg">
+
+    <!-- icon  -->
+    <script src="https://kit.fontawesome.com/9d06c79ea2.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="/images/bird_logo.jpg" alt="logo">
+            <h1><a href="./main.html">Birdy</a></h1>
+        </div>
+
+        <div class="mobile">
+            <div class="pc-icon"><img src="../images/icon/pc-icon.png" alt="PC 변환"></div>
+            <div class="phone-icon"><img src="../images/icon/phone-icon.png" alt="모바일 변환"></div>
+        </div>
+
+        <!-- 우측 상단 메뉴리스트 -->
+
+        <div class="top-menu">
+            <ul class="menu-list">
+                <li><a href="loginsignup.html">회원가입</a></li>
+                <li><a href="loginsignup.html">로그인</a></li>
+                <li><a href="MyPage.html">마이페이지</a></li>
+                <li><a href="free.html">게시판</a></li>
+            </ul>
+        </div>
+
+    </header>
+
+
+    <main id="allMain">
+        <!-- Sidenav -->
+        <div class="sidenav">
+            <div id="profile_box">
+                <div class="profile">
+                    <img src="/sejin/pic_bird/m_15.jpg" alt="" width="100" height="100">
+
+                    <div class="name">
+                        IloveBirds
+                    </div>
+                    <div class="job">
+                        프리미엄멤버
+                    </div>
+                </div>
+
+                <div class="sidenav-url">
+                    <div class="url">
+                        <a href="#profile" class="active">내 프로필</a>
+                        <hr>
+                    </div>
+                    <div class="url">
+                        <a href="#settings">내 정보수정</a>
+                        <hr>
+                    </div>
+                    <div class="url">
+                        <a href="#shoping">장바구니</a>
+                        <hr>
+                    </div>
+                    <div class="url">
+                        <a href="#my">내가 쓴 글</a>
+                        <br>
+                    </div>
+                </div>
+                <div id="fa">
+                    <a href="#cart">
+                        <!-- <span class="icon-count">29</span> -->
+                        <i class="fa fa-envelope fa-2x"></i>
+                    </a>
+
+                    <a href="#notification">
+                        <!-- <span class="icon-count">59</span> -->
+                        <i class="fa fa-bell fa-2x"></i>
+                    </a>
+
+                    <a href="#sign-out">
+                        <i class="fa fa-sign-out-alt fa-2x"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <!-- End -->
+
+        <!-- Main -->
+        <div class="main">
+            <h2>내 정보</h2>
+            <div class="card">
+                <div class="card-body">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Name</td>
+                                <td>:</td>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>:</td>
+                                <td>oneteam@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>Address</td>
+                                <td>:</td>
+                                <td>Seoul, SouthKorea</td>
+                            </tr>
+                            <tr>
+                                <td>아이디</td>
+                                <td>:</td>
+                                <td>Diving</td>
+                            </tr>
+                            <tr>
+                                <td>Job</td>
+                                <td>:</td>
+                                <td>Web Developer</td>
+                            </tr>
+                            <tr>
+                                <h2 id="member_admin"><i class="fa-solid fa-feather"></i> 멤버십 회원</h2>
+                                </form>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <!-- End -->
+
+    </main>
+
+    <!-- footer 시작 -->
+    <footer>
+        <div id="footer-container">
+            <!-- 왼쪽 영역: 프로젝트 팀명 -->
+            <div class="footer-left">
+                <img src="/sejin/pic_bird/con_2.jpg" alt="Company Logo">
+                <p>T e a m O N E</p>
+            </div>
+
+            <!-- 중앙 영역: 링크 목록 -->
+            <div class="footer-center">
+                <ul>
+                    <li><a href="./main.html">홈</a></li>
+                    <li><a href="./AboutUs1.html">회사 소개</a></li>
+                    <li><a href="goods.html">새 용품</a></li>
+                    <li><a href="#">고객 지원</a></li>
+                    <li><a href="./FAQ.html">문의하기</a></li>
+                </ul>
+            </div>
+
+            <!-- 오른쪽 영역: 연락처 및 소셜 미디어 링크 -->
+            <div class="footer-right">
+                <p>연락처 : 02-1234-5678</p>
+                <p>이메일 : keduit@temone.com</p>
+                <div class="social-links">
+                    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 저작권 정보 및 추가 내용 -->
+        <div class="copyright">
+            <p>&copy; <span class="more"></span> Birdy</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

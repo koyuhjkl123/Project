@@ -1,0 +1,181 @@
+
+
+/* 상단 영역 스타일 */
+.header {
+  background-color: white;
+  color: black;
+  padding: 30px;
+  text-align: center;
+}
+
+/* 왼쪽 영역 스타일 */
+.left {
+  background-color: #EAEAEA;
+  color: black;
+  padding: 20px;
+  width: 10%;
+  float: left;
+  /* 왼쪽 정렬 */
+  box-sizing: border-box;
+  /* padding 값 포함 */
+  height: calc(100vh - 120px);
+  /* 높이를 상단 영역과 하단 영역의 높이만큼 조정 */
+}
+
+.left .menubar #menu-container ul img {
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+}
+
+.left .menubar #menu-container ul {
+  padding: 0;
+}
+
+.left .menubar #menu-container ul li {
+  margin-top: 20px;
+}
+
+.left .menubar #menu-container ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+}
+
+.left .menubar #menu-container ul li > ul {
+  font-size: 0.5rem;
+}
+
+.left .menubar #menu-container ul li > ul li > a {
+  font-size: 16px;
+  font-weight: none;
+}
+
+.left .menubar #menu-container ul li:hover > a {
+  opacity: .5; /* 메뉴 hover 시 투명도 50% */
+  transition: all .5s;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  clear: both; /* float 된 요소들을 모두 제거하여 center 영역 아래에 위치하도록 함 */
+  position: relative; /* 위치 지정을 위해 relative로 설정 */
+  top: 10px; /* center 영역 아래로 10px 이동 */
+}
+
+.center {
+  background-color: #D5D5D5;
+  color: #595959;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: auto;
+  height: calc(100vh - 120px);
+  clear: none; /* clear 속성 제거 */
+}
+
+.center h2 {
+  font-size: 40px;
+  /* 원하는 크기로 설정 */
+}
+
+.board {
+  border: 3px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.board h2 {
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination a {
+  color: #333;
+  display: inline-block;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+}
+
+.pagination a.active {
+  background-color: #333;
+  color: white;
+  border: 1px solid #595959;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.search-container {
+  margin-top: 20px;
+  text-align: right; /* 검색박스와 버튼 오른쪽 */
+}
+
+.search-box {
+  padding: 10px 10px; /* 위아래 8px, 좌우 10px의 패딩 */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  margin-right: 10px; /* 오른쪽 여백을 추가 */
+}
+
+.search-button {
+  padding: 10px 16px; /* 위아래 8px, 좌우 16px의 패딩*/
+  background-color: #595959;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px; 
+}
+
+.search-button:hover {
+  background-color: gray;
+}
+
+
+
+/* 추가한 CSS 부분 */
+.sub-menu {
+  display: none;
+  /* 처음에는 하위 카테고리를 숨김 */
+}
+
+/* 상단 메뉴바 영역 */
+.top-menu {
+  margin: 20px 30px 0 0;
+}
+
+/* footer 영역 스타일 */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}

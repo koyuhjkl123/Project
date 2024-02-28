@@ -1,0 +1,200 @@
+body {
+    background-color: #ffffff;
+    color: #1f2937;
+    font-family: sans-serif;
+}
+
+.header-image {
+    height: 256px;
+    /* height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 32px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.25rem;
+}
+
+h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    padding: 30px;
+}
+p{
+    font-size: 2rem;
+}
+p,
+h2,
+.step-number,
+a {
+    margin-bottom: 16px;
+    padding: 15px;
+}
+
+/* 상단 로고 이미지 */
+.logo {
+    margin-left: 30px;
+}
+.slide li{
+    font-size: 2rem;
+    margin:10px;
+}
+
+.parallax-section {
+    /* padding: 40px; */
+    padding-top: 24px;
+    padding-bottom: 24px;
+    /* width: 100vh; */
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    /* background-attachment: fixed; */
+    /* background-repeat: no-repeat; */
+    /* display: flex; */
+    /* object-fit: cover; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.slide {
+    opacity: 0;
+    -moz-transition: all 500ms linear;
+    -webkit-transition: all 500ms linear;
+    -o-transition: all 500ms linear;
+    transition: all 500ms linear;
+    -moz-transform: translate3d(-100px, 0px, 0px);
+    -webkit-transform: translate3d(-100px, 0px, 0px);
+    -o-transform: translate(-100px, 0px);
+    -ms-transform: translate(-100px, 0px);
+    transform: translate3d(-100px, 0px, 0px);
+    font-size: 3rem;
+}
+
+.hasSlid {
+    opacity: 1;
+    -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.step-background h2 {
+    font-size: 25px; /* 원하는 폰트 크기로 설정 */
+    font-weight: bold; /* 원하는 폰트 두께로 설정 */
+    color: #333; /* 원하는 폰트 색상으로 설정 */
+}
+
+/* p 태그에 대한 폰트 스타일 */
+.step-background p {
+    font-size: 18px; /* 원하는 폰트 크기로 설정 */
+    line-height: 1.5; /* 텍스트 줄 간격 설정 */
+    color: #666; /* 원하는 폰트 색상으로 설정 */
+}
+
+/* "더 읽기" 링크에 대한 폰트 스타일 */
+.step-background a {
+    font-size: 16px; /* 원하는 폰트 크기로 설정 */
+    color: #007bff; /* 원하는 링크 색상으로 설정 */
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+/* "더 읽기" 링크에 호버 시 적용될 스타일 */
+.step-background a:hover {
+    text-decoration: underline; /* 호버 시 밑줄 표시 */
+}
+/* .padding-enlarge {
+    transition: padding-top 0.15s ease-in-out, padding-bottom 0.15s ease-in-out;
+}
+
+.padding-enlarge:hover {
+    padding-top: 15px;
+    padding-bottom: 15px;
+} */
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.add-read {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.add-read:hover {
+    text-decoration: underline;
+}
+
+.step-number {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-right: 8px;
+}
+.step-number {
+    background-color: #f3f4f6;
+    color: #111827;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.slide {
+    opacity: 0;
+    transition: all 500ms linear;
+    transform: translate3d(-100px, 0px, 0px);
+}
+
+.hasSlid {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.header-image {
+    background-image: url('https://source.unsplash.com/featured/?sunset');
+    background-size: cover;
+    /* width: 100vh; */
+    background-position: center;
+    /* background-repeat: no-repeat; */
+}
+
+.step-1-background {
+    /* background-image: url('https://source.unsplash.com/featured/?start');
+} */
+    background-image: url('https://source.unsplash.com/featured/?baldeagle');
+}
+
+.step-2-background {
+    background-image: url('https://source.unsplash.com/featured/?albatross');
+}
+
+/* .step-3-background {
+    background-image: url('https://www.wikihow.com/images/thumb/7/70/Bird-Watch-Step-3-Version-2.jpg/aid50860-v4-728px-Bird-Watch-Step-3-Version-2.jpg.webp');
+} */
+
+.step-4-background {
+    background-image: url('https://source.unsplash.com/featured/?crow');
+}
+
+.step-5-background {
+    background-image: url('https://www.wikihow.com/images/thumb/0/02/Bird-Watch-Step-5-Version-2.jpg/aid50860-v4-728px-Bird-Watch-Step-5-Version-2.jpg.webp');
+}
+
+.step-6-background {
+    background-image: url('https://source.unsplash.com/featured/?eagle');
+}
+
+.step-7-background {
+    background-image: url('https://www.wikihow.com/images/thumb/d/d9/Bird-Watch-Step-7-Version-2.jpg/aid50860-v4-728px-Bird-Watch-Step-7-Version-2.jpg.webp');
+}
+
+.step-8-background {
+    background-image: url('https://source.unsplash.com/featured/?owl');
+}
+.step-9-background {
+    background-image: url('https://source.unsplash.com/featured/?bird');
+}

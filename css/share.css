@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'GangwonEdu_OTFBoldA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 
 
 /* 공용 들어가는 기본 default 설정 */
@@ -34,16 +42,28 @@ li{
 /* 이미지 로고 영역 */
 header .logo {
   margin-top: 30px;
-  width: 150px;
-  height: 150px;
+  width: 70px;
+  height: 70px;
 }
 
 header .logo img {
-  width: 62%;
-  height: 62%;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
 }
 
+.mobile{
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 50%;
+}
+
+.pc-icon img,
+.phone-icon img {
+  width: 70px;
+  height: 70px;
+}
 /* 이미지 로고 영역 종료*/
 
 /* 상단 메뉴바 영역 */
@@ -165,10 +185,7 @@ header .logo img {
   position: fixed;
 }
 
-.icon-container .menubar #menu-container ul {
-  padding: 0;
-  /* padding-left 40px되어 있어서 제거 하기 위해*/
-}
+
 
 .icon-container .menubar #menu-container ul img {
   width: 10px;
@@ -177,10 +194,7 @@ header .logo img {
 }
 
 .icon-container .menubar #menu-container ul img.close {
-  padding: 0;
-  margin: 0;
   position: absolute;
-  top: 0;
 }
 
 .icon-container .menubar #menu-container ul li {
@@ -307,7 +321,7 @@ footer #footer-container .footer-right>.social-links {
   color: #fff;
   border: 2px solid #fff;
   border-radius: 10px;
-  cursor: e-resize;
+  cursor: pointer;
   display: none;
   position: fixed;
   text-align: center;
@@ -317,6 +331,28 @@ footer #footer-container .footer-right>.social-links {
 }
 
 #to-top.show {
+  display: block;
+}
+
+#to-bottom {
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  text-align: center;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9;
+  transform: rotate(180deg);
+}
+
+#to-bottom.show {
   display: block;
 }
 
