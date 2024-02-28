@@ -14,8 +14,6 @@ function toggleMenu() {
     let iconContainer = document.querySelector('header .icon-container');
     let menubar = document.querySelector('.menubar');
     let icon = document.querySelector('.icon');
-    let menuUl = document.querySelector('.menubar #menu-container ul');
-    let menuSubUl = document.querySelector('header .menubar #menu-container ul li > ul');
   
     iconContainer.addEventListener('click', function () {
       iconContainer.classList.toggle('active');
@@ -29,12 +27,6 @@ function toggleMenu() {
         icon.style.display = 'block'; // 햄버거 나타내기
       }
   
-    //   if (iconContainer.classList.contains('active')) {
-    //     menuUl.style.opacity = '1'; // 클릭 후
-    //     menuSubUl.style.opacity = '1';
-    //   } else {
-    //     menuUl.style.opacity = '0'; // 클릭 전
-    //   }
     });
   });
   
@@ -59,7 +51,7 @@ function toggleMenu() {
   });
   // 메뉴 클릭 시 --> 각 li 아이템들 hover 시 동작
   document.addEventListener('DOMContentLoaded', function () {
-    let menuItems = document.querySelectorAll('header .menubar #menu-container ul > li a');
+    let menuItems = document.querySelectorAll('.menubar #menu-container ul > li a');
   
     // 각 메뉴 아이템에 이벤트 리스너 추가
     menuItems.forEach(function (item) {

@@ -4,10 +4,10 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault(); // 기본 동작 방지
 
             // 이미지 URL 가져오기
-            var imageUrl = link.getAttribute('data-preview-image');
+            let imageUrl = link.getAttribute('data-preview-image');
 
             // 이미지를 포함할 새 div 요소 생성
-            var previewDiv = document.createElement('div');
+            let previewDiv = document.createElement('div');
             previewDiv.style.position = 'fixed';
             previewDiv.style.top = '0';
             previewDiv.style.left = '0';
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
             previewDiv.style.zIndex = '10000'; // 확실히 최상위에 위치하도록 z-index 설정
 
             // 미리보기 이미지 생성
-            var previewImg = document.createElement('img');
+            let previewImg = document.createElement('img');
             previewImg.src = imageUrl;
             previewImg.style.maxWidth = '80%';
             previewImg.style.maxHeight = '80%';

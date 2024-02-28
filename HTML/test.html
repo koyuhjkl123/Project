@@ -11,7 +11,7 @@
     /* Set the size of the map */
     #map {
       margin: 0 auto;
-      width: 20%; /* 지도 넓이 */
+      width: 80%; /* 지도 넓이 */
       height: 500px; /* 지도 높이 */
     }
   </style>
@@ -29,13 +29,31 @@
     })
   ],
   view: new ol.View({
-    center: ol.proj.fromLonLat([126.97794, 37.5665]), // Seoul, South Korea
-    zoom: 10
+    center: ol.proj.fromLonLat([128.096836,	36.82245]), // Seoul, South Korea
+    zoom: 10,
+    minZoom: 10,
+    maxZoom: 10
   }),
   size: [500, 500]
 });
 
- 
+    // Add a WMS layer to the map
+    const wmsLayer = new ol.layer.Tile({
+      source: new ol.source.TileWMS({
+        url: 'https://www.nie-ecobank.kr/ecoapi/BgtsInfoService/wms/getBirdsPointWMS',
+        params: {
+					'serviceKey': '48UV42UKKFW16R243UQT677L92T4CX5H11EMQ6OK', // 인증키
+          'LAYERS': 'mv_map_bgts_birds_point', // 레이아웃
+          'TRANSPARENT': true, // 배경 안보이게
+          'FORMAT': 'image/png', // 이미지
+          'SRS': 'EPSG:5186',
+          'BBOX': '314548.9311225004,401742.29949240043,320867.0145135768,409072.0397406582',
+          'WIDTH': 663, // 넓이
+          'HEIGHT': 768 // 높이
+        }
+      })
+    });
+
     // Add the WMS layer to the map
     map.addLayer(wmsLayer);
   </script>
